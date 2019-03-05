@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>highlight.js一个在网页上实现代码高亮的JS库</title>
+      <link href="/2019/03/05/highlight-js%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E7%9A%84JS%E5%BA%93/"/>
+      <url>/2019/03/05/highlight-js%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E7%9A%84JS%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<p>目前的很多博客例如 <a href="https://wordpress.org/" target="_blank" rel="noopener">Wordpress</a> 、<a href="http://typecho.org/" target="_blank" rel="noopener">Typecho</a> 等默认的代码高亮效果都不是太好，我刚用 <a href="https://wordpress.org/" target="_blank" rel="noopener">Wordpress</a> 的时候默认就没有代码高亮功能，浏览器默认的代码高亮也基本和没有差不多，在代码比较多的情况下对于读者来说看起来还是比较费力的。对于一部分博客来说可以通过插件解决，但是如果你对插件的效果不满意的话就可以考虑使用highlight.js。<br><a id="more"></a><br><a href="https://highlightjs.org/" target="_blank" rel="noopener">highlight.js</a> 是一个能实现网页代码高亮功能的JS库，最多可支持185种语言的代码高亮和89种主题样式，目前主流的IDE主题样式在 <a href="https://highlightjs.org/" target="_blank" rel="noopener">highlight.js</a> 上都能实现。如果你想在网页 中实现代码高亮 <a href="https://highlightjs.org/" target="_blank" rel="noopener">highlight.js</a> 是一个不错的选择，<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 默认的代码高亮插件就是用 <a href="https://highlightjs.org/" target="_blank" rel="noopener">highlight.js</a> 实现的。</p><p>下图是浏览器默认的代码高亮，主要就是 <code>&lt;pre&gt;</code> 和 <code>&lt;code&gt;</code> 标签，基本没有什么效果：</p><p><img src="https://wsmcb.github.io/img/浏览器默认代码高亮.png" alt="浏览器默认代码高亮"></p><p>这种情况下一旦代码比较多看起来就比较费力了。</p><p>highLight.js的官网地址是： <a href="https://highlightjs.org/usage/" target="_blank" rel="noopener">https://highlightjs.org/usage/</a> ，进入后点击 <a href="https://highlightjs.org/download/" target="_blank" rel="noopener">Get version 9.15.6</a> 下载，版本号显示的可能会和我这里的不一样，选择需要的语言，选择完成后 点击 <strong>Download</strong> ，</p><p><img src="https://wsmcb.github.io/img/highlightjs选择需要的语言.png" alt="highlightjs选择需要的语言"></p><p>下载完成后是一个压缩包，主要需要用到的文件是 <strong>highlight.pack.js</strong> 和 <strong>styles</strong> 里的css主题，其他的是帮助文件和许可证，</p><p><img src="https://wsmcb.github.io/img/highlightjs文件结构.png" alt="highlightjs文件结构"></p><p>在网页中引入一个css主题和 <strong>highlight.pack</strong> 然后初始化，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/vs2015.css"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/highlight.pack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">hljs.initHighlightingOnLoad();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>我这里选择的是VS2015主题，还有一种方式就是使用官方的CDM，不过在国内不一定稳定：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>初始化的部分还是一样的，代码使用 <code>&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code> 包裹，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">code</span>&gt;</span></span><br><span class="line">        var a = 0;</span><br><span class="line">    </span><br><span class="line">        if (a == 0) &#123;</span><br><span class="line">            for (var i = 0;i <span class="tag">&lt; <span class="attr">10</span>;<span class="attr">i</span> ++) &#123;</span></span><br><span class="line"><span class="tag">                <span class="attr">console.log</span>(<span class="attr">i</span>);</span></span><br><span class="line"><span class="tag">            &#125;</span></span><br><span class="line"><span class="tag">        &#125;</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">        <span class="attr">function</span> <span class="attr">fn</span>() &#123;</span></span><br><span class="line"><span class="tag">            <span class="attr">console.log</span>('<span class="attr">Hello</span>');</span></span><br><span class="line"><span class="tag">        &#125;</span></span><br><span class="line">    &lt;/code&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure><p>最终效果：</p><p><img src="https://wsmcb.github.io/img/highlightjs效果.png" alt="highlightjs效果"></p><p>highlight.js可以自动检测语言，你也可以给 <code>&lt;code&gt;</code> 标签加上类名，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span><span class="tag">&lt;<span class="name">code</span> <span class="attr">class</span>=<span class="string">"html"</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure><p>要查看所有可用的class名可以访问： <a href="https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html" target="_blank" rel="noopener">https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html</a> ，如果要更换主题只需要更换css文件即可，</p><p><img src="https://wsmcb.github.io/img/highlightjs主题截图1.png" alt="highlightjs主题截图1"></p><p><img src="https://wsmcb.github.io/img/highlightjs主题截图2.png" alt="highlightjs主题截图2"></p><p>如需预览更多样式可以访问： <a href="https://highlightjs.org/static/demo/" target="_blank" rel="noopener">https://highlightjs.org/static/demo/</a> 。</p><p>如果要在Wordpress中使用highlight.js可以选择 <strong>外观</strong> -&gt; <strong>编辑</strong> 在 <strong>header.php</strong> 文件中引入css和js即可，需要插入代码的时候在编辑器中选择纯文本，然后加入 <code>&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code> 标签，或者也可以下载Markdown插件，用Markdown写，最终预览的时候也会被转为代码标签。</p><p><a href="https://www.changbin.me" target="_blank" rel="noopener">我的博客：www.changbin.me</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript操作Cookie</title>
       <link href="/2019/03/04/JavaScript%E6%93%8D%E4%BD%9CCookie/"/>
       <url>/2019/03/04/JavaScript%E6%93%8D%E4%BD%9CCookie/</url>
@@ -299,9 +326,9 @@
       
         <tags>
             
-            <tag> Windows Server </tag>
-            
             <tag> Win10 </tag>
+            
+            <tag> Windows Server </tag>
             
         </tags>
       
