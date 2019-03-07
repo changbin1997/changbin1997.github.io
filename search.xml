@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>简单给WordPress主题汉化</title>
+      <link href="/2019/03/07/%E7%AE%80%E5%8D%95%E7%BB%99WordPress%E4%B8%BB%E9%A2%98%E6%B1%89%E5%8C%96/"/>
+      <url>/2019/03/07/%E7%AE%80%E5%8D%95%E7%BB%99WordPress%E4%B8%BB%E9%A2%98%E6%B1%89%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<p>最近准备给博客换个主题，在Wordpress的主题库中找了一下发现很难找到合适的，大多主题都只适合用来作电商和企业官网。唯一找到几个比较适合作博客的还全是英文，没有中文翻译，最终只能自己手动来翻译，这里就简单记录一下翻译过程。<br><a id="more"></a><br>为了方便翻译，还需要下载一个名为 <a href="https://poedit.net/" target="_blank" rel="noopener">Poedit</a> 的软件，下面是维基百科对Poedit的简单介绍：</p><blockquote><p>Poedit是一个免费增值软件及跨平台的gettext类国际化翻译编辑器，也是同类型软件中最广泛使用的一个。现时它不论在Unix+GTK 或 Windows平台 配合wxWidgets 均有相关版本。</p></blockquote><p>Poedit的官网是： <a href="https://poedit.net/" target="_blank" rel="noopener">https://poedit.net/</a> 进入后直接下载和系统对应的版本，下载完成后安装，我这里以汉化一个未安装的Wordpress主题为例，一般未安装的主题都是zip的压缩包，解压压缩包，在主题目录下找到 <strong>languages</strong> 目录，看一下有没有 <strong>.pot</strong> 后缀的文件，如果有的话就可以使用Poedit打开翻译。打开Poedit后界面如下：</p><p><img src="https://wsmcb.github.io/img/Poedit界面.png" alt="Poedit界面"></p><p>Wordpress相关的翻译是需要购买专业版的，因为我的是免费版，所以只能完全手动了，点击 <strong>创建新的翻译</strong> 设置要翻译的语言，我选择的是简体中文，</p><p><img src="https://wsmcb.github.io/img/Poedit设置要翻译的语言.png" alt="Poedit设置要翻译的语言"></p><p>因为我用的是免费版，所以 <strong>预翻译</strong> 和 <strong>翻译建议</strong> 之类的功能都是不能用的，遇到不会的只能查词典或使用谷歌翻译了，不过还好我这个主题需要翻译的只有120多句。</p><p><img src="https://wsmcb.github.io/img/Poedit翻译界面.png" alt="Poedit翻译界面"></p><p>软件会提示需要翻译的句子数量和甚于的句子数量。</p><p>全部翻译完成后点击工具栏的保存按钮，保存到主题目录下的 <strong>languages</strong> 目录下，然后按原来的结构重新把主题压缩为zip，然后在Wordpress的添加主题的地方上传主题压缩包，启用 主题就可以看到效果了。</p><p>如果需要给一个已安装的主题汉化可以在 <strong>Wordpress目录/wp-content/themes/你的主题目录/languages目录</strong> 找到<strong>.pot</strong> 后缀的文件，把文件下载到本地，用Poedit按照上面的方法打开汉化，汉化完成后把生成的 <strong>zh_CN.mo</strong> 和 <strong>zh_CN.po</strong> 上传到 <strong>Wordpress目录/wp-content/themes/你的主题目录/languages目录</strong> 。</p><p>如果需要修改已汉化的语言文件可以在 <strong>Wordpress目录/wp-content/themes/你的主题目录/languages目录</strong> 找到 <strong>.po</strong> 后缀的语言文件，用Poedit打开编辑，编辑完成后保存。</p><p><a href="https://www.changbin.me" target="_blank" rel="noopener">我的博客：www.changbin.me</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> WordPress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>highlight.js一个在网页上实现代码高亮的JS库</title>
       <link href="/2019/03/05/highlight-js%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E7%9A%84JS%E5%BA%93/"/>
       <url>/2019/03/05/highlight-js%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E7%9A%84JS%E5%BA%93/</url>
@@ -326,9 +353,9 @@
       
         <tags>
             
-            <tag> Windows Server </tag>
-            
             <tag> Win10 </tag>
+            
+            <tag> Windows Server </tag>
             
         </tags>
       
@@ -569,9 +596,9 @@
             
             <tag> Mysql </tag>
             
-            <tag> PHP </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
