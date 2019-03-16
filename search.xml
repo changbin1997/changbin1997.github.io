@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>sessionStorage的简单使用</title>
+      <link href="/2019/03/16/sessionStorage%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/03/16/sessionStorage%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>sessionStorage有点类似于localStorage，都是用来存储数据的，但是不同的地方就是localStorage存储的数据不会过期，而sessionStorage存储的数据在关闭浏览器后会被销毁，类似于后端的session。sessionStorage在发送HTTP请求的时候不会被发送到后端，所以后端是无法操作sessionStorage的。<br><a id="more"></a><br>之前我也写过一篇文章： <a href="https://www.changbin.me/index.php/2017/12/07/html5-localstorage%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" target="_blank" rel="noopener">HTML5 LOCALSTORAGE的简单使用</a> ，今天正好把sessionStorage也写了，下面是浏览器对sessionStorage的兼容情况：</p><table><thead><tr><th>Chrome</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td>5+</td><td>2+</td><td>8+</td><td>10.5+</td><td>4+</td></tr></tbody></table><p>以上信息来源于 MDN文档。</p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="sessionStorage-setItem-key-value-方法"><a href="#sessionStorage-setItem-key-value-方法" class="headerlink" title="sessionStorage.setItem(key, value)  方法"></a><em>sessionStorage.setItem</em>(key, value) 方法</h3><p><code>sessionStorage.setItem</code> 方法的功能是保存数据，下面把qq=12345678保存到 <code>sessionStorage</code> ：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  保存数据</span></span><br><span class="line">sessionStorage.setItem(<span class="string">'qq'</span>, <span class="string">'12345678'</span>);</span><br></pre></td></tr></table></figure><h3 id="sessionStorage-getItem-key-方法"><a href="#sessionStorage-getItem-key-方法" class="headerlink" title="sessionStorage.getItem(key)  方法"></a>sessionStorage.getItem(key) 方法</h3><p><code>sessionStorage.getItem</code> 用来获取保存在sessionStorage的数据，如果未找到会返回 <code>null</code>，下面获取上面保存在 <code>sessionStorage</code> 的qq：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  读取数据</span></span><br><span class="line"><span class="keyword">let</span> data = sessionStorage.getItem(<span class="string">'qq'</span>);</span><br></pre></td></tr></table></figure><h3 id="sessionStorage-removeItem-key-方法"><a href="#sessionStorage-removeItem-key-方法" class="headerlink" title="sessionStorage.removeItem(key)  方法"></a>sessionStorage.removeItem(key) 方法</h3><p><code>sessionStorage.removeItem</code> 用来删除数据，下面删除保存的qq：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  删除数据</span></span><br><span class="line">sessionStorage.removeItem(<span class="string">'qq'</span>);</span><br></pre></td></tr></table></figure><h3 id="sessionStorage-clear-方法"><a href="#sessionStorage-clear-方法" class="headerlink" title="sessionStorage.clear()  方法"></a>sessionStorage.clear() 方法</h3><p><code>sessionStorage.clear</code> 方法可以删除当前域名下保存的所有sessionStorage数据，下面删除所有数据：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.clear();</span><br></pre></td></tr></table></figure><h3 id="sessionStorage-key-index-方法"><a href="#sessionStorage-key-index-方法" class="headerlink" title="sessionStorage.key(index)  方法"></a>sessionStorage.key(index) 方法</h3><p><code>sessionStorage.key</code> 根据传入的index索引获取对应的键名，例如我存储了 name 和 age 的键值对，我使用：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  获取key</span></span><br><span class="line"><span class="keyword">let</span> data = sessionStorage.key(<span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);  <span class="comment">//  输出结果未 name</span></span><br></pre></td></tr></table></figure><p>最终会获取name，也就是第0个的键名。</p><h2 id="存储JSON"><a href="#存储JSON" class="headerlink" title="存储JSON"></a>存储JSON</h2><p><code>sessionStorage</code> 只能存储字符串，如果每一次存储都生成一条新的sessionStorage数据也不方便管理，如果要存储JSON就需要把JSON转换为字符串存储，下面演示存储JSON：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  JSON</span></span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">    name: <span class="string">"小李"</span>,</span><br><span class="line">    age: <span class="number">25</span>,</span><br><span class="line">    phoneNumber: <span class="string">"15000000000"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  JSON转字符串</span></span><br><span class="line">user = <span class="built_in">JSON</span>.stringify(user);</span><br><span class="line"><span class="comment">//  存储</span></span><br><span class="line">sessionStorage.setItem(<span class="string">'user'</span>, user);</span><br></pre></td></tr></table></figure><p>获取数据也需要把字符串转换为JSON，下面获取存储在sessionStorage的JSON字符串：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  读取数据</span></span><br><span class="line"><span class="keyword">let</span> data = sessionStorage.getItem(<span class="string">'user'</span>);</span><br><span class="line"><span class="comment">//  把JSON字符串转换为JSON</span></span><br><span class="line">data = <span class="built_in">JSON</span>.parse(data);</span><br></pre></td></tr></table></figure><p><code>localStorage</code> 也可以使用同样的方式来存储JSON。</p><p><a href="https://www.changbin.me" target="_blank" rel="noopener">我的博客：www.changbin.me</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML5 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript拖拽文件上传和本地图片预览</title>
       <link href="/2019/03/09/JavaScript%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/"/>
       <url>/2019/03/09/JavaScript%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/</url>
@@ -22,9 +49,9 @@
             
             <tag> HTML5 </tag>
             
-            <tag> AJAX </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> AJAX </tag>
             
             <tag> 上传文件 </tag>
             
@@ -384,9 +411,9 @@
       
         <tags>
             
-            <tag> Windows Server </tag>
-            
             <tag> Win10 </tag>
+            
+            <tag> Windows Server </tag>
             
         </tags>
       
@@ -627,9 +654,9 @@
             
             <tag> Mysql </tag>
             
-            <tag> 数据库 </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
       
@@ -912,9 +939,9 @@
       
         <tags>
             
-            <tag> AJAX </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> AJAX </tag>
             
         </tags>
       
