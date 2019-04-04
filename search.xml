@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>PHP操作Cookie和Session</title>
+      <link href="/2019/04/04/PHP%E6%93%8D%E4%BD%9CCookie%E5%92%8CSession/"/>
+      <url>/2019/04/04/PHP%E6%93%8D%E4%BD%9CCookie%E5%92%8CSession/</url>
+      
+        <content type="html"><![CDATA[<p>Cookie是网站常用的一种存储数据的方式，Cookie虽然是保存在用户的浏览器端，但发送HTTP请求的时候也会一起传到服务器，所以后端也能很方便的操作Cookie，而且使用PHP操作Cookie要比Javascript方便。<br><a id="more"></a><br>Session也是一种存储数据的方式，不过Session的数据是存储在服务端，浏览器端只是存储一个Session的ID，关闭浏览器后Session也会被销毁，有点类似于浏览器端的sessionStorage。Session常用来存储用户的登录状态和购物车等。</p><h2 id="操作Cookie"><a href="#操作Cookie" class="headerlink" title="操作Cookie"></a>操作Cookie</h2><h3 id="添加Cookie"><a href="#添加Cookie" class="headerlink" title="添加Cookie"></a>添加Cookie</h3><p>添加Cookie可以使用 <code>setcookie</code> 函数，下面存储一个名为 <strong>username</strong> 的Cookie：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  添加一个名为username的Cookie</span></span><br><span class="line">setcookie(<span class="string">'username'</span>, <span class="string">'123456'</span>, time() + <span class="number">3600</span>);</span><br></pre></td></tr></table></figure><p>上面存储了一个名为username的Cookie，其中的 <code>username</code> 就是Cookie的名称，<code>123456</code> 就是要存储的Cookie值，<code>time() + 3600</code> 就是Cookie的过期时间，<code>time()</code> 是获取当前的Unix时间戳，后面的 <code>+ 3600</code> 就是在当前时间戳上 + 3600秒，也就是一个小时后过期。下面是 <code>setcookie</code> 函数的详细参数说明：</p><table><thead><tr><th>参数</th><th>类型</th><th>说明</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>Cookie名称。</td></tr><tr><td>value</td><td>string</td><td>Cookie值。</td></tr><tr><td>expire</td><td>int</td><td>Cookie的过期时间，使用UNIX时间戳。</td></tr><tr><td>path</td><td>string</td><td>Cookie 有效的服务器路径。 设置成 ‘/‘ 时，Cookie 对整个域名 domain 有效。 如果设置成 ‘/foo/‘， Cookie 仅仅对 domain 中 /foo/ 目录及其子目录有效（比如 /foo/bar/）。 默认值是设置 Cookie 时的当前目录。</td></tr><tr><td>domain</td><td>string</td><td>域名，如果设置为主域名 主域名和二级域名都有效，如果设置为二级域名只有设置的域名和旗下的域名有效。</td></tr><tr><td>secure</td><td>bool</td><td>只有HTTPS连接才发送Cookie，默认为 false。</td></tr><tr><td>httponly</td><td>bool</td><td>Cookie只能通过HTTP协议访问，也就是无法通过Javascript访问，默认为false。</td></tr></tbody></table><h3 id="访问Cookie"><a href="#访问Cookie" class="headerlink" title="访问Cookie"></a>访问Cookie</h3><p>要获取Cookie可以访问 <code>$_COOKIE</code> 全局数组，下面输出保存的username：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  输出username的Cookie</span></span><br><span class="line"><span class="keyword">echo</span> $_COOKIE[<span class="string">'username'</span>];</span><br></pre></td></tr></table></figure><h3 id="修改Cookie"><a href="#修改Cookie" class="headerlink" title="修改Cookie"></a>修改Cookie</h3><p>修改Cookie只需要重新添加一个重名的Cookie覆盖之前的Cookie即可，例如我存储了一个username=123456的Cookie，我想把Cookie值改为abc：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  把username的Cookie值改为abc</span></span><br><span class="line">setcookie(<span class="string">'username'</span>, <span class="string">'abc'</span>, time() * <span class="number">3600</span>);</span><br></pre></td></tr></table></figure><h3 id="删除Cookie"><a href="#删除Cookie" class="headerlink" title="删除Cookie"></a>删除Cookie</h3><p>删除Cookie也很简单，重新添加一个同名的Cookie，把过期时间设置为比当前更早的时间，下面删除username的Cookie：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  把username的Cookie值改为abc</span></span><br><span class="line">setcookie(<span class="string">'username'</span>, <span class="string">''</span>, time() - <span class="number">1</span>);</span><br></pre></td></tr></table></figure><p>这里把过期时间设置为了当前时间 - 1秒。</p><h2 id="操作Session"><a href="#操作Session" class="headerlink" title="操作Session"></a>操作Session</h2><h3 id="添加Session"><a href="#添加Session" class="headerlink" title="添加Session"></a>添加Session</h3><p>添加Session可以直接给 <code>$_SESSION</code> 全局变量添加内容，不过在使用Session前还需要先启动Session，启动Session的函数是 <code>session_start()</code> ，下面添加一个名为 <strong>username</strong> 的Session：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  启动session</span></span><br><span class="line">session_start();</span><br><span class="line"><span class="comment">//  存储username</span></span><br><span class="line">$_SESSION[<span class="string">'username'</span>] = <span class="string">'123'</span>;</span><br></pre></td></tr></table></figure><p>在操作 <code>$_SESSION</code> 之前都需要启动Session。</p><h3 id="访问Session"><a href="#访问Session" class="headerlink" title="访问Session"></a>访问Session</h3><p>访问Session也是直接访问 <code>$_SESSION</code> ，如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  启动session</span></span><br><span class="line">session_start();</span><br><span class="line"><span class="comment">//  输出username</span></span><br><span class="line"><span class="keyword">echo</span> $_SESSION[<span class="string">'username'</span>];</span><br></pre></td></tr></table></figure><h3 id="修改和删除Session"><a href="#修改和删除Session" class="headerlink" title="修改和删除Session"></a>修改和删除Session</h3><p>修改也是一样的修改 <code>$_SESSION</code> ，因为比较简单，所以就不掩饰了。</p><p>删除也只需要删除 <code>$_SESSION</code> 即可，如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  启动session</span></span><br><span class="line">session_start();</span><br><span class="line"><span class="comment">//  删除username</span></span><br><span class="line"><span class="keyword">unset</span>($_SESSION[<span class="string">'username'</span>]);</span><br></pre></td></tr></table></figure><p>如果要释放所有Session变量可以使用 <code>session_unset()</code> 。</p><h3 id="其他Session相关"><a href="#其他Session相关" class="headerlink" title="其他Session相关"></a>其他Session相关</h3><p>注意！如果一个页面或关联的几个页面出现多次 <code>$_SESSION</code> 也只需要启动一次Session，如果要判断session是否启动可以使用 <code>isset()</code> 函数来判断 <code>$_SESSION</code> 是否存在，如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  判断Session是否启动</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="keyword">isset</span>($_SESSION)) &#123;</span><br><span class="line">    <span class="comment">//  如果未启动就启动session</span></span><br><span class="line">    session_start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>或者也可以使用 <code>session_status()</code> 函数来判断Session是否启动，启动会返回 <strong>2</strong> ，未启动会返回 <strong>1</strong> ，如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  判断Session状态</span></span><br><span class="line"><span class="keyword">if</span> (session_status() == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">//  启动Session</span></span><br><span class="line">    session_start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>以上就是PHP比较简单的操作Cookie和Session，更复杂的会话管理以后再写。</p><p><a href="https://www.changbin.me" target="_blank" rel="noopener">我的博客：www.changbin.me</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PHP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux源码编译安装</title>
       <link href="/2019/03/20/Linux%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
       <url>/2019/03/20/Linux%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/</url>
@@ -45,9 +70,9 @@
       
         <tags>
             
-            <tag> HTML5 </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> HTML5 </tag>
             
         </tags>
       
@@ -72,11 +97,11 @@
       
         <tags>
             
-            <tag> HTML5 </tag>
-            
             <tag> AJAX </tag>
             
             <tag> JavaScript </tag>
+            
+            <tag> HTML5 </tag>
             
             <tag> 上传文件 </tag>
             
@@ -679,9 +704,9 @@
             
             <tag> Mysql </tag>
             
-            <tag> 数据库 </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
       
