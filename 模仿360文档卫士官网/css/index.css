@@ -1,0 +1,280 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 990;
+}
+header nav {
+  width: 1000px;
+  margin: 0 auto;
+}
+header nav .logo {
+  width: 110px;
+  height: 22px;
+  display: block;
+  margin: 13px 0 0 25px;
+  float: left;
+}
+header nav ul {
+  margin-left: 80px;
+  float: left;
+}
+header nav ul li {
+  float: left;
+  margin: 0 20px;
+  line-height: 60px;
+}
+header nav ul li a {
+  color: #aed1fa;
+  font-size: 14px;
+}
+header nav ul li a:hover {
+  color: #e2effc;
+}
+
+.area1 {
+  width: 100%;
+  height: 739px;
+  background: url(../img/area1背景.jpg);
+  top: 0;
+  z-index: 1;
+  padding-top: 158px;
+}
+.area1 .txt1 {
+  width: 667px;
+  height: 127px;
+  background: url(../img/text1.png);
+  margin: 0 auto;
+}
+.area1 .download-btn {
+  width: 270px;
+  height: 68px;
+  margin: 60px auto 0 auto;
+  display: block;
+  background: url(../img/下载按钮背景.png);
+}
+.area1 .download-btn:hover {
+  background: url(../img/下载按钮背景激活.png);
+}
+.area1 .info {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 19.5px;
+  padding-top: 8px;
+}
+
+.area2 {
+  width: 100%;
+  height: 800px;
+  background-image: url(../img/area2背景.jpg);
+  background-color: #eff8ff;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.area2 .box {
+  width: 1018px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.area2 .box .img {
+  width: 618px;
+  height: 442px;
+  background: url(../img/area2配图.png);
+  position: absolute;
+  top: 50%;
+  margin-top: -25%;
+}
+.area2 .box .text {
+  width: 380px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.area2 .box .text h2 {
+  width: 331px;
+  height: 39px;
+  background: url(../img/area2标题.png);
+  margin-bottom: 25px;
+}
+.area2 .box .text .line {
+  width: 380px;
+  border-bottom: 1px solid #8dc3ff;
+}
+.area2 .box .text .line div {
+  width: 31px;
+  height: 2px;
+  background: #8dc3ff;
+}
+.area2 .box .text ul {
+  width: 380px;
+  padding-top: 55px;
+}
+.area2 .box .text ul li {
+  height: 30px;
+  margin: 0 0 35px 2px;
+  font-size: 20px;
+}
+.area2 .box .text ul li .icon {
+  width: 25px;
+  height: 25px;
+  background: url(../img/icon.png);
+  display: block;
+  float: left;
+  margin: 2.5px 12px 0 0;
+}
+.area2 .box .text ul li .icon-1 {
+  background-position: 0 1px;
+}
+.area2 .box .text ul li .icon-2 {
+  background-position: 0 -43px;
+}
+.area2 .box .text ul li .icon-3 {
+  background-position: 0 -87px;
+}
+.area2 .box .text ul li span {
+  display: block;
+  float: left;
+  line-height: 30px;
+  color: #333333;
+}
+
+.area3 {
+  width: 100%;
+  height: 800px;
+}
+.area3 .box {
+  width: 1018px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.area3 .text {
+  width: 410px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.area3 .text h2 {
+  width: 283px;
+  height: 98px;
+  background: url(../img/area3标题.png);
+  margin-bottom: 25px;
+}
+.area3 .text .line {
+  width: 380px;
+  border-bottom: 1px solid #8dc3ff;
+  width: 283px;
+}
+.area3 .text .line div {
+  width: 31px;
+  height: 2px;
+  background: #8dc3ff;
+}
+.area3 .text p {
+  padding-top: 60px;
+  font-size: 20px;
+}
+.area3 .img {
+  width: 633px;
+  height: 412px;
+  background: url(../img/area3配图.png);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -25%;
+}
+
+.area4 {
+  width: 100%;
+  height: 800px;
+  height: 832px;
+  background: url(../img/area4背景.jpg);
+}
+.area4 .box {
+  width: 1018px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.area4 .box {
+  height: 100%;
+}
+.area4 .box .img {
+  width: 496px;
+  height: 496px;
+  background: url(../img/area4配图.png);
+  position: absolute;
+  top: 98px;
+}
+.area4 .box .text {
+  width: 370px;
+  position: absolute;
+  right: 0;
+  top: 213px;
+}
+.area4 .box .text h2 {
+  width: 242px;
+  height: 98px;
+  background: url(../img/area4标题.png);
+  margin-bottom: 25px;
+}
+.area4 .box .text .line {
+  width: 380px;
+  border-bottom: 1px solid #8dc3ff;
+  border-bottom-color: #c8e1fc;
+}
+.area4 .box .text .line div {
+  width: 31px;
+  height: 2px;
+  background: #8dc3ff;
+}
+.area4 .box .text .line div {
+  background: #c8e1fc;
+}
+.area4 .box .text p {
+  color: #ffffff;
+  padding-top: 60px;
+}
+.area4 .box .download-btn {
+  width: 270px;
+  height: 68px;
+  display: block;
+  background: url(../img/下载按钮背景.png);
+  position: absolute;
+  top: 680px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+footer {
+  width: 100%;
+  height: 156px;
+  background: #388FF4;
+  text-align: center;
+}
+footer p {
+  padding-top: 50px;
+  text-align: center;
+  color: #CFEDFF;
+  font-size: 12px;
+  line-height: 18px;
+}
+footer .box {
+  text-align: center;
+  padding-top: 6px;
+}
+footer a {
+  background: url(../img/国徽icon.png);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  color: #CFEDFF;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.css.map */
