@@ -1,0 +1,39 @@
+#app .img-box {
+  width: 520px;
+  height: 280px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 1px solid #0088FF;
+  position: relative;
+}
+#app .img-box .box {
+  width: 2600px;
+  margin: 0;
+  transform: translate(0, 0);
+  transition: 0.5s;
+}
+#app .img-box .box li {
+  width: 520px;
+  float: left;
+}
+#app .img-box .img-btn {
+  width: 150px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  display: flex;
+}
+#app .img-box .img-btn button {
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  border-radius: 50%;
+  border: none;
+}
+#app .img-box .img-btn button:hover {
+  background: #FF8800;
+}
+
+/*# sourceMappingURL=style.css.map */
