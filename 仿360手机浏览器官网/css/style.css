@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+#app {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*顶部*/
+header {
+    padding: 22.5px 0;
+}
+header img {
+    width: 183px;
+    float: left;
+
+}
+header .top-link {
+    float: right;
+}
+header .top-link a {
+    line-height: 35px;
+    display: inline-block;
+}
+header .top-link a:nth-of-type(1) {
+    margin-right: 25px;
+}
+header .top-link .icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 6.5px;
+}
+header .top-link .txt {
+    margin-left: 9px;
+    font-size: 14px;
+    color: #333333;
+}
+
+#content .content-left {
+    max-width: 750px;
+    max-height: 820px;
+}
+
+#content .content-right {
+    float: right;
+    width: 271px;
+    max-height: 556px;
+    margin-right: 226px;
+    margin-top: 100px;
+}
+/*软件图标区域*/
+#content .content-right .software-icon {
+    text-align: center;
+}
+#content .content-right .software-icon img {
+    max-width: 181px;
+    margin: 0 auto;
+}
+#content .content-right .software-icon p:nth-of-type(1) {
+    font-size: 24px;
+    text-align: center;
+}
+#content .content-right .software-icon p:nth-of-type(2) {
+    font-size: 16px;
+    text-align: center;
+}
+/*二维码区域*/
+#content .content-right .qr-code {
+    margin-top: 27px;
+    text-align: center;
+}
+#content .content-right .qr-code img {
+    max-width: 187px;
+}
+#content .content-right .qr-code p {
+    font-size: 14px;
+    margin: 16px 0;
+}
+/*下载区域*/
+#content .content-right .download-link {
+    text-align: center;
+}
+#content .content-right .download-link a {
+    width: 100%;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #979797;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+#content .content-right .download-link a:nth-of-type(2) {
+    margin-top: 12px;
+}
+#content .content-right .download-link a img {
+    width: 22px;
+    height: 22px;
+    margin: auto 2px;
+
+}
+#content .content-right .download-link a span {
+    margin: auto 0;
+}
+
+/*底部信息*/
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #666666;
+    font-size: 12px;
+}
