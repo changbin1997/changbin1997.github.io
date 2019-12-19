@@ -1,0 +1,292 @@
+/*样式重置*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/*一些通用的默认样式*/
+.link-hover:hover {
+    color: #ffffff !important;
+}
+.link-active {
+    color: #ffffff !important;
+}
+
+/*清除浮动*/
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+}
+
+/*顶部导航区域*/
+header {
+    width: 100%;
+    height: 60px;
+    background: #000000;
+}
+header nav {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*Logo*/
+header nav .logo-link {
+    width: 184px;
+    height: 24px;
+    display: block;
+    float: left;
+    margin-top: 18px;
+}
+header nav .logo-link img {
+    width: 100%;
+}
+/*导航列表*/
+header nav .nav-list {
+    float: left;
+    display: flex;
+    height: 60px;
+    margin-left: 90px;
+}
+header nav .nav-list li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 50px;
+}
+header nav .nav-list li a {
+    color: #B3B3B3;
+    font-size: 15px;
+}
+/*注册和登录区域*/
+header nav .login-box {
+    float: right;
+    height: 60px;
+    display: flex;
+}
+header nav .login-box * {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #B3B3B3;
+    font-size: 14px;
+}
+header nav .login-box span {
+    padding: 0 12px;
+}
+
+/*巨幕区域*/
+.jumbotron {
+    height: 500px;
+    background: #160638;
+}
+.jumbotron .box {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*巨幕的主要内容*/
+.jumbotron .jumbotron-content {
+    height: 440px;
+    display: flex;
+    align-items: center;
+}
+.jumbotron .jumbotron-content .intro, .jumbotron .jumbotron-content .jumbotron-img {
+    width: 50%;
+}
+.jumbotron .jumbotron-content .intro h2 {
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 25px 0;
+    line-height: 72px;
+}
+.jumbotron .jumbotron-content .intro p {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0 0 35px 0;
+    line-height: 30px;
+}
+.jumbotron .jumbotron-content .intro a {
+    width: 160px;
+    height: 50px;
+    background: #FF6D5F;
+    color: #ffffff;
+    border-radius: 25px;
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
+}
+.jumbotron .jumbotron-content .intro a:hover {
+    background: #FF5634;
+}
+.jumbotron .jumbotron-content .jumbotron-img {
+    height: 345px;
+    background: url(../img/jumbotron-bg.png);
+}
+/*巨幕下方的公告*/
+.jumbotron .announcement {
+    height: 60px;
+    background: #140532;
+}
+.jumbotron .announcement ul {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.jumbotron .announcement li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/*主要内容区域*/
+.content section {
+    padding-top: 60px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.content section h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+/*网站支持区域*/
+.content .site-support ul {
+    display: flex;
+    justify-content: space-around;
+}
+.content .site-support li {
+    padding: 50px 40px;
+}
+.content .site-support li:hover {
+    background: #F9FAFE;
+}
+.content .site-support li .icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px auto;
+    background-image: url(../img/sprite-icons.png);
+}
+.content .site-support li h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-align: center;
+    color: #333333;
+}
+.content .site-support p {
+    color: #888888;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    line-height: 24px;
+}
+.content .site-support a {
+    width: 114px;
+    height: 34px;
+    margin: 40px auto 0 auto;
+    display: block;
+    border-radius: 17px;
+    border: 1px solid #3D3D3D;
+    font-size: 14px;
+    text-align: center;
+    line-height: 34px;
+    color: #333333;
+}
+.content .site-support a:hover {
+    background: #FE6B5B;
+    color: #ffffff;
+}
+.content .site-support li:nth-of-type(2) .icon {
+    background-position: -76px 0;
+}
+.content .site-support li:nth-of-type(3) .icon {
+    background-position: 0 -76px;
+}
+.content .site-support li:nth-of-type(4) .icon {
+    background-position: -76px -76px;
+}
+/*站长学院区域*/
+.content .college {
+    padding-bottom: 60px;
+}
+.content .college .item-list {
+    display: flex;
+    justify-content: space-around;
+}
+.content .college .topic {
+    margin-bottom: 20px;
+    display: block;
+    transition: 0.5s;
+}
+.content .college .topic:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content .college .topic .pic-box {
+    height: 200px;
+    overflow: hidden;
+}
+.content .college .topic .pic-box img {
+    width: 100%;
+    transition: 1s;
+}
+.content .college .topic .pic-box:hover img {
+    width: 110%;
+    transform: translate(-5%, -5%);
+}
+.content .college .topic h4 {
+    height: 52px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+.content .college .links-list li {
+    margin: 0 0 18px 0;
+}
+.content .college .links-list li a {
+    color: #333333;
+    font-size: 14px;
+}
+.content .college .links-list li a:hover {
+    color: #FF5736;
+}
+
+/*底部内容区域*/
+footer {
+    background: #000000;
+    padding: 55px 0;
+}
+footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+footer * {
+    color: #B3B3B3;
+    font-size: 14px;
+}
+footer .footer-nav span {
+    margin: 0 20px;
+}
+footer div {
+    text-align: center;
+}
+footer p {
+    text-align: center;
+    margin: 12px 0 0 0;
+}
