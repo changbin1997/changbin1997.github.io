@@ -1,0 +1,231 @@
+/*样式重置*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/*顶部导航栏*/
+header {
+    width: 960px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*导航栏Logo*/
+header.logo img {
+    width: 192px;
+    height: 44px;
+}
+/*导航栏导航区域*/
+header nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+header nav li {
+    padding: 0 33px 0 8px;
+    margin: 0;
+}
+header nav li a {
+    color: #666666;
+    font-size: 14px;
+}
+header nav li:nth-of-type(5) a {
+    color: #0284E5;
+}
+header nav .line {
+    background: #2294E6;
+    height: 2px;
+    width: 48px;
+    position: absolute;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+/*下载区域*/
+.mod-banner {
+    height: 400px;
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+.mod-banner > .box {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+.mod-banner .download {
+    width: 240px;
+    position: absolute;
+    right: 214px;
+    top: 198px;
+    opacity: 0;
+    transition: 2s;
+}
+.mod-banner .download a {
+    width: 100%;
+    height: 62px;
+    display: block;
+    background-image: url(../img/download.png);
+}
+.mod-banner .download a:hover {
+    background-image: url(../img/downloadhover.png);
+}
+.mod-banner .download .sd {
+    margin-top: 15px;
+}
+.mod-banner .download .sd p {
+    color: #ffffff;
+    font-size: 12px;
+    margin: 0;
+    line-height: 19px;
+}
+
+/*内容导航区域*/
+.content-nav-wrapper {
+    height: 70px;
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+}
+.content-nav-wrapper .box {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.content-nav-wrapper .box a {
+    width: 199px;
+    height: 100%;
+    line-height: 70px;
+    padding: 0 0 0 88px;
+    display: block;
+    font-size: 18px;
+    color: #0284E5;
+    background-repeat: no-repeat;
+    background-position: 45px 20px;
+}
+.content-nav-wrapper .box a:nth-of-type(1) {
+    background-image: url(../img/nav1.png);
+}
+.content-nav-wrapper .box a:nth-of-type(1):hover {
+    background-image: url(../img/navhover1.png);
+}
+.content-nav-wrapper .box a:nth-of-type(2) {
+    background-image: url(../img/nav2.png);
+}
+.content-nav-wrapper .box a:nth-of-type(2):hover {
+    background-image: url(../img/navhover2.png);
+}
+.content-nav-wrapper .box a:nth-of-type(3) {
+    background-image: url(../img/nav3.png);
+}
+.content-nav-wrapper .box a:nth-of-type(3):hover {
+    background-image: url(../img/navhover3.png);
+}
+.content-nav-wrapper .box a:hover {
+    background-color: #39A7FF;
+    color: #ffffff;
+}
+
+/*内容列表*/
+.jijiupan-con {
+    width: 960px;
+    margin: 0 auto;
+}
+.jijiupan-con li {
+    height: 400px;
+    border-bottom: 1px solid #DCDCDC;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.jijiupan-con .con-item-text {
+    width: 375px;
+}
+.jijiupan-con .con-item-text h3 {
+    color: #0284E5;
+    font-size: 30px;
+    margin: 0 0 17px 0;
+    font-weight: 400;
+}
+.jijiupan-con .con-item-text p {
+    color: #999999;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.mod-advantage {
+    width: 960px;
+    margin: 78px auto 55px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mod-advantage li {
+    padding: 0 0 0 55px;
+    background-repeat: no-repeat;
+}
+.mod-advantage li h5 {
+    color: #0284E5;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 27px;
+}
+.mod-advantage li p {
+    color: #0284E5;
+    font-size: 12px;
+    margin: 0;
+    line-height: 18px;
+}
+.mod-advantage li:nth-of-type(1) {
+    background-image: url(../img/advantage1.png);
+}
+.mod-advantage li:nth-of-type(2) {
+    background-image: url(../img/advantage2.png);
+}
+.mod-advantage li:nth-of-type(3) {
+    background-image: url(../img/advantage3.png);
+}
+.mod-advantage li:last-child {
+    font-size: 14px;
+    color: #999999;
+}
+
+.thks {
+    width: 960px;
+    height: 39px;
+    margin: 0 auto 60px auto;
+    background: #39A7FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thks span {
+    color: #ffffff;
+    font-size: 12px;
+}
+.thks a {
+    color: #666666;
+    font-size: 12px;
+    margin: 0 2px;
+}
+
+/*底部内容*/
+footer {
+    padding: 21px 0 22px 0;
+    border-top: 1px solid #E0E0E0;
+    background: #EEEEEE;
+}
+footer div {
+    text-align: center;
+}
+footer div a {
+    color: #666666;
+    font-size: 12px;
+}
