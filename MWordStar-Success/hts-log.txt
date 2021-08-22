@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 21 Aug 2021 17:14:46 at http://localhost/php/typecho-demo/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN1%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "zh, en, *" http://localhost/php/typecho-demo/ -O1 "C:\My Websites\MWordStar-Success" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:15:19	Error: 	"Not Found" (404) at link localhost/php/typecho-demo/favicon.ico (from localhost/php/typecho-demo/)
+17:17:02	Warning: 	Retry after error -4 (Connect Error) at link https://cn.vuejs.org/images/icons/apple-icon-57x57.png (from localhost/php/typecho-demo/index.php/9.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 50 seconds : 179 links scanned, 176 files written (4433443 bytes overall) [4489795 bytes received at 26410 bytes/sec], 4.6 requests per connection
+(1 errors, 1 warnings, 0 messages)
