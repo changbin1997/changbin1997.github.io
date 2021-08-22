@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://purl.org/rss/1.0/"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel rdf:about="http://localhost/php/typecho-demo/index.php/feed/rss/2021/08/">
+<title>MWordStar - 2021年8月</title>
+<link>http://localhost/php/typecho-demo/index.php/2021/08/</link>
+<description>MWordStar演示站</description>
+<items>
+<rdf:Seq>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/12/"/>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/11/"/>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/13/"/>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/10/"/>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/7/"/>
+<rdf:li resource="http://localhost/php/typecho-demo/index.php/archives/5/"/>
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/12/">
+<title>MWordStar 响应式双栏 Typecho 博客主题</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/12/</link>
+<dc:date>2021-08-21T08:25:00+00:00</dc:date>
+<description>MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 我的博客 之前使用的主题。主题免费开源，可以在 Github 上免费下载。因为我现在暂时没有用这个主题，所以没有主题演示站，样式之类的可以参考下面的截图。主题下载地址：https://github.com/changbin1997/MWordStar/releases主题使用说明：https://mwordstar.misterma.com/下面是主题首页截图：主题元素包含圆角和直角两种风格，您可以根据喜好在主题外观设置中切换，下面是直角风格的首页截图：主题还包含了几套不同风格的配色，您可以根据喜好在主题外观设置中切换。文章页截图：特点和功能响应式设计无障碍适配（Accessibility）5 种不同风格的配色两种不同风格的元素代码高亮丰富的设置选项良好的 SEO 优化自带点赞功能文章可快速分享到社交网站评论区自带 Emoji 表情面板自动根据文章中的标题生成章节目录长期维护详细的 使用说明（必看）主题介绍外观设计因为我个人比较喜欢两栏布局，所以这个主题也使用了两栏布局的设计。主题依赖主题主要用到了一下几个库和框架：Bootstrap  外观和布局jQuery  Bootstrap 依赖jquery-qrcode 一个生成二维码的 jQuery 插件highlight.js  代码高亮IcoMoon  字体图标其中 IcoMoon 的字体图标是可定制的，所以只包含了主题中出现的图标，字体图标的文件体积也很小。主题的静态文件没有使用任何 CDN 地址，所有文件都放在主题的 assets 目录中。主题的生成目录、点赞、快速分享 之类的功能都是自己手动编写的，所以用到的 JS 库也比较少。使用 Webpack 打包的版本前台只需要加载一个 CSS 和 一个 JS 文件，所有 JS 库都打包到了 JS 中，所有 CSS 和字体图标都打包到了 CSS 中。因为用到的库比较少，而且字体图标和部分组件都是按需引入的，所以打包后的 CSS 和 JS 也比较小。主题安装把主题上传到 Typecho 的 usr/themes/ 目录，然后解压，你也可以先解压在上传。解压后需要保证 themes 目录下 有一个 MWordStar 目录。登录 Typecho 的后台管理，进入 控制台 -&gt; 外观，如果看到 MWordStar 就点击 启用。代码高亮代码高亮的样式使用的是 VS2015 的暗色主题，和 Visual Studio Code 的默认主题差不多。主题支持 30 多种语言的代码高亮。详细的说明可以查看 使用说明 。友情链接友情链接分为 全站友情链接、首页友情链接、内页友情链接。全站友情链接 会在每个页面的侧边栏显示，首页友情链接 会在首页的侧边栏显示，内页友情链接 只会在 友情链接 的页面显示。如需查看友情链接的设置说明可以访问：使用说明 。文章头图文章头图可以在 首页、文章页、侧边栏 显示，您可以根据需求在主题外观设置中设置。文章头图来源支持自动获取文章的第一张图片和手动输入图片 URL。无障碍（Accessibility）上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。目前国内的很多网站都只注重外观，忽略了残障人士的可访问性。但是想要做好网站的用户体验，无障碍 适配肯定是少不了的。主题针对屏幕阅读器做了大量优化，并 在 NVDA 和 VoiceOver 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读。主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。主题可完美支持键盘访问，颜色对比度也符合标准。小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。Emoji 表情主题评论区包含一个 Emoji 表情面板，您可以在后台启用或禁用。Emoji 表情面板包含 1466 个表情，这些表情都是按照分类动态加载的，您不用担心性能问题。Emoji 表情面板也进行了无障碍适配，可支持键盘访问和屏幕阅读器朗读。下面是 Emoji 表情面板的截图：兼容性因为本主题使用了 HTML5 和 CSS3，需要 IE10 及以上浏览器才能完美兼容。IE8 及以下浏览器显示可能会出现一些问题。插件适配因为本人很少使用插件，所以目前适配的插件比较少。下面是已适配的插件：Sticky 文章置顶插件其它主题 Github：https://github.com/changbin1997/MWordStar码云仓库地址：https://gitee.com/changbin1997/MWordStar主题使用 MIT License 开源。如果您在使用这个主题时遇到 Bug 或有任何问题和建议都可以在 博客评论区 留言，也可以在 Github 的 issues 反馈。</description>
+</item>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/11/">
+<title>Facile 一个简洁的 Typecho 博客主题</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/11/</link>
+<dc:date>2021-08-21T08:17:00+00:00</dc:date>
+<description>Facile 是一套简洁的 Typecho 博客主题，也是我的博客正在使用的主题。之前我用的主题是 MWordStar ，时间长了就想换一下外观，本来想再给 MWordStar 增加一套样式，但是外观变动比较大，而且 MWordStar 已经有几套样式了，所以重新开发一套主题。主题演示地址：https://www.misterma.com/ 主题下载地址：https://github.com/changbin1997/Facile/releases 下载时请选择 Facile-bundle.zip ，否则前端 JS 代码无法在 IE 系列浏览器运行。主题 Github 仓库：https://github.com/changbin1997/Facile 下面是主题首页截图：不包含文章头图的截图：Facile 相比 MWordStar 来说，外观要更简洁一些，功能也会少一些，MWordStar 有的功能以后也会陆续增加到 Facile 中，但是 Facile 的功能以后也不会有 MWordStar 多。Facile 目前还没有专门的使用说明文档，Facile 的功能设置和 MWordStar 是差不多的，可以直接参考 MWordStar 的使用说明文档 ，有问题也可以到 留言板 或 Facile 的介绍文章页 留言。特点和功能响应式设计无障碍适配（Accessibility）代码高亮自带点赞功能丰富的侧边栏组件丰富的设置选项安装在 Releases 下载的主题是一个 zip 格式的压缩包，把压缩包上传到 Typecho 目录下的 usr/themes/ 目录，然后解压，解压后应该可以看到一个 Facile 目录。登录 Typecho 后台，在顶部导航栏的 控制台 菜单选择 外观 ，如果存放位置没有错误的话就可以看到 Facile 主题了，点击 启用 。主题依赖主题主要用到了以下几个库：bootswatch 不同风格的 Bootstrap 主题jQuery DOM 操作和 Bootstrap 依赖qrious 生成二维码的 JS 库highlight.js 代码高亮ECharts 百度开源的图表库，用于 统计页 生成统计图后端没有用到任何库。ECharts 的库比较大，所以只引入了饼图和日历图，而且只会在统计页加载。Bootstrap 的 JS 使用 Webpack 打包过的发行版也只引入了用到的模块。主题的图标使用的是 IcoMoon 的字体图标，IcoMoon 的图标可以自定义，所以主题中只包含几个用到的图标。前端 JS 使用的是 ES6 语法，在 IE 系列的浏览器（包括 IE11）是无法运行的，如果没有二次开发需求的话，可以在 Releases 下载 Facile-bundle.zip 发行版，发行版使用了 Webpack + Babel 来打包和转换，可以在 IE 运行。代码高亮文章区和评论区都有代码高亮效果，目前支持 30 多种语言的代码高亮，代码高亮的配色使用的是 VS2015 的暗色主题，和 VSCode 的默认主题差不多。支持的语言和 MWordStar 是一样的，可以访问 MWordStar 代码高亮 查看支持的语言。统计页主题包含一个统计页模板，你可以在后台创建页面，页面的自定义模板选择 网站数据，标题可以随便写，创建完成后就可以在顶部导航栏访问了。统计页包含基本的数据统计、分类文章占比图、文章更新日历图、评论动态日历图、阅读量排名前 5 的文章、评论量排名前 5 的文章。基本数据统计如下：分类占比统计图如下：下面是评论动态日历图：文章动态日历图和评论动态的日历图是差不多的，屏幕尺寸不同显示的月份数量也不同。下面是文章评论排名表格：文章阅读量排名表格和评论量排名的表格也是差不多的。统计页面演示可以访问 https://www.misterma.com/data.html 。无障碍（Accessibility）上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。目前国内的很多网站和 App 都只注重外观，忽略了残障人士的 可访问性，甚至有的 App 在开启屏幕阅读器的情况下都无法正常使用。Facile 主题针对屏幕阅读器做了大量优化，并在 MVDA 和 VoiceOver 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读（除了日历图），主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。主题可完美支持键盘访问，颜色对比度也符合标准。小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。其他功能主题自带友情链接功能，友链可以分为 全站、首页、独立页 三种显示方式。友链需要在主题设置中填写 JSON 数据，格式和说明可以简单参考 MWordStar 友情链接 。文章头图目前支持手动输入和自动获取文章中的第一张图片作为文章头图，你可以在撰写文章页的下方设置。插件适配因为我需要用到 Sticky 文章置顶插件，所以这个主题也直接适配了 Sticky 插件，Sticky 插件安装完成后无需修改主题。</description>
+</item>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/13/">
+<title>PHP 使用 PHPMailer 发送邮件</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/13/</link>
+<dc:date>2021-08-20T08:13:00+00:00</dc:date>
+<description>最近准备写一个个人博客，博客的用户注册和找回密码都需要邮件验证。PHP 虽然提供了 mail 函数来发送邮件，但是 mail 函数的功能限制较多，只能发送普通文本，如果要发送 HTML 或附件就比较麻烦。在逛 Github 的时候看到一个功能比较强大的邮件发送类 PHPMailer ，很多著名的 PHP 开源项目 比如  WordPress、Drupal、SugarCRM 也都在用 PHPMailer 发送邮件。下面就简单写一下 PHPMailer 发送邮件的过程。PHPMailer 的 Github 地址是 https://github.com/PHPMailer/PHPMailer 。可以使用 Composer 安装，也可以手动下载项目引入，我这里是手动下载项目引入。发送邮件发送邮件相关的代码都在 src 目录中，language 目录中包含了不同语言的报错信息。下面使用 SMTP 发送邮件：&lt;?php
+
+use PHPMailer\PHPMailer\PHPMailer;  //  设置命名空间
+use PHPMailer\PHPMailer\SMTP;  //  设置命名空间
+use PHPMailer\PHPMailer\Exception;  //  设置命名空间
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+
+$mail = new PHPMailer(true);  //  创建邮件发送对象
+
+try {
+    //  服务器相关设置
+    $mail-&gt;SMTPDebug = SMTP::DEBUG_SERVER;  //  输出服务器日志
+    $mail-&gt;isSMTP();  //  使用 SMTP 来发送邮件
+    $mail-&gt;SMTPAuth = true;  //  启用 SMTP 身份验证
+    $mail-&gt;Host = 'smtp.qq.com';  //  SMTP 服务器地址
+    $mail-&gt;Username = 'email@misterma.com';  //  SMTP 用户名
+    $mail-&gt;Password = 'wvikg5hyswveche';  //  密码
+    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  //  使用 TLS 加密
+    $mail-&gt;Port = '25';  //  SMTP 端口
+
+    //  发件人和收件人
+    $mail-&gt;setFrom('email@misterma.com', 'Mr. Ma');  //  发件人
+    $mail-&gt;addAddress('usmmiuy@gmail.com', 'Joe User');  //  添加收件人
+
+    // 邮件标题和内容
+    $mail-&gt;isHTML(true);  //  邮件格式设置为 HTML
+    $mail-&gt;Subject = '这是邮件标题';  //  邮件标题
+    $mail-&gt;Body = '这是 HTML 内容 &lt;b&gt;加粗的文字&lt;/b&gt;';  //  HTML 内容
+    $mail-&gt;AltBody = '文本内容';  //  纯文本
+    $mail-&gt;addAttachment('tutorial.txt');  //  添加附件
+
+    $mail-&gt;send();  //  发送
+    echo '发送完成';
+} catch (Exception $e) {
+    //  输出错误信息
+    echo '错误:' . $mail-&gt;ErrorInfo;
+}我上面使用的是 QQ邮箱的 SMTP 服务。一些属性和方法说明下面是服务器相关的一些属性说明：$mail-&gt;Host：设置 SMTP 服务器地址，不同邮箱服务的 SMTP 地址也会不一样，下面会有常用的邮箱服务的 SMTP 地址。$mail-&gt;Username：SMPT 用户名，一般也就是发送邮件的邮箱地址。$mail-&gt;Password：SMTP 的用户密码，有的邮箱服务可以直接使用邮箱密码，有的邮箱在开启 SMTP 后会生成一个独立的授权码。$mail-&gt;Port：SMTP 服务器端口，不同邮箱服务的端口也会不一样，下面会写常用的邮箱的 SMTP 端口。下面是发件人和收件人相关的一些方法说明：$mail-&gt;setFrom()：发件人，第一个参数是发件人邮箱地址，第二个参数是发件人姓名。$mail-&gt;addAddress()：添加收件人，第一个参数是收件人的邮箱地址，第二个参数是收件人的姓名，收件人可添加多个。下面是邮件标题和邮件内容相关的一些方法说明：$mail-&gt;isHTML()：使用 HTML 格式。$mail-&gt;Subject：邮件的标题或主题。$mail-&gt;Body：邮件内容。$mail-&gt;AltBody：邮件内容（纯文本）。$mail-&gt;addAttachment：添加附件，参数就是文件名，附件可以添加多个。常用邮件服务的 SMTP 地址和端口下面是一些常用的邮箱服务的 SMTP 地址和端口：服务商SMTP 地址SMTP 端口QQ邮箱smtp.qq.com25网易126邮箱smtp.126.com25网易163邮箱smtp.163.com25新浪邮箱smtp.sina.cn25Gmailsmtp.gmail.com465雅虎邮箱smtp.mail.yahoo.com465Foxmail邮箱 可以直接使用 QQ邮箱 的 SMTP 地址和端口。以上就是 PHPMailer 发送邮件的简单演示，PHPMailer 还有很多选项可以设置。如果要查看更多的设置选项可以访问官方的 API 文档 。</description>
+</item>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/10/">
+<title>Linux 搭建 Minecraft 基岩版服务器</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/10/</link>
+<dc:date>2021-08-19T08:09:00+00:00</dc:date>
+<description>Minecraft Bedrock Edition 也就是我的世界基岩版，这是 Minecraft 的另一个版本。Minecraft 基岩版可以运行在 Win10、Android、iOS、XBox。基岩版不能使用 Java 版的服务器，Java 版也不能使用基岩版的服务器，不过 Win10、Android、iOS、XBox 的基岩版都可以使用同一个服务器，也就是说基岩版的服务器可以让 Win10 和手机一起联机。目前基岩版的服务器还是测试版，因为不是用 Java 编写的，所以目前只能在 Windows 和 Ubuntu 上搭建。我使用的是阿里云的轻量应用服务器，配置是 1 核 2 G，使用的系统是 Ubuntu 18.04。下载可以进入 https://www.minecraft.net/en-us/download/server/bedrock/ 下载服务器，目前只有 Windows 和 Ubuntu 两个版本。下载之前需要选中 I agree to the Minecraft End User License Agreement and Privacy Policy。你可以下载到本地电脑，然后通过 SFTP 上传到服务器，也可以右击 DOWNLOAD 复制链接地址，直接通过 wget 下载到服务器。一般情况下官网默认就是最新版本的服务端，我下载的服务端版本是 1.14.32.1，客户端版本是 14.30，在游戏主界面的右下方可以查看版本。如果客户端版本比服务端版本低的话可以更新到最新版本，Win 10 可以在应用商店更新。下载的压缩包中还会包含一个 bedrock_server_how_to.html，这就是服务器的帮助文档，建议可以下载一份服务端到本地电脑，方便查看帮助文档。运行下载的服务端可能是一个 zip 格式的压缩包，先解压：unzip bedrock-server-1.14.32.1.zip上面的命令是把文件解压到当前目录，其中的 bedrock-server-1.14.32.1.zip 就是压缩包的名称。如果解压的时候出现：Command 'unzip' not found可以输入：apt install -y zip安装 zip。基岩版的服务端还需要依赖 libcurl4-openssl-dev，安装 libcurl4-openssl-dev：apt install -y libcurl4-openssl-dev安装完成后输入：LD_LIBRARY_PATH=. ./bedrock_server启动服务器。启动后会输出状态信息，如下：NO LOG FILE! - setting up server logging...
+[2020-04-02 20:50:22 INFO] Starting Server
+[2020-04-02 20:50:22 INFO] Version 1.14.32.1
+[2020-04-02 20:50:22 INFO] Session ID 08940d5f-f2da-4da8-9130-c7e59f580559
+[2020-04-02 20:50:22 INFO] Level Name: Bedrock level
+[2020-04-02 20:50:22 INFO] Game mode: 1 Creative
+[2020-04-02 20:50:22 INFO] Difficulty: 0 PEACEFUL
+[2020-04-02 20:50:22 INFO] opening worlds/Bedrock level/db
+[2020-04-02 20:50:25 INFO] IPv4 supported, port: 4999
+[2020-04-02 20:50:25 INFO] IPv6 not supported
+[2020-04-02 20:50:25 INFO] IPv4 supported, port: 19132
+[2020-04-02 20:50:25 INFO] IPv6 not supported
+[2020-04-02 20:50:27 INFO] Server started.服务器默认的端口是 19132，协议是 UDP ，不是 TCP，开放端口的时候需要注意一下。客户端连接打开 Minecraft 基岩版，选择 游戏，选择 服务器，点击 添加，按照提示输入服务器 IP 和端口号。如下：如果没有修改过配置文件的话，默认的端口号是 19132。进入服务器之前需要登录 Xbox Live，只有账户中有 Minecraft 才能联机。配置服务端解压后会包含一个名为 server.properties 的配置文件，服务器相关的配置就在这个配置文件中。可以用 VI 之类的编辑器打开配置文件编辑，关于 VI 编辑器的使用可以看 Linux VI 编辑器简单使用教程 。配置文件中的 # 开头的行是注释，可以不用管，主要就是修改 = 后面的内容。下面是一些配置项说明：gamemode：默认的游戏模式，survival 生存，creative 创造，adventure 冒险。difficulty：默认难度，peaceful 和平，easy 简单，normal 普通，hard 困难。max-players：玩家数量限制，默认为 10。server-port：服务器端口，默认为 19132。server-portv6：IPv6 端口，默认为 19133。online-mode：正版验证，如果你的服务器可以正常连接到 Xbox Live 的话，可以设置为 true，否则可以设置为 false，即便不开启正版验证，客户端也需要登录 Xbox Live 才能联机。white-list：白名单，只有在白名单中的玩家才能进入服务器，默认为 false。allow-cheats：允许作弊，默认为 false。player-idle-timeout：自动踢出挂机玩家，默认为 30 分钟。default-player-permission-level：默认玩家等级，visitor 游客，member 普通玩家，operator 管理员。更详细的配置说明可以查看帮助文档。白名单配置服务端解压后会包含一个 whitelist.json 文件，这就是储存白名单的文件，格式如下：[
+    {
+        &quot;name&quot;: &quot;name1&quot;,
+        &quot;ignoresPlayerLimit&quot;: &quot;true&quot;
+    },
+    {
+        &quot;name&quot;: &quot;name2&quot;
+    }
+]其中的 name 是玩家的 Xbox 用户名，ignoresPlayerLimit 是忽略服务器人数限制，ignoresPlayerLimit 是可省略的。只有 server.properties 配置文件中的 white-list 为 true，whitelist.json 中的白名单才会生效。如果在服务器正在运行的时候修改了白名单的话，需要在服务器命令行中输入：whitelist.jsonwhitelist reload重新加载白名单才会生效。设置了白名单后就只有 whitelist.json 中的玩家才能进入服务器。后台运行如果直接使用 LD_LIBRARY_PATH=. ./bedrock_server 启动服务器的话，退出 SSH 终端后，服务端也会停止运行。这里可以使用 nohub 命令来启动服务端：nohub LD_LIBRARY_PATH=. ./bedrock_server &amp;以上就是搭建 Minecraft 基岩版服务器的过程，更详细的服务器配置和命令可以查看帮助文档。相关文章：Linux 搭建 Minecraft Java 服务器Linux VI 编辑器简单使用教程</description>
+</item>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/7/">
+<title>少年闰土</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/7/</link>
+<dc:date>2021-08-05T07:42:00+00:00</dc:date>
+<description>深蓝的天空中挂着一轮金黄的圆月，下面是海边的沙地，都种着一望无际的碧绿的西瓜。其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹②用力地刺去。那猹却将身一扭，反从他的胯下逃走了。　　这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了；那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。这祭祀，说是三十多年才能轮到一回，所以很郑重；正月里供祖像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月），忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。　　我的父亲允许了；我也很高兴，因为我早听到闰土这名字，而且知道他和我仿佛年纪，闰月生的，五行缺土，所以他的父亲叫他闰土。他是能装弶捉小鸟雀的。　　我于是日日盼望新年，新年到，闰土也就到了。好容易到了年末，有一日，母亲告诉我，闰土来了，我便飞跑地去看。他正在厨房里，紫色的圆脸，头戴一顶小毡帽，颈上套一个明晃晃的银项圈，这可见他的父亲十分爱他，怕他死去，所以在神佛面前许下愿心，用圈子将他套住了。他见人很怕羞，只是不怕我，没有旁人的时候，便和我说话，于是不到半日，我们便熟识了。　　我们那时候不知道谈些什么，只记得闰土很高兴，说是上城之后，见了许多没有见过的东西。　　第二日，我便要他捕鸟。他说：“这不能。须大雪下了才好。我们沙地上，下了雪，我扫出一块空地来，用短棒支起一个大竹匾，撒下秕谷，看鸟雀来吃时，我远远地将缚在棒上的绳子只一拉，那鸟雀就罩在竹匾下了。什么都有：稻鸡，角鸡，鹁鸪，蓝背……”　　我于是又很盼望下雪。　　闰土又对我说：“现在太冷，你夏天到我们这里来。我们日里到海边捡贝壳去，红的绿的都有，鬼见怕也有，观音手也有。晚上我和爹管四瓜去，你也去。”　　“管贼吗？”　　“不是。走路的人口渴了摘一个瓜吃，我们这里是不算偷的。要管的是獾猪，刺猬，猹。月亮地下，你听，啦啦地响了，猹在咬瓜了。你便捏了胡叉，轻轻地走去……”　　我那时并不知道这所谓猹的是怎么一件东西——便是现在也没有知道——只是无端地觉得状如小狗而很凶猛。　　“它不咬人吗？”　　“有胡叉呢。走到了，看见猹了，你便刺。这畜生很伶俐，倒向你奔来，反从胯下窜了。它的皮毛是油一般的滑……　　我素不知道天下有这许多新鲜事：海边有如许五色的贝壳；西瓜有这样危险的经历，我先前单知道它在水果店里出卖罢了。　　“我们沙地里，潮汛要来的时候，就有许多跳鱼儿只是跳，都有青蛙似的两只脚……”　　啊！闰土的心里有无穷无尽的希奇的事，都是我往常的朋友所不知道的。他们不知道一些事，闰土在海边时．他们都和我一样只看见院子里高墙上的四角的天空。　　可惜正月过去了，闰土须回家里去。我急得大哭，他也躲到厨房里，哭着不肯出门，但终于被他父亲带走了。他后来还托他的父亲带给我一包贝壳和几支很好看的鸟毛，我也曾送他一两次东西，但从此没有再见面。</description>
+</item>
+<item rdf:about="http://localhost/php/typecho-demo/index.php/archives/5/">
+<title>登高</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/5/</link>
+<dc:date>2021-08-01T07:17:00+00:00</dc:date>
+<description>风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来。万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯。</description>
+</item>
+</rdf:RDF>

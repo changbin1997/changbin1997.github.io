@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>MWordStar</title>
+<link>http://localhost/php/typecho-demo/</link>
+<atom:link href="http://localhost/php/typecho-demo/index.php/feed/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description>MWordStar演示站</description>
+<lastBuildDate>Sat, 21 Aug 2021 08:25:00 +0000</lastBuildDate>
+<pubDate>Sat, 21 Aug 2021 08:25:00 +0000</pubDate>
+<item>
+<title>MWordStar 响应式双栏 Typecho 博客主题</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/12/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/12/</guid>
+<pubDate>Sat, 21 Aug 2021 08:25:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 我的博客 之前使用的主题。主题免费开源，可以在 Github 上免费下载。因为我现在暂时没有用这个主题，所以没有主题演示站，...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 <a href="https://www.misterma.com/">我的博客</a> 之前使用的主题。主题免费开源，可以在 Github 上免费下载。</p><p>因为我现在暂时没有用这个主题，所以没有主题演示站，样式之类的可以参考下面的截图。</p><p>主题下载地址：<a href="https://github.com/changbin1997/MWordStar/releases">https://github.com/changbin1997/MWordStar/releases</a></p><p>主题使用说明：<a href="https://mwordstar.misterma.com/">https://mwordstar.misterma.com/</a></p><p>下面是主题首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686604695.png" alt="MWordStar主题首页截图1" title="MWordStar主题首页截图1"></p><p>主题元素包含圆角和直角两种风格，您可以根据喜好在主题外观设置中切换，下面是直角风格的首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686924621.jpg" alt="MWordStar直角风格首页截图" title="MWordStar直角风格首页截图"></p><p>主题还包含了几套不同风格的配色，您可以根据喜好在主题外观设置中切换。</p><p><img src="https://www.misterma.com/img-admin/uploads/16043687256363.jpg" alt="MWordStar不同配色的截图" title="MWordStar不同配色的截图"></p><p>文章页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16162518715628.jpg" alt="MWordStar主题文章页截图" title="MWordStar主题文章页截图"></p><h2>特点和功能</h2><ul><li>响应式设计</li><li>无障碍适配（Accessibility）</li><li>5 种不同风格的配色</li><li>两种不同风格的元素</li><li>代码高亮</li><li>丰富的设置选项</li><li>良好的 SEO 优化</li><li>自带点赞功能</li><li>文章可快速分享到社交网站</li><li>评论区自带 Emoji 表情面板</li><li>自动根据文章中的标题生成章节目录</li><li>长期维护</li><li>详细的 <a href="https://mwordstar.misterma.com/">使用说明</a>（必看）</li></ul><h2>主题介绍</h2><h3>外观设计</h3><p>因为我个人比较喜欢两栏布局，所以这个主题也使用了两栏布局的设计。</p><h3>主题依赖</h3><p>主题主要用到了一下几个库和框架：</p><ul><li><a href="https://getbootstrap.com/">Bootstrap</a>  外观和布局</li><li><a href="https://jquery.com/">jQuery</a>  Bootstrap 依赖</li><li><a href="https://github.com/jeromeetienne/jquery-qrcode">jquery-qrcode</a> 一个生成二维码的 jQuery 插件</li><li><a href="https://highlightjs.org/">highlight.js</a>  代码高亮</li><li><a href="https://icomoon.io/">IcoMoon</a>  字体图标</li></ul><p>其中 IcoMoon 的字体图标是可定制的，所以只包含了主题中出现的图标，字体图标的文件体积也很小。</p><p>主题的静态文件没有使用任何 CDN 地址，所有文件都放在主题的 <code>assets</code> 目录中。主题的生成目录、点赞、快速分享 之类的功能都是自己手动编写的，所以用到的 JS 库也比较少。</p><p>使用 Webpack 打包的版本前台只需要加载一个 CSS 和 一个 JS 文件，所有 JS 库都打包到了 JS 中，所有 CSS 和字体图标都打包到了 CSS 中。因为用到的库比较少，而且字体图标和部分组件都是按需引入的，所以打包后的 CSS 和 JS 也比较小。</p><h3>主题安装</h3><p>把主题上传到 Typecho 的 <code>usr/themes/</code> 目录，然后解压，你也可以先解压在上传。</p><p>解压后需要保证 <code>themes</code> 目录下 有一个 <code>MWordStar</code> 目录。</p><p>登录 Typecho 的后台管理，进入 <code>控制台</code> -&gt; <code>外观</code>，如果看到 <strong>MWordStar</strong> 就点击 <code>启用</code>。</p><h3>代码高亮</h3><p>代码高亮的样式使用的是 VS2015 的暗色主题，和 Visual Studio Code 的默认主题差不多。主题支持 30 多种语言的代码高亮。详细的说明可以查看 <a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>友情链接</h3><p>友情链接分为 <code>全站友情链接</code>、<code>首页友情链接</code>、<code>内页友情链接</code>。<code>全站友情链接</code> 会在每个页面的侧边栏显示，<code>首页友情链接</code> 会在首页的侧边栏显示，<code>内页友情链接</code> 只会在 友情链接 的页面显示。</p><p>如需查看友情链接的设置说明可以访问：<a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>文章头图</h3><p>文章头图可以在 首页、文章页、侧边栏 显示，您可以根据需求在主题外观设置中设置。文章头图来源支持自动获取文章的第一张图片和手动输入图片 URL。</p><h3>无障碍（Accessibility）</h3><p>上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。</p><p>目前国内的很多网站都只注重外观，忽略了残障人士的可访问性。但是想要做好网站的用户体验，<a href="https://www.misterma.com/archives/264/">无障碍</a> 适配肯定是少不了的。</p><p>主题针对屏幕阅读器做了大量优化，并 在 <a href="http://www.nvda-project.org/">NVDA</a> 和 <a href="https://www.apple.com/cn/accessibility/iphone/vision/">VoiceOver</a> 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读。主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。</p><p>主题可完美支持键盘访问，颜色对比度也符合标准。</p><p>小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。</p><h3>Emoji 表情</h3><p>主题评论区包含一个 Emoji 表情面板，您可以在后台启用或禁用。Emoji 表情面板包含 1466 个表情，这些表情都是按照分类动态加载的，您不用担心性能问题。</p><p>Emoji 表情面板也进行了无障碍适配，可支持键盘访问和屏幕阅读器朗读。</p><p>下面是 Emoji 表情面板的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043688114310.jpeg" alt="emoji面板截图" title="emoji面板截图"></p><h3>兼容性</h3><p>因为本主题使用了 HTML5 和 CSS3，需要 IE10 及以上浏览器才能完美兼容。IE8 及以下浏览器显示可能会出现一些问题。</p><h3>插件适配</h3><p>因为本人很少使用插件，所以目前适配的插件比较少。</p><p>下面是已适配的插件：</p><ul><li><a href="https://plugins.typecho.me/plugins/sticky.html">Sticky</a> 文章置顶插件</li></ul><h2>其它</h2><p>主题 Github：<a href="https://github.com/changbin1997/MWordStar">https://github.com/changbin1997/MWordStar</a></p><p>码云仓库地址：<a href="https://gitee.com/changbin1997/MWordStar">https://gitee.com/changbin1997/MWordStar</a></p><p>主题使用 <a href="https://github.com/changbin1997/MWordStar/blob/master/LICENSE">MIT License</a> 开源。</p><p>如果您在使用这个主题时遇到 Bug 或有任何问题和建议都可以在 <a href="https://www.misterma.com/archives/812/#comments">博客评论区</a> 留言，也可以在 Github 的 <a href="https://github.com/changbin1997/MWordStar/issues">issues</a> 反馈。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/12/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/12/</wfw:commentRss>
+</item>
+<item>
+<title>Facile 一个简洁的 Typecho 博客主题</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/11/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/11/</guid>
+<pubDate>Sat, 21 Aug 2021 08:17:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[Facile 是一套简洁的 Typecho 博客主题，也是我的博客正在使用的主题。之前我用的主题是 MWordStar ，时间长了就想换一下外观，本来想再给 MWordStar 增加一套样式，但...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>Facile 是一套简洁的 Typecho 博客主题，也是我的博客正在使用的主题。</p><p>之前我用的主题是 <a href="https://www.misterma.com/archives/812/">MWordStar</a> ，时间长了就想换一下外观，本来想再给 MWordStar 增加一套样式，但是外观变动比较大，而且 MWordStar 已经有几套样式了，所以重新开发一套主题。</p><p>主题演示地址：<a href="https://www.misterma.com/">https://www.misterma.com/</a> </p><p>主题下载地址：<a href="https://github.com/changbin1997/Facile/releases">https://github.com/changbin1997/Facile/releases</a> </p><p>下载时请选择 <code>Facile-bundle.zip</code> ，否则前端 JS 代码无法在 IE 系列浏览器运行。</p><p>主题 Github 仓库：<a href="https://github.com/changbin1997/Facile">https://github.com/changbin1997/Facile</a> </p><p>下面是主题首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16200336116020.png" alt="Facile首页截图" title="Facile首页截图"></p><p>不包含文章头图的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16200336317620.png" alt="Facile不包含文章头图的截图" title="Facile不包含文章头图的截图"></p><p>Facile 相比 <a href="https://github.com/changbin1997/MWordStar">MWordStar</a> 来说，外观要更简洁一些，功能也会少一些，MWordStar 有的功能以后也会陆续增加到 Facile 中，但是 Facile 的功能以后也不会有 MWordStar 多。</p><p>Facile 目前还没有专门的使用说明文档，Facile 的功能设置和 MWordStar 是差不多的，可以直接参考 <a href="https://mwordstar.misterma.com/">MWordStar 的使用说明文档</a> ，有问题也可以到 <a href="https://www.misterma.com/msg.html">留言板</a> 或 <a href="https://www.misterma.com/archives/899/">Facile 的介绍文章页</a> 留言。</p><h2>特点和功能</h2><ul><li>响应式设计</li><li>无障碍适配（Accessibility）</li><li>代码高亮</li><li>自带点赞功能</li><li>丰富的侧边栏组件</li><li>丰富的设置选项</li></ul><h2>安装</h2><p>在 Releases 下载的主题是一个 zip 格式的压缩包，把压缩包上传到 Typecho 目录下的 <code>usr/themes/</code> 目录，然后解压，解压后应该可以看到一个 <code>Facile</code> 目录。</p><p>登录 Typecho 后台，在顶部导航栏的 <code>控制台</code> 菜单选择 <code>外观</code> ，如果存放位置没有错误的话就可以看到 Facile 主题了，点击 <code>启用</code> 。</p><h2>主题依赖</h2><p>主题主要用到了以下几个库：</p><ul><li><a href="https://github.com/thomaspark/bootswatch">bootswatch</a> 不同风格的 Bootstrap 主题</li><li><a href="https://jquery.com/">jQuery</a> DOM 操作和 Bootstrap 依赖</li><li><a href="https://github.com/neocotic/qrious">qrious</a> 生成二维码的 JS 库</li><li><a href="https://highlightjs.org/">highlight.js</a> 代码高亮</li><li><a href="https://github.com/apache/echarts">ECharts</a> 百度开源的图表库，用于 <a href="https://www.misterma.com/data.html">统计页</a> 生成统计图</li></ul><p>后端没有用到任何库。</p><p>ECharts 的库比较大，所以只引入了饼图和日历图，而且只会在统计页加载。Bootstrap 的 JS 使用 Webpack 打包过的发行版也只引入了用到的模块。</p><p>主题的图标使用的是 <a href="https://icomoon.io/">IcoMoon</a> 的字体图标，IcoMoon 的图标可以自定义，所以主题中只包含几个用到的图标。</p><p>前端 JS 使用的是 ES6 语法，在 IE 系列的浏览器（包括 IE11）是无法运行的，如果没有二次开发需求的话，可以在 <a href="https://github.com/changbin1997/Facile/releases">Releases</a> 下载 <code>Facile-bundle.zip</code> 发行版，发行版使用了 Webpack + Babel 来打包和转换，可以在 IE 运行。</p><h2>代码高亮</h2><p>文章区和评论区都有代码高亮效果，目前支持 30 多种语言的代码高亮，代码高亮的配色使用的是 VS2015 的暗色主题，和 VSCode 的默认主题差不多。</p><p>支持的语言和 MWordStar 是一样的，可以访问 <a href="https://mwordstar.misterma.com/docs/doc13/">MWordStar 代码高亮</a> 查看支持的语言。</p><h2>统计页</h2><p>主题包含一个统计页模板，你可以在后台创建页面，页面的自定义模板选择 <code>网站数据</code>，标题可以随便写，创建完成后就可以在顶部导航栏访问了。</p><p>统计页包含基本的数据统计、分类文章占比图、文章更新日历图、评论动态日历图、阅读量排名前 5 的文章、评论量排名前 5 的文章。</p><p>基本数据统计如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198784315155.jpeg" alt="Facile基本统计截图" title="Facile基本统计截图"></p><p>分类占比统计图如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198785132678.jpeg" alt="Facile分类占比截图" title="Facile分类占比截图"></p><p>下面是评论动态日历图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198788751795.jpeg" alt="Facile评论动态图" title="Facile评论动态图"></p><p>文章动态日历图和评论动态的日历图是差不多的，屏幕尺寸不同显示的月份数量也不同。</p><p>下面是文章评论排名表格：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198790286475.jpeg" alt="Facile评论排名表格截图" title="Facile评论排名表格截图"></p><p>文章阅读量排名表格和评论量排名的表格也是差不多的。</p><p>统计页面演示可以访问 <a href="https://www.misterma.com/data.html">https://www.misterma.com/data.html</a> 。</p><h2>无障碍（Accessibility）</h2><p>上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。目前国内的很多网站和 App 都只注重外观，忽略了残障人士的 <a href="https://www.misterma.com/archives/264/">可访问性</a>，甚至有的 App 在开启屏幕阅读器的情况下都无法正常使用。</p><p>Facile 主题针对屏幕阅读器做了大量优化，并在 <a href="http://www.nvda-project.org/">MVDA</a> 和 <a href="https://www.apple.com/cn/accessibility/iphone/vision/">VoiceOver</a> 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读（除了日历图），主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。</p><p>主题可完美支持键盘访问，颜色对比度也符合标准。</p><p>小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。</p><h2>其他功能</h2><p>主题自带友情链接功能，友链可以分为 全站、首页、独立页 三种显示方式。友链需要在主题设置中填写 JSON 数据，格式和说明可以简单参考 <a href="https://mwordstar.misterma.com/docs/doc10">MWordStar 友情链接</a> 。</p><p>文章头图目前支持手动输入和自动获取文章中的第一张图片作为文章头图，你可以在撰写文章页的下方设置。</p><h2>插件适配</h2><p>因为我需要用到 <a href="https://plugins.typecho.me/plugins/sticky.html">Sticky</a> 文章置顶插件，所以这个主题也直接适配了 Sticky 插件，Sticky 插件安装完成后无需修改主题。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/11/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/11/</wfw:commentRss>
+</item>
+<item>
+<title>PHP 使用 PHPMailer 发送邮件</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/13/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/13/</guid>
+<pubDate>Fri, 20 Aug 2021 08:13:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[最近准备写一个个人博客，博客的用户注册和找回密码都需要邮件验证。PHP 虽然提供了 mail 函数来发送邮件，但是 mail 函数的功能限制较多，只能发送普通文本，如果要发送 HTML 或附件就...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>最近准备写一个个人博客，博客的用户注册和找回密码都需要邮件验证。PHP 虽然提供了 <code>mail</code> 函数来发送邮件，但是 <code>mail</code> 函数的功能限制较多，只能发送普通文本，如果要发送 HTML 或附件就比较麻烦。</p><p>在逛 Github 的时候看到一个功能比较强大的邮件发送类 <a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a> ，很多著名的 PHP 开源项目 比如  WordPress、Drupal、SugarCRM 也都在用 PHPMailer 发送邮件。</p><p>下面就简单写一下 PHPMailer 发送邮件的过程。</p><p>PHPMailer 的 Github 地址是 <a href="https://github.com/PHPMailer/PHPMailer">https://github.com/PHPMailer/PHPMailer</a> 。</p><p>可以使用 Composer 安装，也可以手动下载项目引入，我这里是手动下载项目引入。</p><h2>发送邮件</h2><p>发送邮件相关的代码都在 <code>src</code> 目录中，<code>language</code> 目录中包含了不同语言的报错信息。</p><p>下面使用 SMTP 发送邮件：</p><pre><code class="lang-php">&lt;?php
+
+use PHPMailer\PHPMailer\PHPMailer;  //  设置命名空间
+use PHPMailer\PHPMailer\SMTP;  //  设置命名空间
+use PHPMailer\PHPMailer\Exception;  //  设置命名空间
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+
+$mail = new PHPMailer(true);  //  创建邮件发送对象
+
+try {
+    //  服务器相关设置
+    $mail-&gt;SMTPDebug = SMTP::DEBUG_SERVER;  //  输出服务器日志
+    $mail-&gt;isSMTP();  //  使用 SMTP 来发送邮件
+    $mail-&gt;SMTPAuth = true;  //  启用 SMTP 身份验证
+    $mail-&gt;Host = 'smtp.qq.com';  //  SMTP 服务器地址
+    $mail-&gt;Username = 'email@misterma.com';  //  SMTP 用户名
+    $mail-&gt;Password = 'wvikg5hyswveche';  //  密码
+    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  //  使用 TLS 加密
+    $mail-&gt;Port = '25';  //  SMTP 端口
+
+    //  发件人和收件人
+    $mail-&gt;setFrom('email@misterma.com', 'Mr. Ma');  //  发件人
+    $mail-&gt;addAddress('usmmiuy@gmail.com', 'Joe User');  //  添加收件人
+
+    // 邮件标题和内容
+    $mail-&gt;isHTML(true);  //  邮件格式设置为 HTML
+    $mail-&gt;Subject = '这是邮件标题';  //  邮件标题
+    $mail-&gt;Body = '这是 HTML 内容 &lt;b&gt;加粗的文字&lt;/b&gt;';  //  HTML 内容
+    $mail-&gt;AltBody = '文本内容';  //  纯文本
+    $mail-&gt;addAttachment('tutorial.txt');  //  添加附件
+
+    $mail-&gt;send();  //  发送
+    echo '发送完成';
+} catch (Exception $e) {
+    //  输出错误信息
+    echo '错误:' . $mail-&gt;ErrorInfo;
+}</code></pre><p>我上面使用的是 QQ邮箱的 SMTP 服务。</p><h2>一些属性和方法说明</h2><p>下面是服务器相关的一些属性说明：</p><ul><li><code>$mail-&gt;Host</code>：设置 SMTP 服务器地址，不同邮箱服务的 SMTP 地址也会不一样，下面会有常用的邮箱服务的 SMTP 地址。</li><li><code>$mail-&gt;Username</code>：SMPT 用户名，一般也就是发送邮件的邮箱地址。</li><li><code>$mail-&gt;Password</code>：SMTP 的用户密码，有的邮箱服务可以直接使用邮箱密码，有的邮箱在开启 SMTP 后会生成一个独立的授权码。</li><li><code>$mail-&gt;Port</code>：SMTP 服务器端口，不同邮箱服务的端口也会不一样，下面会写常用的邮箱的 SMTP 端口。</li></ul><p>下面是发件人和收件人相关的一些方法说明：</p><ul><li><code>$mail-&gt;setFrom()</code>：发件人，第一个参数是发件人邮箱地址，第二个参数是发件人姓名。</li><li><code>$mail-&gt;addAddress()</code>：添加收件人，第一个参数是收件人的邮箱地址，第二个参数是收件人的姓名，收件人可添加多个。</li></ul><p>下面是邮件标题和邮件内容相关的一些方法说明：</p><ul><li><code>$mail-&gt;isHTML()</code>：使用 HTML 格式。</li><li><code>$mail-&gt;Subject</code>：邮件的标题或主题。</li><li><code>$mail-&gt;Body</code>：邮件内容。</li><li><code>$mail-&gt;AltBody</code>：邮件内容（纯文本）。</li><li><code>$mail-&gt;addAttachment</code>：添加附件，参数就是文件名，附件可以添加多个。</li></ul><h2>常用邮件服务的 SMTP 地址和端口</h2><p>下面是一些常用的邮箱服务的 SMTP 地址和端口：</p><table><thead><tr><th>服务商</th><th>SMTP 地址</th><th>SMTP 端口</th></tr></thead><tbody><tr><td>QQ邮箱</td><td>smtp.qq.com</td><td>25</td></tr><tr><td>网易126邮箱</td><td>smtp.126.com</td><td>25</td></tr><tr><td>网易163邮箱</td><td>smtp.163.com</td><td>25</td></tr><tr><td>新浪邮箱</td><td>smtp.sina.cn</td><td>25</td></tr><tr><td>Gmail</td><td>smtp.gmail.com</td><td>465</td></tr><tr><td>雅虎邮箱</td><td>smtp.mail.yahoo.com</td><td>465</td></tr></tbody></table><p>Foxmail邮箱 可以直接使用 QQ邮箱 的 SMTP 地址和端口。</p><p>以上就是 PHPMailer 发送邮件的简单演示，PHPMailer 还有很多选项可以设置。如果要查看更多的设置选项可以访问官方的 <a href="http://phpmailer.github.io/PHPMailer/">API 文档</a> 。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/13/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/13/</wfw:commentRss>
+</item>
+<item>
+<title>Linux 搭建 Minecraft 基岩版服务器</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/10/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/10/</guid>
+<pubDate>Thu, 19 Aug 2021 08:09:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[Minecraft Bedrock Edition 也就是我的世界基岩版，这是 Minecraft 的另一个版本。Minecraft 基岩版可以运行在 Win10、Android、iOS、XBo...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>Minecraft Bedrock Edition 也就是我的世界基岩版，这是 Minecraft 的另一个版本。Minecraft 基岩版可以运行在 Win10、Android、iOS、XBox。基岩版不能使用 Java 版的服务器，Java 版也不能使用基岩版的服务器，不过 Win10、Android、iOS、XBox 的基岩版都可以使用同一个服务器，也就是说基岩版的服务器可以让 Win10 和手机一起联机。</p><p>目前基岩版的服务器还是测试版，因为不是用 Java 编写的，所以目前只能在 Windows 和 Ubuntu 上搭建。</p><p>我使用的是阿里云的轻量应用服务器，配置是 1 核 2 G，使用的系统是 Ubuntu 18.04。</p><h2>下载</h2><p>可以进入 <a href="https://www.minecraft.net/en-us/download/server/bedrock/">https://www.minecraft.net/en-us/download/server/bedrock/</a> 下载服务器，目前只有 Windows 和 Ubuntu 两个版本。</p><p><img src="https://www.misterma.com/img-admin/uploads/16043773761056.jpg" alt="基岩版服务器下载" title="基岩版服务器下载"></p><p>下载之前需要选中 <code>I agree to the Minecraft End User License Agreement and Privacy Policy</code>。你可以下载到本地电脑，然后通过 SFTP 上传到服务器，也可以右击 <code>DOWNLOAD</code> 复制链接地址，直接通过 wget 下载到服务器。</p><p>一般情况下官网默认就是最新版本的服务端，我下载的服务端版本是 1.14.32.1，客户端版本是 14.30，在游戏主界面的右下方可以查看版本。如果客户端版本比服务端版本低的话可以更新到最新版本，Win 10 可以在应用商店更新。</p><p>下载的压缩包中还会包含一个 <code>bedrock_server_how_to.html</code>，这就是服务器的帮助文档，建议可以下载一份服务端到本地电脑，方便查看帮助文档。</p><h2>运行</h2><p>下载的服务端可能是一个 zip 格式的压缩包，先解压：</p><pre><code class="lang-bash">unzip bedrock-server-1.14.32.1.zip</code></pre><p>上面的命令是把文件解压到当前目录，其中的 <code>bedrock-server-1.14.32.1.zip</code> 就是压缩包的名称。</p><p>如果解压的时候出现：</p><blockquote><p>Command 'unzip' not found</p></blockquote><p>可以输入：</p><pre><code class="lang-bash">apt install -y zip</code></pre><p>安装 zip。</p><p>基岩版的服务端还需要依赖 libcurl4-openssl-dev，安装 libcurl4-openssl-dev：</p><pre><code class="lang-bash">apt install -y libcurl4-openssl-dev</code></pre><p>安装完成后输入：</p><pre><code class="lang-bash">LD_LIBRARY_PATH=. ./bedrock_server</code></pre><p>启动服务器。</p><p>启动后会输出状态信息，如下：</p><pre><code class="lang-bash">NO LOG FILE! - setting up server logging...
+[2020-04-02 20:50:22 INFO] Starting Server
+[2020-04-02 20:50:22 INFO] Version 1.14.32.1
+[2020-04-02 20:50:22 INFO] Session ID 08940d5f-f2da-4da8-9130-c7e59f580559
+[2020-04-02 20:50:22 INFO] Level Name: Bedrock level
+[2020-04-02 20:50:22 INFO] Game mode: 1 Creative
+[2020-04-02 20:50:22 INFO] Difficulty: 0 PEACEFUL
+[2020-04-02 20:50:22 INFO] opening worlds/Bedrock level/db
+[2020-04-02 20:50:25 INFO] IPv4 supported, port: 4999
+[2020-04-02 20:50:25 INFO] IPv6 not supported
+[2020-04-02 20:50:25 INFO] IPv4 supported, port: 19132
+[2020-04-02 20:50:25 INFO] IPv6 not supported
+[2020-04-02 20:50:27 INFO] Server started.</code></pre><p>服务器默认的端口是 <code>19132</code>，协议是 <strong>UDP</strong> ，<strong>不是 TCP</strong>，开放端口的时候需要注意一下。</p><h2>客户端连接</h2><p>打开 Minecraft 基岩版，选择 <code>游戏</code>，选择 <code>服务器</code>，点击 <code>添加</code>，按照提示输入服务器 IP 和端口号。</p><p>如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043774109342.jpg" alt="基岩版添加服务器" title="基岩版添加服务器"></p><p>如果没有修改过配置文件的话，默认的端口号是 <code>19132</code>。</p><p>进入服务器之前需要登录 Xbox Live，只有账户中有 Minecraft 才能联机。</p><h2>配置</h2><p>服务端解压后会包含一个名为 <code>server.properties</code> 的配置文件，服务器相关的配置就在这个配置文件中。</p><p>可以用 VI 之类的编辑器打开配置文件编辑，关于 VI 编辑器的使用可以看 <a href="https://www.misterma.com/archives/125/">Linux VI 编辑器简单使用教程</a> 。</p><p>配置文件中的 <code>#</code> 开头的行是注释，可以不用管，主要就是修改 <code>=</code> 后面的内容。</p><p>下面是一些配置项说明：</p><ul><li><code>gamemode</code>：默认的游戏模式，<code>survival</code> 生存，<code>creative</code> 创造，<code>adventure</code> 冒险。</li><li><code>difficulty</code>：默认难度，<code>peaceful</code> 和平，<code>easy</code> 简单，<code>normal</code> 普通，<code>hard</code> 困难。</li><li><code>max-players</code>：玩家数量限制，默认为 <code>10</code>。</li><li><code>server-port</code>：服务器端口，默认为 <code>19132</code>。</li><li><code>server-portv6</code>：IPv6 端口，默认为 <code>19133</code>。</li><li><code>online-mode</code>：正版验证，如果你的服务器可以正常连接到 Xbox Live 的话，可以设置为 <code>true</code>，否则可以设置为 <code>false</code>，即便不开启正版验证，客户端也需要登录 Xbox Live 才能联机。</li><li><code>white-list</code>：白名单，只有在白名单中的玩家才能进入服务器，默认为 <code>false</code>。</li><li><code>allow-cheats</code>：允许作弊，默认为 <code>false</code>。</li><li><code>player-idle-timeout</code>：自动踢出挂机玩家，默认为 30 分钟。</li><li><code>default-player-permission-level</code>：默认玩家等级，<code>visitor</code> 游客，<code>member</code> 普通玩家，<code>operator</code> 管理员。</li></ul><p>更详细的配置说明可以查看帮助文档。</p><h2>白名单配置</h2><p>服务端解压后会包含一个 <code>whitelist.json</code> 文件，这就是储存白名单的文件，格式如下：</p><pre><code class="lang-json">[
+    {
+        &quot;name&quot;: &quot;name1&quot;,
+        &quot;ignoresPlayerLimit&quot;: &quot;true&quot;
+    },
+    {
+        &quot;name&quot;: &quot;name2&quot;
+    }
+]</code></pre><p>其中的 <code>name</code> 是玩家的 Xbox 用户名，<code>ignoresPlayerLimit</code> 是忽略服务器人数限制，<code>ignoresPlayerLimit</code> 是可省略的。</p><p>只有 <code>server.properties</code> 配置文件中的 <code>white-list</code> 为 <code>true</code>，<code>whitelist.json</code> 中的白名单才会生效。</p><p>如果在服务器正在运行的时候修改了白名单的话，需要在服务器命令行中输入：</p><pre><code class="lang-bash">whitelist.jsonwhitelist reload</code></pre><p>重新加载白名单才会生效。</p><p>设置了白名单后就只有 <code>whitelist.json</code> 中的玩家才能进入服务器。</p><h2>后台运行</h2><p>如果直接使用 <code>LD_LIBRARY_PATH=. ./bedrock_server</code> 启动服务器的话，退出 SSH 终端后，服务端也会停止运行。</p><p>这里可以使用 <code>nohub</code> 命令来启动服务端：</p><pre><code class="lang-bash">nohub LD_LIBRARY_PATH=. ./bedrock_server &amp;</code></pre><p>以上就是搭建 Minecraft 基岩版服务器的过程，更详细的服务器配置和命令可以查看帮助文档。</p><p>相关文章：</p><ul><li><a href="https://www.misterma.com/archives/864/">Linux 搭建 Minecraft Java 服务器</a></li><li><a href="https://www.misterma.com/archives/125/">Linux VI 编辑器简单使用教程</a></li></ul>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/10/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/10/</wfw:commentRss>
+</item>
+<item>
+<title>少年闰土</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/7/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/7/</guid>
+<pubDate>Thu, 05 Aug 2021 07:42:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[深蓝的天空中挂着一轮金黄的圆月，下面是海边的沙地，都种着一望无际的碧绿的西瓜。其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹②用力地刺去。那猹却将身一扭，反从他的胯下逃走了。　　这少...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>深蓝的天空中挂着一轮金黄的圆月，下面是海边的沙地，都种着一望无际的碧绿的西瓜。其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹②用力地刺去。那猹却将身一扭，反从他的胯下逃走了。<br>　　<br>这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了；那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。这祭祀，说是三十多年才能轮到一回，所以很郑重；正月里供祖像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月），忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。<br>　　<br>我的父亲允许了；我也很高兴，因为我早听到闰土这名字，而且知道他和我仿佛年纪，闰月生的，五行缺土，所以他的父亲叫他闰土。他是能装弶捉小鸟雀的。<br>　　<br>我于是日日盼望新年，新年到，闰土也就到了。好容易到了年末，有一日，母亲告诉我，闰土来了，我便飞跑地去看。他正在厨房里，紫色的圆脸，头戴一顶小毡帽，颈上套一个明晃晃的银项圈，这可见他的父亲十分爱他，怕他死去，所以在神佛面前许下愿心，用圈子将他套住了。他见人很怕羞，只是不怕我，没有旁人的时候，便和我说话，于是不到半日，我们便熟识了。<br>　　<br>我们那时候不知道谈些什么，只记得闰土很高兴，说是上城之后，见了许多没有见过的东西。<br>　　<br>第二日，我便要他捕鸟。他说：“这不能。须大雪下了才好。我们沙地上，下了雪，我扫出一块空地来，用短棒支起一个大竹匾，撒下秕谷，看鸟雀来吃时，我远远地将缚在棒上的绳子只一拉，那鸟雀就罩在竹匾下了。什么都有：稻鸡，角鸡，鹁鸪，蓝背……”<br>　　<br>我于是又很盼望下雪。<br>　　<br>闰土又对我说：“现在太冷，你夏天到我们这里来。我们日里到海边捡贝壳去，红的绿的都有，鬼见怕也有，观音手也有。晚上我和爹管四瓜去，你也去。”<br>　　<br>“管贼吗？”<br>　　<br>“不是。走路的人口渴了摘一个瓜吃，我们这里是不算偷的。要管的是獾猪，刺猬，猹。月亮地下，你听，啦啦地响了，猹在咬瓜了。你便捏了胡叉，轻轻地走去……”<br>　　<br>我那时并不知道这所谓猹的是怎么一件东西——便是现在也没有知道——只是无端地觉得状如小狗而很凶猛。<br>　　<br>“它不咬人吗？”<br>　　<br>“有胡叉呢。走到了，看见猹了，你便刺。这畜生很伶俐，倒向你奔来，反从胯下窜了。它的皮毛是油一般的滑……<br>　　<br>我素不知道天下有这许多新鲜事：海边有如许五色的贝壳；西瓜有这样危险的经历，我先前单知道它在水果店里出卖罢了。<br>　　<br>“我们沙地里，潮汛要来的时候，就有许多跳鱼儿只是跳，都有青蛙似的两只脚……”<br>　　<br>啊！闰土的心里有无穷无尽的希奇的事，都是我往常的朋友所不知道的。他们不知道一些事，闰土在海边时．他们都和我一样只看见院子里高墙上的四角的天空。<br>　　<br>可惜正月过去了，闰土须回家里去。我急得大哭，他也躲到厨房里，哭着不肯出门，但终于被他父亲带走了。他后来还托他的父亲带给我一包贝壳和几支很好看的鸟毛，我也曾送他一两次东西，但从此没有再见面。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/7/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/7/</wfw:commentRss>
+</item>
+<item>
+<title>登高</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/5/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/5/</guid>
+<pubDate>Sun, 01 Aug 2021 07:17:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来。万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯。]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>风急天高猿啸哀，渚清沙白鸟飞回。</p><p>无边落木萧萧下，不尽长江滚滚来。</p><p>万里悲秋常作客，百年多病独登台。</p><p>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</p>
+]]></content:encoded>
+<slash:comments>4</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/5/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/5/</wfw:commentRss>
+</item>
+<item>
+<title>林黛玉进贾府</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/3/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/3/</guid>
+<pubDate>Wed, 14 Jul 2021 06:58:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[且说黛玉自那日弃舟登岸时，便有荣国府打发了轿子并拉行李的车辆久候了。这林黛玉常听得母亲说过，他外祖母家与别家不同。他近日所见的这几个三等仆妇，吃穿用度，已是不凡了，何况今至其家。因此步步留心，时...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>且说黛玉自那日弃舟登岸时，便有荣国府打发了轿子并拉行李的车辆久候了。这林黛玉常听得母亲说过，他外祖母家与别家不同。他近日所见的这几个三等仆妇，吃穿用度，已是不凡了，何况今至其家。因此步步留心，时时在意，不肯轻易多说一句话，多行一步路，惟恐被人耻笑了他去。自上了轿，进入城中，从纱窗向外瞧了一瞧，其街市之繁华，人烟之阜盛，自与别处不同。又行了半日，忽见街北蹲着两个大石狮子，三间兽头大门，门前列坐着十来个华冠丽服之人。正门却不开，只有东西两角门有人出入。正门之上有一匾，匾上大书“敕造宁国府”五个大字。黛玉想道：这必是外祖之长房了。想着，又往西行，不多远，照样也是三间大门，方是荣国府了。却不进正门，只进了西边角门。那轿夫抬进去，走了一射之地，将转弯时，便歇下退出去了。后面的婆子们已都下了轿，赶上前来。另换了三四个衣帽周全十七八岁的小厮上来，复抬起轿子。众婆子步下围随至一垂花门前落下。众小厮退出，众婆子上来打起轿帘，扶黛玉下轿。林黛玉扶着婆子的手，进了垂花门，两边是抄手游廊，当中是穿堂，当地放着一个紫檀架子大理石的大插屏。转过插屏，小小的三间厅，厅后就是后面的正房大院。正面五间上房，皆雕梁画栋，两边穿山游廊厢房，挂着各色鹦鹉、画眉等鸟雀。台矶之上，坐着几个穿红着绿的丫头，一见他们来了，便忙都笑迎上来，说：“刚才老太太还念呢，可巧就来了。”于是三四人争着打起帘笼，一面听得人回话：“林姑娘到了。”</p><p>黛玉方进入房时，只见两个人搀着一位鬓发如银的老母迎上来，黛玉便知是他外祖母。方欲拜见时，早被他外祖母一把搂入怀中，心肝儿肉叫着大哭起来。当下地下侍立之人，无不掩面涕泣，黛玉也哭个不住。一时众人慢慢解劝住了，黛玉见拜见了外祖母。——此即冷子兴所云之史氏太君，贾赦贾政之母也。当下贾母一一指与黛玉：“这是你大舅母；这是你二舅母；这是你先珠大哥的媳妇珠大嫂子。”黛玉一一拜见过。贾母又说：“请姑娘们来。今日远客才来，可以不必上学去了。”众人答应了一声，便去了两个。</p><p>不一时，只见三个奶嬷嬷并五六个丫鬟，簇拥着三个姊妹来了。第一个肌肤微丰，合中身材，腮凝新荔，鼻腻鹅脂，温柔沉默，观之可亲。第二个削肩细腰，长挑身材，鸭蛋脸面，俊眼修眉，顾盼神飞，文彩精华，见之忘俗。第三个身量未足，形容尚小。其钗环裙袄，三人皆是一样的妆饰。黛玉忙起身迎上来见礼，互相厮认过，大家归了坐。丫鬟们斟上茶来。不过说些黛玉之母如何得病，如何请医服药，如何送死发丧。不免贾母又伤感起来，因说：“我这些儿女，所疼者独有你母，今日一旦先舍我而去，连面也不能一见，今见了你，我怎不伤心！”说着，搂了黛玉在怀，又呜咽起来。众人忙都宽慰解释，方略略止住。</p><p>众人见黛玉年貌虽小，其举止言谈不俗，身体面庞虽怯弱不胜，却有一段自然的风流态度，便知他有不足之症。因问：“常服何药，如何不急为疗治？”黛玉道：“我自来是如此，从会吃饮食时便吃药，到今日未断，请了多少名医修方配药，皆不见效。那一年我三岁时，听得说来了一个癞头和尚，说要化我去出家，我父母固是不从。他又说：‘既舍不得他，只他的病一生也不能好的了。若要好时，除非从此以后总不许见哭声；除了父母之外，凡有外姓亲友之人，一概不见，方可平安了此一世。’疯疯癫癫，说了这些不经之谈，也没人理他。如今还是吃人参养荣丸。”贾母道：“正好，我这里正配丸药呢。叫他们多配一料就是了。”</p><p>一语未了，只听后院中有人笑声，说：“我来迟了，不曾迎接远客！”黛玉纳罕道：“这些人个个皆敛声屏气，恭肃严整如此，这来者系谁，这样放诞无礼？”心下想时，只见一群媳妇丫鬟围拥着一个人从后房门进来。这个人打扮与众姑娘不同，彩绣辉煌，恍若神妃仙子：头上戴着金丝八宝攒珠髻，绾着朝阳五凤挂珠钗；项上带着赤金盘螭（chī）璎珞圈；裙边系着豆绿宫绦，双衡比目玫瑰佩；身上穿着缕金百蝶穿花大红洋缎窄裉（kèn）袄，外罩五彩刻丝石青银鼠褂；下着翡翠撒花洋绉裙。一双丹凤三角眼，两弯柳叶吊梢眉，身量苗条，体格风骚，粉面含春威不露，丹唇未启笑先闻。黛玉连忙起身接见。贾母笑道：“你不认得他。他是我们这里有名的一个泼皮破落户儿，南省俗谓作‘辣子’，你只叫他‘凤辣子’就是了。”黛玉正不知以何称呼，只见众姊妹都忙告诉他道：“这是琏嫂子。”黛玉虽不识，也曾听见母亲说过，大舅贾赦之子贾琏，娶的就是二舅母王氏之内侄女，自幼假充男儿教养的，学名王熙凤。黛玉忙陪笑见礼，以“嫂”呼之。这熙凤携着黛玉的手，上下细细打谅了一回，仍送至贾母身边坐下，因笑道：“天下真有这样标致的人物，我今儿才算见了！况且这通身的气派，竟不像老祖宗的外孙女儿，竟是个嫡亲的孙女，怨不得老祖宗天天口头心头一时不忘。只可怜我这妹妹这样命苦，怎么姑妈偏就去世了！”说着，便用帕试泪。贾母笑道：“我才好了，你倒来招我。你妹妹远路才来，身子又弱，也才劝住了，快再休提前话。”这熙凤听了，忙转悲为喜道：“正是呢！我一见了妹妹，一心都在他身上了，又是喜欢，又是伤心，意忘记了老祖宗。该打，该打！”又忙携黛玉之手，问；“妹妹几岁了？可也上过学？现吃什么药？在这里不要想家，想要什么吃的、什么玩的，只管告诉我；丫头老婆们不好了，也只管告诉我。”一面又问婆子们：“林姑娘的行李东西可搬进来了？带了几个人来？你们赶早打扫两间下房，让他们去歇歇。”</p><p>说话时，已摆了茶果上来。熙凤亲为捧茶捧果。又见二舅母问他：“月钱放过了不曾？”熙凤道：“月钱已放完了。才刚带着人到后楼上找缎子，找了这半日，也并没有见昨日太太说的那样的，想是太太记错了？”王夫人道：“有没有，什么要紧。”因又说道：“该随手拿出两个来给你这妹妹去裁衣裳的，等晚上想着叫人再去拿罢，可别忘了。”熙凤道：“这倒是我先料着了，知道妹妹不过这两日到的，我已预备下了，等太太回去过了目好送来。”王夫人一笑，点头不语。</p><p>当下茶果已撤，贾母命两个老嬷嬷带了黛玉去见两个母舅。时贾赦之妻邢氏忙亦起身，笑回道：“我带了外甥女过去，倒也便（biàn）宜。”贾母笑道：“正是呢，你也去罢，不必过来了。”邢夫人答头了一声“是”字，遂带了黛玉与王夫人作辞，大家送至穿堂前。出了垂花门，早有众小厮们拉过一辆翠幄（wò）青绸车，邢夫人携了黛玉，坐在上面，众婆子们放下车帘，方命小厮们抬起，拉至宽处，方驾上驯骡，亦出了西角门，往东过荣府正门，便入一黑油大门中，至仪门前方下来。众小厮退出，方打起车帘，邢夫人搀着黛玉的手，进入院中。黛玉度其房屋院宇，必是荣府中花园隔断过来的。进入三层仪门，果见正房厢庑（wǔ）游廊，悉皆小巧别致，不似方才那边轩峻壮丽；且院中随处之树木山石皆在。一时进入正室，早有许多盛妆丽服之姬妾丫鬟迎着，邢夫人让黛玉坐了，一面命人到外面书房去请贾赦。一时人来回话说：“老爷说了：‘连日身上不好，见了姑娘彼此倒伤心，暂且不忍相见。劝姑娘不要伤心想家，跟着老太太和舅母，即同家里一样。姊妹们虽拙，大家一处伴着，亦可以解些烦闷。或有委屈之处，只管说得，不要外道才是。’”黛玉忙站起来，一一听了。再坐一刻，便告辞。邢夫人苦留吃过晚饭去，黛玉笑回道：“舅母爱惜赐饭，原不应辞，只是还要过去拜见二舅舅，恐领了赐去不恭，异日再领，未为不可。望舅母容谅。”邢夫人听说，笑道：“这倒是了。”遂令两三个嬷嬷用方才的车好生送了姑娘过去。于是黛玉告辞。邢夫人送至仪门前，又嘱咐了众人几句，眼看着车去了方回来。</p><p>一时黛玉进了荣府，下了车。众嬷嬷引着，便往东转弯，穿过一个东西的穿堂，向南大厅之后，仪门内大院落，上面五间大正房，两边厢房鹿顶耳房钻山，四通八达，轩昂壮丽，比贾母处不同。黛玉便知这方是正经正内室，一条大甬路，直接出大门的。进入堂屋中，抬头迎面先看见一个赤金九龙青地大匾，匾上写着斗大的三个大字，是“荣禧堂”，后有一行小字：“某年月日，书赐荣国公贾源”，又有“万几宸（chén）翰之宝”。大紫檀雕螭案上，设着三尺来高青绿古铜鼎，悬着待漏随朝墨龙大画，一边是金蜼（wěi）彝，一边是玻璃（hǎi）。地下两溜十六张楠木交椅，又有一副对联，乃乌木联牌，镶着錾(zàn)银的字迹，道是：</p><p>座上珠玑昭日月，堂前黼黻(fǔfú)焕烟霞。</p><p>下面一行小字，道是：“同乡世教弟勋袭东安郡王穆莳拜手书。”</p><p>原来王夫人时常居坐宴息，亦不在这正室，只在这正室东边的三间耳房内。于是老嬷嬷引黛玉进东房门来。临窗大炕上铺着猩红洋罽(jì)，正面设着大红金钱蟒靠背，石青金钱蟒引枕，秋香色金钱蟒大条褥。两边设一对梅花式洋漆小几。左边几上文王鼎匙箸香盒；右边几上汝窑美人觚(gū)——觚内插着时鲜花卉，并茗碗痰盒等物。地下面西一溜四张椅上，都搭着银红撒花椅搭，底下四副脚踏。椅之两边，也有一对高几，几上茗碗瓶花俱备。其余陈设，自不必细说。老嬷嬷们让黛玉炕上坐，炕沿上却有两个锦褥对设，黛玉度其位次，便不上炕，只向东边椅子上坐了。本房内的丫鬟忙捧上茶来。黛玉一面吃茶，一面打谅这些丫鬟们，妆饰衣裙，举止行动，果亦与别家不同。</p><p>茶未吃了，只见一个穿红绫袄青缎掐牙背心的丫鬟走来笑说道：“太太说，请林姑娘到那边坐罢。”老嬷嬷听了，于是又引黛玉出来，到了东廊三间小正房内。正房炕上横设一张炕桌，桌上磊着书籍茶具，靠东壁面西设着半旧的青缎背引枕。王夫人却坐在西边下首，亦是半旧的青缎靠背坐褥。见黛玉来了，便往东让。黛玉心中料定这是贾政之位。因见挨炕一溜三张椅子上，也搭着半旧的弹墨椅袱，黛玉便向椅上坐了。王夫人再四携他上炕，他方挨王夫人坐了。王夫人因说：“你舅舅今日斋戒去了，再见罢。只是有一句话嘱咐你：你三个姊妹倒都极好，以后一处念书认字学针线，或是偶一顽笑，都有尽让的。但我不放心的最是一件：我有一个孽根祸胎，是家里的‘混世魔王’，今日因庙里还愿去了，尚未回来，晚间你看见便知了。你只以后不要睬他，你这些姊妹都不敢沾惹他的。”</p><p>黛玉亦常听得母亲说过，二舅母生的有个表兄，乃衔玉而诞，顽劣异常，极恶读书，最喜在内帏厮混；外祖母又极溺爱，无人敢管。今见王夫人如此说，便知说的是这表兄了。因陪笑道：“舅母说的，可是衔玉所生的这位哥哥？在家时亦曾听见母亲常说，这位哥哥比我大一岁，小名就唤宝玉，虽极憨顽，说在姊妹情中极好的。况我来了，自然只和姊妹同处，兄弟们自是别院另室的，岂得去沾惹之理？”王夫人笑道：“你不知道原故：他与别人不同，自幼因老太太疼爱，原系同姊妹们一处娇养惯了的。若姊妹们有日不理他，他倒还安静些，纵然他没趣，不过出了二门，背地里拿着他两个小幺（yāo）儿出气，咕唧一会子就完了。若这一日姊妹们和他多说一句话，他心里一乐，便生出多少事来。所以嘱咐你别睬他。他嘴里一时甜言蜜语，一时有天无日，一时又疯疯傻傻，只休信他。”</p><p>黛玉一一的都答应着。只见一个丫鬟来回：“老太太那里传晚饭了。”王夫人忙携黛玉从后房门由后廊往西，出了角门，是一条南北宽夹道。南边是倒座三间小小的抱厦厅，北边立着一个粉油大影壁，后有一半大门，小小一所房室。王夫人笑指向黛玉道：“这是你凤姐姐的屋子，回来你好往这里找他来，少什么东西，你只管和他说就是了。”这院门上也有四五个才总角的小厮，都垂手侍立。王夫人遂携黛玉穿过一个东西穿堂，便是贾母的后院了。于是，进入后房门，已有多人在此伺候，见王夫人来了，方安设桌椅。贾珠之妻李氏捧饭，熙凤安箸，王夫人进羹。贾母正面榻上独坐，两边四张空椅，熙凤忙拉了黛玉在左边第一张椅上坐了，黛玉十分推让。贾母笑道：“你舅母你嫂子们不在这里吃饭。你是客，原应如此坐的。”黛玉方告了座，坐了。贾母命王夫人坐了。迎春姊妹三个告了座方上来。迎春便坐右手第一，探春左第二，惜春右第二。旁边丫鬟执着拂尘、漱盂、巾帕。李、凤二人立于案旁布让。外间伺候之媳妇丫鬟虽多，却连一声咳嗽不闻。寂然饭毕，各有丫鬟用小茶盘捧上茶来。当日林如海教女以惜福养身，云饭后务待饭粒咽尽，过一时再吃茶，方不脾胃。今黛玉见了这里许多事情不合家中之式，不得不随的，少不得一一改过来，因而接了茶。早见人又捧过漱盂来，黛玉也照样漱了口。盥手毕，又捧上茶来，这方是吃的茶。贾母便说：“你们去罢，让我们自在说话儿。”王夫人听了，忙起身，又说了两句闲话，方引凤、李二人去了。贾母因问黛玉念何书。黛玉道：只刚念了《四书》。”黛玉又问姊妹们读何书。贾母道：“读的是什么书，不过是认得两个字，不是睁眼的瞎子罢了！”</p><p>一语未了，只听外面一阵脚步响，丫鬟进来笑道：“宝玉来了！”黛玉心中正疑惑着：“这个宝玉，不知是怎生个惫（bán）懒人物，懵懂顽童？”——倒不见那蠢物也罢了。心中想着，忽见丫鬟话未报完，已进来了一位年轻的公子：头上戴着束发嵌宝紫金冠，齐眉勒着二龙抢珠金抹额；穿一件二色金百蝶穿花大红箭袖，束着五彩丝攒花结长穗宫绦(tāo)，外罩石青起花八团倭缎排穗褂；登着青缎粉底小朝靴。面若中秋之月，色如春晓之花，鬓若刀裁，眉如墨画，面如桃瓣，目若秋波。虽怒时而若笑，即瞋视而有情。项上金螭璎珞，又有一根五色丝绦，系着一块美玉。黛玉一见，便吃一大惊，心下想道：“好生奇怪，倒像在那里见过一般，何等眼熟到如此！”只见这宝玉向贾母请了安，贾母便命：“去见你娘来。”宝玉即转身去了。一时回来，再看已换了冠带：头上周围一转的短发，都结成小辫，红丝结束，共攒至顶中胎发，总编一根大辫，黑亮如漆，从顶至梢，一串四颗大珠，用金八宝坠角；身上穿着银红撒花半旧大袄，仍旧带着项圈、宝玉、寄名锁、护身符等物；下面半露松花撒花绫裤腿，锦边弹墨袜，厚底大红鞋。越显得面如敷粉，唇若施脂；转盼多情，语言常笑。天然一段风骚，全在眉梢；平生万种情思，悉堆眼角。看其外貌最是极好，却难知其底细。后人有《西江月》二词，批宝玉极恰，其词曰：</p><p>无故寻愁觅恨，有时似傻如狂。纵然生得好皮囊，腹内原来草莽。潦倒不通世务，愚顽怕读文章。行为偏僻性乖张，那管世人诽谤！</p><p>富贵不知乐业，贫穷难耐凄凉。可怜辜负好韶光，于国于家无望。天下无能第一，古今不肖无双。寄言纨裤与膏粱：莫效此儿形状！</p><p>贾母因笑道：“外客未见，就脱了衣裳，还不去见你妹妹！”宝玉早已看见多了一个姊妹，便料定是林姑妈之女，忙来作揖。厮见毕归坐，细看形容，与众各别：两弯似蹙非蹙罥烟眉，一双似喜非喜含情目。态生两靥（yè）之愁，娇袭一身之病。泪光点点，娇喘微微。闲静时如姣花照水，行动处似弱柳扶风。心较比干多一窍，病如西子胜三分。宝玉看罢，因笑道：“这个妹妹我曾见过的。”贾母笑道：“可又是胡说，你又何曾见过他？”宝玉笑道：“虽然未曾见过他，然我看着面善，心里就算是旧相识，今日只作远别重逢，亦未为不可。”贾母笑道：“更好，更好，若如此，更相和睦了。”宝玉便走近黛玉身边坐下，又细细打量一番，因问：“妹妹可曾读书？”黛玉道：“不曾读，只上了一年学，些须认得几个字。”宝玉又道：“妹妹尊名是那两个字？”黛玉便说了名。宝玉又问表字。黛玉道：“无字。”宝玉笑道：“我送妹妹一妙字，莫若‘颦颦’二字极妙。”探春便问何出。宝玉道：“《古今人物通考》上说：‘西方有石名黛，可代画眉之墨。’况这林妹妹眉尖若蹙，用取这两个字，岂不两妙！”探春笑道：“只恐又是你的杜撰。”宝玉笑道：“除《四书》外，杜撰的太多，偏只我是杜撰不成？”又问黛玉：“可也有玉没有？”众人不解其语，黛玉便忖度着因他有玉，故问我有也无，因答道：“我没有那个。想来那玉是一件罕物，岂能人人有的。”宝玉听了，登时发作起痴狂病来，摘下那玉，就狠命摔去，骂道：“什么罕物，连人之高低不择，还说‘通灵’不‘通灵’呢！我也不要这劳什子了！”吓的众人一拥争去拾玉。贾母急的搂了宝玉道：“孽障！你生气，要打骂人容易，何苦摔那命根子！”宝玉满面泪痕泣道：“家里姐姐妹妹都没有，单我有，我说没趣；如今来了这们一个神仙似的妹妹也没有，可知这不是个好东西。”贾母忙哄他道：“你这妹妹原有这个来的，因你姑妈去世时，舍不得你妹妹，无法处，遂将他的玉带了去了：一则全殉葬之礼，尽你妹妹之孝心；二则你姑妈之灵，亦可权作见了女儿之意。因此他只说没有这个，不便自己夸张之意。你如今怎比得他？还不好生慎重带上，仔细你娘知道了。”说着，便向丫鬟手中接来，亲与他带上。宝玉听如此说，想一想大有情理，也就不生别论了。</p><p>当下，奶娘来请问黛玉之房舍。贾母说：“今将宝玉挪出来，同我在套间暖阁儿里，把你林姑娘暂安置碧纱橱里。等过了残冬，春天再与他们收拾房屋，另作一番安置罢。”宝玉道：“好祖宗，我就在碧纱厨外的床上很妥当，何必又出来闹的老祖宗不得安静。”贾母想了一想说：“也罢了。”每人一个奶娘并一个丫头照管，余者在外间上夜听唤。一面早有熙凤命人送了一顶藕合色花帐，并几件锦被缎褥之类。</p><p>黛玉只带了两个人来：一个是自幼奶娘王嬷嬷，一个是十岁的小丫头，亦是自幼随身的，名唤作雪雁。贾母见雪雁甚小，一团孩气，王嬷嬷又极老，料黛玉皆不遂心省力的，便将自己身边的一个二等丫头，名唤鹦哥者与了黛玉。外亦如迎春等例，每人除自幼乳母外，另有四个教引嬷嬷，除贴身掌管钗钏盥沐两个丫鬟外，另有五六个洒扫房屋来往使役的小丫鬟。当下，王嬷嬷与鹦哥陪侍黛玉在碧纱橱内。宝玉之乳母李嬷嬷，并大丫鬟名唤袭人者，陪侍在外面大床上。</p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/3/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/3/</wfw:commentRss>
+</item>
+<item>
+<title>蜀道难</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/4/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/4/</guid>
+<pubDate>Tue, 04 May 2021 07:08:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[噫吁嚱，危乎高哉！蜀道之难，难于上青天！蚕丛及鱼凫，开国何茫然！尔来四万八千岁，不与秦塞通人烟。西当太白有鸟道，可以横绝峨眉巅。地崩山摧壮士死，然后天梯石栈相钩连。上有六龙回日之高标，下有冲波逆...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>噫吁嚱，危乎高哉！蜀道之难，难于上青天！<br>蚕丛及鱼凫，开国何茫然！<br>尔来四万八千岁，不与秦塞通人烟。<br>西当太白有鸟道，可以横绝峨眉巅。<br>地崩山摧壮士死，然后天梯石栈相钩连。<br>上有六龙回日之高标，下有冲波逆折之回川。<br>黄鹤之飞尚不得过，猿猱欲度愁攀援。(攀援 一作：攀缘)<br>青泥何盘盘，百步九折萦岩峦。<br>扪参历井仰胁息，以手抚膺坐长叹。<br>问君西游何时还？畏途巉岩不可攀。<br>但见悲鸟号古木，雄飞雌从绕林间。<br>又闻子规啼夜月，愁空山。<br>蜀道之难,难于上青天，使人听此凋朱颜！<br>连峰去天不盈尺，枯松倒挂倚绝壁。<br>飞湍瀑流争喧豗，砯崖转石万壑雷。<br>其险也如此，嗟尔远道之人胡为乎来哉！(也若此 一作：也如此)<br>剑阁峥嵘而崔嵬，一夫当关，万夫莫开。<br>所守或匪亲，化为狼与豺。<br>朝避猛虎，夕避长蛇；磨牙吮血，杀人如麻。<br>锦城虽云乐，不如早还家。<br>蜀道之难,难于上青天，侧身西望长咨嗟！</p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/4/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/4/</wfw:commentRss>
+</item>
+</channel>
+</rss>
