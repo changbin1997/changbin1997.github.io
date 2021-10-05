@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-localhost	TRUE	/php/typecho-demo/	FALSE	1999999999	0fb2af2921734e691621067e96f41a0btypechoAgreeRecording	%5B0%5D
-localhost	TRUE	/php/typecho-demo/	FALSE	1999999999	0fb2af2921734e691621067e96f41a0bextend_contents_views	2%2C12%2C11%2C10%2C7%2C5%2C4%2C3
-

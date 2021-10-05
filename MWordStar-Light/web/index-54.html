@@ -6,12 +6,153 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 xmlns:atom="http://www.w3.org/2005/Atom"
 xmlns:wfw="http://wellformedweb.org/CommentAPI/">
 <channel>
-<title>MWordStar - Linux 搭建 Minecraft 基岩版服务器 的评论</title>
-<link>http://localhost/php/typecho-demo/index.php/archives/10/</link>
-<atom:link href="http://localhost/php/typecho-demo/index.php/feed/archives/10/" rel="self" type="application/rss+xml" />
+<title>MWordStar - PHP</title>
+<link>http://localhost/php/typecho-demo/index.php/category/php/</link>
+<atom:link href="http://localhost/php/typecho-demo/index.php/feed/category/php/" rel="self" type="application/rss+xml" />
 <language>zh-CN</language>
-<description>Minecraft Bedrock Edition 也就是我的世界基岩版，这是 Minecraft 的另一个版本。Minecraft 基岩版可以运行在 Win10、Android、iOS、XBo...</description>
-<lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
-<pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+<description>这里是一些PHP相关的教程和笔记。</description>
+<lastBuildDate>Wed, 29 Sep 2021 14:47:00 +0000</lastBuildDate>
+<pubDate>Wed, 29 Sep 2021 14:47:00 +0000</pubDate>
+<item>
+<title>PHP 压缩和解压文件</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/16/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/16/</guid>
+<pubDate>Wed, 29 Sep 2021 14:47:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[我的服务器每天都会分割日志，这些按天分割的日志为了方便管理和下载就需要按月归档，打包为压缩包。这里就简单写一下 PHP 压缩和解压文件。我用来压缩和解压文件的库是 ZipArchive ，这是 ...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>我的服务器每天都会分割日志，这些按天分割的日志为了方便管理和下载就需要按月归档，打包为压缩包。这里就简单写一下 PHP 压缩和解压文件。</p><p>我用来压缩和解压文件的库是 <a href="https://www.php.net/manual/zh/class.ziparchive.php">ZipArchive</a> ，这是 PHP 内置的一个用来压缩和解压 ZIP 文件的库。</p><h2>压缩</h2><p>下面简单创建一个 ZIP 的压缩包，然后添加一个文件到压缩包：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addFile('log.txt');  // 添加一个文件到打开的 zip 文件中
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面创建了一个名为 <code>1.zip</code> 的压缩包，然后把 <code>log.txt</code> 添加到了 <code>1.zip</code> 中。</p><p>下面是用到的方法说明：</p><h3><code>open()</code> 方法</h3><p><code>open</code> 方法的功能是打开一个 zip 文件，第一个参数是文件名，第二个参数是打开方式，打开方式可以接受一个预定义常量，下面是预定义常量的说明：</p><ul><li><code>ZIPARCHIVE::OVERWRITE </code>： 总是以一个新的压缩包开始，此模式下如果已经存在则会被覆盖。</li><li><code>ZIPARCHIVE::CREATE</code>： 如果不存在则创建一个zip压缩包。</li><li><code>ZipArchive::RDONLY</code>： 只读模式打开压缩包。</li><li><code>ZIPARCHIVE::EXCL</code>： 如果压缩包已经存在，则出错。</li><li><code>ZIPARCHIVE::CHECKCONS</code>： 对压缩包执行额外的一致性检查，如果失败则显示错误。</li></ul><p>我上面使用的是 <code>ZipArchive::CREATE</code>，也就是如果 zip 文件不存在就创建一个。</p><h3><code>addFile()</code> 方法</h3><p><code>addFile</code> 方法的功能是把文件添加到 zip 包中。第一个参数是要添加的文件名，第二个参数是添加到 zip 包中的名称。</p><p>下面演示第二个参数：</p><pre><code class="lang-php">$zip-&gt;addFile('log.txt', 'log-backup.txt');</code></pre><p>我要添加到 zip 包的文件是 <code>log.txt</code> 添加到 zip 包后在 zip 包中查看就是 <code>log-backup.txt</code>，相当于在添加的时候给文件改个名，成功会返回 <code>true</code>，否则返回 <code>false</code> 。</p><h3><code>close()</code> 方法</h3><p>在操作完成后可以使用 <code>close</code> 关闭打开的 zip 包。</p><h2>直接添加内容</h2><p>在没有文件的情况下也可以直接添加字符串或其它内容到 zip 包中。</p><p>下面创建一个 zip 包，然后添加字符串到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addFromString('Hello.txt', 'Hello this is text');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面创建了一个 <code>1.zip</code> 的压缩包，然后添加了一个名为 <code>Hello.txt</code> 的文件到 zip 包中，这个 <code>Hello.txt</code> 的内容就是 <code>Hello this is text</code> 。</p><h2>添加多个文件</h2><p>添加多个文件除了多次调用添加外也可以使用 <code>addGlob</code> 方法添加，<code>addGlob</code> 方法就和 <code>glob</code> 函数差不多，可以根据给定的过滤方式来获取目录下所有符合标准的文件。</p><p>下面创建一个 zip 包，然后把当前目录下所有 <code>txt</code> 结尾的文件都添加到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addGlob('*.txt');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>如果我要添加当前目录下的所有文件可以这样写：</p><pre><code class="lang-php">$zip-&gt;addGlob('*');</code></pre><p><code>addGlob</code> 方法只能添加文件，即便用 <code>*</code> 也不会添加目录。</p><h2>添加目录</h2><p>下面创建一个 zip 包，然后添加一个目录到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addEmptyDir('.idea');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面的 <code>addEmptyDir</code> 方法只能添加目录，目录中的文件或目录是不会被添加到 zip 包中的，也就是说添加到 zip 包中的是空目录。</p><p>因为 <code>ZipArchive</code> 没有可以自动递归添加目录下的文件或目录的方法，所以如果要添加目录下的文件或目录就只能自己手动递归添加。</p><p>下面简单编写一个可以递归添加目录下的所有文件或目录的类：</p><pre><code class="lang-php">class Zip {
+    protected $zip = null;  // ZipArchive 对象
+    protected $count = 0;  // 记录文件数量
+    // 添加单个文件或目录
+    public function add($fileName, $zipFileName = '') {
+        if ($zipFileName == '') {
+            // 如果 zip 文件名为空就使用传入的文件或目录名作为 zip 文件名
+            $zipFileName = $fileName . '.zip';
+        }
+        $this-&gt;zip = new ZipArchive();  // 创建 ZipArchive 类
+        $this-&gt;zip-&gt;open($zipFileName, ZipArchive::CREATE);  // 打开一个 zip 文件
+        // 判断传入的是否是一个目录
+        if (is_dir($fileName)) {
+            $this-&gt;addDir($fileName);  // 调用添加目录方法
+        }else {
+            // 如果不是目录就直接添加文件
+            if ($this-&gt;zip-&gt;addFile($fileName)) {
+                $this-&gt;count ++;  // 成功添加后添加文件数量 +1
+            }
+        }
+        $this-&gt;zip-&gt;close();  // 关闭打开的 zip 包
+        return $this-&gt;count;  // 返回已添加文件的数量
+    }
+    // 添加目录
+    public function addDir($dir) {
+        $this-&gt;zip-&gt;addEmptyDir($dir);  // 添加目录
+        $fileList = glob($dir .  '/*');  // 获取路劲下的所有文件或目录
+        foreach ($fileList as $file) {
+            // 是否是目录
+            if (is_dir($file)) {
+                $this-&gt;addDir($file);  // 调用自身继续操作
+                continue;  // 跳过本次循环
+            }
+            // 添加文件
+            if ($this-&gt;zip-&gt;addFile($file, $file)) {
+                $this-&gt;count ++;  // 成功添加后添加文件数量 +1
+            }
+        }
+    }
+}</code></pre><p>上面的类可以调用 <code>add</code> 方法来添加文件或目录，第一个参数可以传入要添加的文件或目录，第二个参数是 zip 包名称，如果传入的 zip 包不存在就会自动创建，如果省略第二个参数会使用文件名来作为 zip 包名。</p><p>下面调用一下上面的 <code>zip</code> 类：</p><pre><code class="lang-php">$zip = new Zip();
+$zip-&gt;add('src', 'src.zip');  // 调用 add 添加</code></pre><p>使用上面的类无论目录下有多少文件或目录都能添加。</p><h2>解压文件</h2><p>下面把 <code>src.zip</code> 里的所有文件解压到 <code>dir</code> 目录：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;extractTo('dir');  // 把 zip 包内的所有文件解压到指定目录
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><p>解压文件使用的就是 <code>extractTo</code> 方法，参数就是存放解压后的文件的目录，如果传入的目录不存在会自动创建。<code>extractTo</code> 成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><h2>设置和获取注释</h2><p>使用 WinRAR 之类的软件查看一些网上下载的压缩包的时候可以看到右侧有注释内容，PHP 也能设置和查看注释内容。</p><p>下面给 <code>src.zip</code> 设置注释内容：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;setArchiveComment('这是一个 zip 压缩包');  // 设置注释
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><p><code>setArchiveComment</code> 方法可以给打开的压缩包设置注释内容，参数就是注释内容，成功返回 <code>true</code>，失败返回 <code>false</code> 。</p><p>下面输出 <code>src.zip</code> 的注释内容：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+echo $zip-&gt;getArchiveComment();  // 输出注释内容
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h2>查询相关</h2><p>下面是一些获取 zip 压缩包信息和文件的方法：</p><h3><code>count()</code> 方法</h3><p><code>count</code> 方法可以获取压缩包中的文件和目录数量，获取的是所有文件和目录的数量，包括深层级的目录和文件。</p><h3><code>getNameIndex()</code> 方法</h3><p><code>getNameIndex</code> 方法可以根据传入的索引返回压缩包内文件的文件名，需要传入一个数字索引，返回对应文件的文件名。</p><p>下面循环输出 <code>src.zip</code> 里所有文件的文件名：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src-all.zip');  // 打开 zip 包
+for ($i = 0;$i &lt; $zip-&gt;count();$i ++) {
+    echo $zip-&gt;getNameIndex($i) . &quot;\n&quot;;  // 输出文件名
+}
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>getFromIndex()</code> 方法</h3><p><code>getFromIndex</code> 方法可以根据索引读取压缩包内的文件内容，第一个参数是文件索引，第二个参数是读取的字节数，0 为读取整个文件。</p><p>下面读取并输出 <code>src.zip</code> 中的第 2 个文件的内容，只读取 3 个字节：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+echo $zip-&gt;getFromIndex(2, 3);  // 读取并输出
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>getFromName()</code> 方法</h3><p><code>getFromName</code> 方法可以根据压缩包内的文件名读取压缩包内的文件内容，第一个参数是要读取的文件名，第二个参数是读取的字节数，0 为读取整个文件。<code>getFromName</code> 和上面的 <code>getFromIndex</code> 方法都是差不多的，只是 <code>getFromName</code> 方法传入的是文件名。</p><h2>操作压缩包内的文件</h2><p>下面是一些操作压缩包内的文件的方法：</p><h3><code>renameName()</code> 方法</h3><p><code>renameName</code> 方法可以给压缩包内的文件重命名，第一个参数是要重命名的文件名，第二个参数是新文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><p>下面把 <code>src.zip</code> 里的 <code>log.txt</code> 重命名为 <code>new-name.txt</code> ：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;renameName('log.txt', 'new-name.txt');  // 重命名
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>renameIndex()</code> 方法</h3><p><code>renameIndex</code> 方法和上面的 <code>renameName</code> 方法差不多，也是给压缩包里的文件重命名的，不过 <code>renameIndex</code> 的第一个参数是要重命名的文件索引，第二个参数是新文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><h3><code>deleteName()</code> 方法</h3><p><code>deleteName</code> 方法可以删除压缩包内的文件， 参数就是要删除的文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><p>下面删除 <code>src.zip</code> 中的 <code>log.txt</code> ：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;deleteName('log.txt');  // 删除
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>deleteIndex()</code> 方法</h3><p><code>deleteIndex</code> 方法和上面的  <code>deleteName</code> 差不多，也是删除压缩包里的文件，不过 <code>deleteIndex</code> 需要传入文件索引。</p><p>以上就是 PHP 操作 zip 压缩文件的方法，更多方法可以查看 PHP 官网的 <a href="https://www.php.net/manual/zh/class.ziparchive.php">ZipArchive</a> 类说明。</p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/16/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/16/</wfw:commentRss>
+</item>
+<item>
+<title>PHP 使用 PHPMailer 发送邮件</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/13/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/13/</guid>
+<pubDate>Fri, 20 Aug 2021 08:13:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[最近准备写一个个人博客，博客的用户注册和找回密码都需要邮件验证。PHP 虽然提供了 mail 函数来发送邮件，但是 mail 函数的功能限制较多，只能发送普通文本，如果要发送 HTML 或附件就...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>最近准备写一个个人博客，博客的用户注册和找回密码都需要邮件验证。PHP 虽然提供了 <code>mail</code> 函数来发送邮件，但是 <code>mail</code> 函数的功能限制较多，只能发送普通文本，如果要发送 HTML 或附件就比较麻烦。</p><p>在逛 Github 的时候看到一个功能比较强大的邮件发送类 <a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a> ，很多著名的 PHP 开源项目 比如  WordPress、Drupal、SugarCRM 也都在用 PHPMailer 发送邮件。</p><p>下面就简单写一下 PHPMailer 发送邮件的过程。</p><p>PHPMailer 的 Github 地址是 <a href="https://github.com/PHPMailer/PHPMailer">https://github.com/PHPMailer/PHPMailer</a> 。</p><p>可以使用 Composer 安装，也可以手动下载项目引入，我这里是手动下载项目引入。</p><h2>发送邮件</h2><p>发送邮件相关的代码都在 <code>src</code> 目录中，<code>language</code> 目录中包含了不同语言的报错信息。</p><p>下面使用 SMTP 发送邮件：</p><pre><code class="lang-php">&lt;?php
+
+use PHPMailer\PHPMailer\PHPMailer;  //  设置命名空间
+use PHPMailer\PHPMailer\SMTP;  //  设置命名空间
+use PHPMailer\PHPMailer\Exception;  //  设置命名空间
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+
+$mail = new PHPMailer(true);  //  创建邮件发送对象
+
+try {
+    //  服务器相关设置
+    $mail-&gt;SMTPDebug = SMTP::DEBUG_SERVER;  //  输出服务器日志
+    $mail-&gt;isSMTP();  //  使用 SMTP 来发送邮件
+    $mail-&gt;SMTPAuth = true;  //  启用 SMTP 身份验证
+    $mail-&gt;Host = 'smtp.qq.com';  //  SMTP 服务器地址
+    $mail-&gt;Username = 'email@misterma.com';  //  SMTP 用户名
+    $mail-&gt;Password = 'wvikg5hyswveche';  //  密码
+    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  //  使用 TLS 加密
+    $mail-&gt;Port = '25';  //  SMTP 端口
+
+    //  发件人和收件人
+    $mail-&gt;setFrom('email@misterma.com', 'Mr. Ma');  //  发件人
+    $mail-&gt;addAddress('usmmiuy@gmail.com', 'Joe User');  //  添加收件人
+
+    // 邮件标题和内容
+    $mail-&gt;isHTML(true);  //  邮件格式设置为 HTML
+    $mail-&gt;Subject = '这是邮件标题';  //  邮件标题
+    $mail-&gt;Body = '这是 HTML 内容 &lt;b&gt;加粗的文字&lt;/b&gt;';  //  HTML 内容
+    $mail-&gt;AltBody = '文本内容';  //  纯文本
+    $mail-&gt;addAttachment('tutorial.txt');  //  添加附件
+
+    $mail-&gt;send();  //  发送
+    echo '发送完成';
+} catch (Exception $e) {
+    //  输出错误信息
+    echo '错误:' . $mail-&gt;ErrorInfo;
+}</code></pre><p>我上面使用的是 QQ邮箱的 SMTP 服务。</p><h2>一些属性和方法说明</h2><p>下面是服务器相关的一些属性说明：</p><ul><li><code>$mail-&gt;Host</code>：设置 SMTP 服务器地址，不同邮箱服务的 SMTP 地址也会不一样，下面会有常用的邮箱服务的 SMTP 地址。</li><li><code>$mail-&gt;Username</code>：SMPT 用户名，一般也就是发送邮件的邮箱地址。</li><li><code>$mail-&gt;Password</code>：SMTP 的用户密码，有的邮箱服务可以直接使用邮箱密码，有的邮箱在开启 SMTP 后会生成一个独立的授权码。</li><li><code>$mail-&gt;Port</code>：SMTP 服务器端口，不同邮箱服务的端口也会不一样，下面会写常用的邮箱的 SMTP 端口。</li></ul><p>下面是发件人和收件人相关的一些方法说明：</p><ul><li><code>$mail-&gt;setFrom()</code>：发件人，第一个参数是发件人邮箱地址，第二个参数是发件人姓名。</li><li><code>$mail-&gt;addAddress()</code>：添加收件人，第一个参数是收件人的邮箱地址，第二个参数是收件人的姓名，收件人可添加多个。</li></ul><p>下面是邮件标题和邮件内容相关的一些方法说明：</p><ul><li><code>$mail-&gt;isHTML()</code>：使用 HTML 格式。</li><li><code>$mail-&gt;Subject</code>：邮件的标题或主题。</li><li><code>$mail-&gt;Body</code>：邮件内容。</li><li><code>$mail-&gt;AltBody</code>：邮件内容（纯文本）。</li><li><code>$mail-&gt;addAttachment</code>：添加附件，参数就是文件名，附件可以添加多个。</li></ul><h2>常用邮件服务的 SMTP 地址和端口</h2><p>下面是一些常用的邮箱服务的 SMTP 地址和端口：</p><table><thead><tr><th>服务商</th><th>SMTP 地址</th><th>SMTP 端口</th></tr></thead><tbody><tr><td>QQ邮箱</td><td>smtp.qq.com</td><td>25</td></tr><tr><td>网易126邮箱</td><td>smtp.126.com</td><td>25</td></tr><tr><td>网易163邮箱</td><td>smtp.163.com</td><td>25</td></tr><tr><td>新浪邮箱</td><td>smtp.sina.cn</td><td>25</td></tr><tr><td>Gmail</td><td>smtp.gmail.com</td><td>465</td></tr><tr><td>雅虎邮箱</td><td>smtp.mail.yahoo.com</td><td>465</td></tr></tbody></table><p>Foxmail邮箱 可以直接使用 QQ邮箱 的 SMTP 地址和端口。</p><p>以上就是 PHPMailer 发送邮件的简单演示，PHPMailer 还有很多选项可以设置。如果要查看更多的设置选项可以访问官方的 <a href="http://phpmailer.github.io/PHPMailer/">API 文档</a> 。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/13/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/13/</wfw:commentRss>
+</item>
 </channel>
 </rss>

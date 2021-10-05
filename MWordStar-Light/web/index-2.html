@@ -11,19 +11,19 @@ xmlns:wfw="http://wellformedweb.org/CommentAPI/">
 <atom:link href="http://localhost/php/typecho-demo/index.php/feed/" rel="self" type="application/rss+xml" />
 <language>zh-CN</language>
 <description>MWordStar演示站</description>
-<lastBuildDate>Sat, 21 Aug 2021 08:25:00 +0000</lastBuildDate>
-<pubDate>Sat, 21 Aug 2021 08:25:00 +0000</pubDate>
+<lastBuildDate>Sun, 03 Oct 2021 08:25:00 +0000</lastBuildDate>
+<pubDate>Sun, 03 Oct 2021 08:25:00 +0000</pubDate>
 <item>
 <title>MWordStar 响应式双栏 Typecho 博客主题</title>
 <link>http://localhost/php/typecho-demo/index.php/archives/12/</link>
 <guid>http://localhost/php/typecho-demo/index.php/archives/12/</guid>
-<pubDate>Sat, 21 Aug 2021 08:25:00 +0000</pubDate>
+<pubDate>Sun, 03 Oct 2021 08:25:00 +0000</pubDate>
 <dc:creator>Mr. Ma</dc:creator>
-<description><![CDATA[MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 我的博客 之前使用的主题。主题免费开源，可以在 Github 上免费下载。因为我现在暂时没有用这个主题，所以没有主题演示站，...]]></description>
+<description><![CDATA[MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 我的博客 之前使用的主题。主题免费开源，可以在 Github 上免费下载。主题演示地址：https://changbin19...]]></description>
 <content:encoded xml:lang="zh-CN"><![CDATA[
-<p>MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 <a href="https://www.misterma.com/">我的博客</a> 之前使用的主题。主题免费开源，可以在 Github 上免费下载。</p><p>因为我现在暂时没有用这个主题，所以没有主题演示站，样式之类的可以参考下面的截图。</p><p>主题下载地址：<a href="https://github.com/changbin1997/MWordStar/releases">https://github.com/changbin1997/MWordStar/releases</a></p><p>主题使用说明：<a href="https://mwordstar.misterma.com/">https://mwordstar.misterma.com/</a></p><p>下面是主题首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686604695.png" alt="MWordStar主题首页截图1" title="MWordStar主题首页截图1"></p><p>主题元素包含圆角和直角两种风格，您可以根据喜好在主题外观设置中切换，下面是直角风格的首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686924621.jpg" alt="MWordStar直角风格首页截图" title="MWordStar直角风格首页截图"></p><p>主题还包含了几套不同风格的配色，您可以根据喜好在主题外观设置中切换。</p><p><img src="https://www.misterma.com/img-admin/uploads/16043687256363.jpg" alt="MWordStar不同配色的截图" title="MWordStar不同配色的截图"></p><p>文章页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16162518715628.jpg" alt="MWordStar主题文章页截图" title="MWordStar主题文章页截图"></p><h2>特点和功能</h2><ul><li>响应式设计</li><li>无障碍适配（Accessibility）</li><li>5 种不同风格的配色</li><li>两种不同风格的元素</li><li>代码高亮</li><li>丰富的设置选项</li><li>良好的 SEO 优化</li><li>自带点赞功能</li><li>文章可快速分享到社交网站</li><li>评论区自带 Emoji 表情面板</li><li>自动根据文章中的标题生成章节目录</li><li>长期维护</li><li>详细的 <a href="https://mwordstar.misterma.com/">使用说明</a>（必看）</li></ul><h2>主题介绍</h2><h3>外观设计</h3><p>因为我个人比较喜欢两栏布局，所以这个主题也使用了两栏布局的设计。</p><h3>主题依赖</h3><p>主题主要用到了一下几个库和框架：</p><ul><li><a href="https://getbootstrap.com/">Bootstrap</a>  外观和布局</li><li><a href="https://jquery.com/">jQuery</a>  Bootstrap 依赖</li><li><a href="https://github.com/jeromeetienne/jquery-qrcode">jquery-qrcode</a> 一个生成二维码的 jQuery 插件</li><li><a href="https://highlightjs.org/">highlight.js</a>  代码高亮</li><li><a href="https://icomoon.io/">IcoMoon</a>  字体图标</li></ul><p>其中 IcoMoon 的字体图标是可定制的，所以只包含了主题中出现的图标，字体图标的文件体积也很小。</p><p>主题的静态文件没有使用任何 CDN 地址，所有文件都放在主题的 <code>assets</code> 目录中。主题的生成目录、点赞、快速分享 之类的功能都是自己手动编写的，所以用到的 JS 库也比较少。</p><p>使用 Webpack 打包的版本前台只需要加载一个 CSS 和 一个 JS 文件，所有 JS 库都打包到了 JS 中，所有 CSS 和字体图标都打包到了 CSS 中。因为用到的库比较少，而且字体图标和部分组件都是按需引入的，所以打包后的 CSS 和 JS 也比较小。</p><h3>主题安装</h3><p>把主题上传到 Typecho 的 <code>usr/themes/</code> 目录，然后解压，你也可以先解压在上传。</p><p>解压后需要保证 <code>themes</code> 目录下 有一个 <code>MWordStar</code> 目录。</p><p>登录 Typecho 的后台管理，进入 <code>控制台</code> -&gt; <code>外观</code>，如果看到 <strong>MWordStar</strong> 就点击 <code>启用</code>。</p><h3>代码高亮</h3><p>代码高亮的样式使用的是 VS2015 的暗色主题，和 Visual Studio Code 的默认主题差不多。主题支持 30 多种语言的代码高亮。详细的说明可以查看 <a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>友情链接</h3><p>友情链接分为 <code>全站友情链接</code>、<code>首页友情链接</code>、<code>内页友情链接</code>。<code>全站友情链接</code> 会在每个页面的侧边栏显示，<code>首页友情链接</code> 会在首页的侧边栏显示，<code>内页友情链接</code> 只会在 友情链接 的页面显示。</p><p>如需查看友情链接的设置说明可以访问：<a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>文章头图</h3><p>文章头图可以在 首页、文章页、侧边栏 显示，您可以根据需求在主题外观设置中设置。文章头图来源支持自动获取文章的第一张图片和手动输入图片 URL。</p><h3>无障碍（Accessibility）</h3><p>上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。</p><p>目前国内的很多网站都只注重外观，忽略了残障人士的可访问性。但是想要做好网站的用户体验，<a href="https://www.misterma.com/archives/264/">无障碍</a> 适配肯定是少不了的。</p><p>主题针对屏幕阅读器做了大量优化，并 在 <a href="http://www.nvda-project.org/">NVDA</a> 和 <a href="https://www.apple.com/cn/accessibility/iphone/vision/">VoiceOver</a> 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读。主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。</p><p>主题可完美支持键盘访问，颜色对比度也符合标准。</p><p>小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。</p><h3>Emoji 表情</h3><p>主题评论区包含一个 Emoji 表情面板，您可以在后台启用或禁用。Emoji 表情面板包含 1466 个表情，这些表情都是按照分类动态加载的，您不用担心性能问题。</p><p>Emoji 表情面板也进行了无障碍适配，可支持键盘访问和屏幕阅读器朗读。</p><p>下面是 Emoji 表情面板的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043688114310.jpeg" alt="emoji面板截图" title="emoji面板截图"></p><h3>兼容性</h3><p>因为本主题使用了 HTML5 和 CSS3，需要 IE10 及以上浏览器才能完美兼容。IE8 及以下浏览器显示可能会出现一些问题。</p><h3>插件适配</h3><p>因为本人很少使用插件，所以目前适配的插件比较少。</p><p>下面是已适配的插件：</p><ul><li><a href="https://plugins.typecho.me/plugins/sticky.html">Sticky</a> 文章置顶插件</li></ul><h2>其它</h2><p>主题 Github：<a href="https://github.com/changbin1997/MWordStar">https://github.com/changbin1997/MWordStar</a></p><p>码云仓库地址：<a href="https://gitee.com/changbin1997/MWordStar">https://gitee.com/changbin1997/MWordStar</a></p><p>主题使用 <a href="https://github.com/changbin1997/MWordStar/blob/master/LICENSE">MIT License</a> 开源。</p><p>如果您在使用这个主题时遇到 Bug 或有任何问题和建议都可以在 <a href="https://www.misterma.com/archives/812/#comments">博客评论区</a> 留言，也可以在 Github 的 <a href="https://github.com/changbin1997/MWordStar/issues">issues</a> 反馈。</p>
+<p>MWordStar 是一套简洁的 Typecho 双栏博客主题，也是 <a href="https://www.misterma.com/">我的博客</a> 之前使用的主题。主题免费开源，可以在 Github 上免费下载。</p><p>主题演示地址：<a href="https://changbin1997.github.io/MWordStar-Light/web/">https://changbin1997.github.io/MWordStar-Light/web/</a></p><p>主题包含几套不同风格的配色，您可以在主题设置中切换，下面是各种配色的演示地址：</p><p>* <a href="https://changbin1997.github.io/MWordStar-Light/web/">MWordStar-Light</a></p><p>* <a href="https://changbin1997.github.io/MWordStar-info/web/">MWordStar-info</a></p><p>* <a href="https://changbin1997.github.io/MWordStar-Primary/web/">MWordStar-Primary</a></p><p>* <a href="https://changbin1997.github.io/MWordStar-Success/web/">MWordStar-Success</a></p><p>Light 和 dark 配色只是顶部的导航栏不一样，其他地方都是一样的，可以参考下面的截图。主题演示站只是静态页面，不能发评论和点赞。</p><p>主题下载地址：<a href="https://github.com/changbin1997/MWordStar/releases">https://github.com/changbin1997/MWordStar/releases</a></p><p>主题使用说明：<a href="https://mwordstar.misterma.com/">https://mwordstar.misterma.com/</a></p><p>下面是主题首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686604695.png" alt="MWordStar主题首页截图1" title="MWordStar主题首页截图1"></p><p>主题元素包含圆角和直角两种风格，您可以根据喜好在主题外观设置中切换，下面是直角风格的首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043686924621.jpg" alt="MWordStar直角风格首页截图" title="MWordStar直角风格首页截图"></p><p>下面是不同配色的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043687256363.jpg" alt="MWordStar不同配色的截图" title="MWordStar不同配色的截图"></p><p>文章页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16162518715628.jpg" alt="MWordStar主题文章页截图" title="MWordStar主题文章页截图"></p><h2>特点和功能</h2><ul><li>响应式设计</li><li>无障碍适配（Accessibility）</li><li>5 种不同风格的配色</li><li>两种不同风格的元素</li><li>代码高亮</li><li>丰富的设置选项</li><li>良好的 SEO 优化</li><li>自带点赞功能</li><li>文章可快速分享到社交网站</li><li>评论区自带 Emoji 表情面板</li><li>自动根据文章中的标题生成章节目录</li><li>长期维护</li><li>详细的 <a href="https://mwordstar.misterma.com/">使用说明</a>（必看）</li></ul><h2>主题介绍</h2><h3>外观设计</h3><p>因为我个人比较喜欢两栏布局，所以这个主题也使用了两栏布局的设计。</p><h3>主题依赖</h3><p>主题主要用到了一下几个库和框架：</p><ul><li><a href="https://getbootstrap.com/">Bootstrap</a>  外观和布局</li><li><a href="https://jquery.com/">jQuery</a>  Bootstrap 依赖</li><li><a href="https://github.com/jeromeetienne/jquery-qrcode">jquery-qrcode</a> 一个生成二维码的 jQuery 插件</li><li><a href="https://highlightjs.org/">highlight.js</a>  代码高亮</li><li><a href="https://icomoon.io/">IcoMoon</a>  字体图标</li></ul><p>其中 IcoMoon 的字体图标是可定制的，所以只包含了主题中出现的图标，字体图标的文件体积也很小。</p><p>主题的静态文件没有使用任何 CDN 地址，所有文件都放在主题的 <code>assets</code> 目录中。主题的生成目录、点赞、快速分享 之类的功能都是自己手动编写的，所以用到的 JS 库也比较少。</p><p>使用 Webpack 打包的版本前台只需要加载一个 CSS 和 一个 JS 文件，所有 JS 库都打包到了 JS 中，所有 CSS 和字体图标都打包到了 CSS 中。因为用到的库比较少，而且字体图标和部分组件都是按需引入的，所以打包后的 CSS 和 JS 也比较小。</p><h3>主题安装</h3><p>把主题上传到 Typecho 的 <code>usr/themes/</code> 目录，然后解压，你也可以先解压在上传。</p><p>解压后需要保证 <code>themes</code> 目录下 有一个 <code>MWordStar</code> 目录。</p><p>登录 Typecho 的后台管理，进入 <code>控制台</code> -&gt; <code>外观</code>，如果看到 <strong>MWordStar</strong> 就点击 <code>启用</code>。</p><h3>代码高亮</h3><p>代码高亮的样式使用的是 VS2015 的暗色主题，和 Visual Studio Code 的默认主题差不多。主题支持 30 多种语言的代码高亮。详细的说明可以查看 <a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>友情链接</h3><p>友情链接分为 <code>全站友情链接</code>、<code>首页友情链接</code>、<code>内页友情链接</code>。<code>全站友情链接</code> 会在每个页面的侧边栏显示，<code>首页友情链接</code> 会在首页的侧边栏显示，<code>内页友情链接</code> 只会在 友情链接 的页面显示。</p><p>如需查看友情链接的设置说明可以访问：<a href="https://www.misterma.com/archives/819/">使用说明</a> 。</p><h3>文章头图</h3><p>文章头图可以在 首页、文章页、侧边栏 显示，您可以根据需求在主题外观设置中设置。文章头图来源支持自动获取文章的第一张图片和手动输入图片 URL。</p><h3>无障碍（Accessibility）</h3><p>上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。</p><p>目前国内的很多网站都只注重外观，忽略了残障人士的可访问性。但是想要做好网站的用户体验，<a href="https://www.misterma.com/archives/264/">无障碍</a> 适配肯定是少不了的。</p><p>主题针对屏幕阅读器做了大量优化，并 在 <a href="http://www.nvda-project.org/">NVDA</a> 和 <a href="https://www.apple.com/cn/accessibility/iphone/vision/">VoiceOver</a> 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读。主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。</p><p>主题可完美支持键盘访问，颜色对比度也符合标准。</p><p>小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。</p><h3>Emoji 表情</h3><p>主题评论区包含一个 Emoji 表情面板，您可以在后台启用或禁用。Emoji 表情面板包含 1466 个表情，这些表情都是按照分类动态加载的，您不用担心性能问题。</p><p>Emoji 表情面板也进行了无障碍适配，可支持键盘访问和屏幕阅读器朗读。</p><p>下面是 Emoji 表情面板的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043688114310.jpeg" alt="emoji面板截图" title="emoji面板截图"></p><h3>兼容性</h3><p>因为本主题使用了 HTML5 和 CSS3，需要 IE10 及以上浏览器才能完美兼容。IE8 及以下浏览器显示可能会出现一些问题。</p><h3>插件适配</h3><p>因为本人很少使用插件，所以目前适配的插件比较少。</p><p>下面是已适配的插件：</p><ul><li><a href="https://plugins.typecho.me/plugins/sticky.html">Sticky</a> 文章置顶插件</li></ul><h2>其它</h2><p>主题 Github：<a href="https://github.com/changbin1997/MWordStar">https://github.com/changbin1997/MWordStar</a></p><p>码云仓库地址：<a href="https://gitee.com/changbin1997/MWordStar">https://gitee.com/changbin1997/MWordStar</a></p><p>主题使用 <a href="https://github.com/changbin1997/MWordStar/blob/master/LICENSE">MIT License</a> 开源。</p><p>如果您在使用这个主题时遇到 Bug 或有任何问题和建议都可以在 <a href="https://www.misterma.com/archives/812/#comments">博客评论区</a> 留言，也可以在 Github 的 <a href="https://github.com/changbin1997/MWordStar/issues">issues</a> 反馈。</p>
 ]]></content:encoded>
-<slash:comments>0</slash:comments>
+<slash:comments>1</slash:comments>
 <comments>http://localhost/php/typecho-demo/index.php/archives/12/#comments</comments>
 <wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/12/</wfw:commentRss>
 </item>
@@ -31,15 +31,145 @@ xmlns:wfw="http://wellformedweb.org/CommentAPI/">
 <title>Facile 一个简洁的 Typecho 博客主题</title>
 <link>http://localhost/php/typecho-demo/index.php/archives/11/</link>
 <guid>http://localhost/php/typecho-demo/index.php/archives/11/</guid>
-<pubDate>Sat, 21 Aug 2021 08:17:00 +0000</pubDate>
+<pubDate>Sat, 02 Oct 2021 08:17:00 +0000</pubDate>
 <dc:creator>Mr. Ma</dc:creator>
 <description><![CDATA[Facile 是一套简洁的 Typecho 博客主题，也是我的博客正在使用的主题。之前我用的主题是 MWordStar ，时间长了就想换一下外观，本来想再给 MWordStar 增加一套样式，但...]]></description>
 <content:encoded xml:lang="zh-CN"><![CDATA[
 <p>Facile 是一套简洁的 Typecho 博客主题，也是我的博客正在使用的主题。</p><p>之前我用的主题是 <a href="https://www.misterma.com/archives/812/">MWordStar</a> ，时间长了就想换一下外观，本来想再给 MWordStar 增加一套样式，但是外观变动比较大，而且 MWordStar 已经有几套样式了，所以重新开发一套主题。</p><p>主题演示地址：<a href="https://www.misterma.com/">https://www.misterma.com/</a> </p><p>主题下载地址：<a href="https://github.com/changbin1997/Facile/releases">https://github.com/changbin1997/Facile/releases</a> </p><p>下载时请选择 <code>Facile-bundle.zip</code> ，否则前端 JS 代码无法在 IE 系列浏览器运行。</p><p>主题 Github 仓库：<a href="https://github.com/changbin1997/Facile">https://github.com/changbin1997/Facile</a> </p><p>下面是主题首页截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16200336116020.png" alt="Facile首页截图" title="Facile首页截图"></p><p>不包含文章头图的截图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16200336317620.png" alt="Facile不包含文章头图的截图" title="Facile不包含文章头图的截图"></p><p>Facile 相比 <a href="https://github.com/changbin1997/MWordStar">MWordStar</a> 来说，外观要更简洁一些，功能也会少一些，MWordStar 有的功能以后也会陆续增加到 Facile 中，但是 Facile 的功能以后也不会有 MWordStar 多。</p><p>Facile 目前还没有专门的使用说明文档，Facile 的功能设置和 MWordStar 是差不多的，可以直接参考 <a href="https://mwordstar.misterma.com/">MWordStar 的使用说明文档</a> ，有问题也可以到 <a href="https://www.misterma.com/msg.html">留言板</a> 或 <a href="https://www.misterma.com/archives/899/">Facile 的介绍文章页</a> 留言。</p><h2>特点和功能</h2><ul><li>响应式设计</li><li>无障碍适配（Accessibility）</li><li>代码高亮</li><li>自带点赞功能</li><li>丰富的侧边栏组件</li><li>丰富的设置选项</li></ul><h2>安装</h2><p>在 Releases 下载的主题是一个 zip 格式的压缩包，把压缩包上传到 Typecho 目录下的 <code>usr/themes/</code> 目录，然后解压，解压后应该可以看到一个 <code>Facile</code> 目录。</p><p>登录 Typecho 后台，在顶部导航栏的 <code>控制台</code> 菜单选择 <code>外观</code> ，如果存放位置没有错误的话就可以看到 Facile 主题了，点击 <code>启用</code> 。</p><h2>主题依赖</h2><p>主题主要用到了以下几个库：</p><ul><li><a href="https://github.com/thomaspark/bootswatch">bootswatch</a> 不同风格的 Bootstrap 主题</li><li><a href="https://jquery.com/">jQuery</a> DOM 操作和 Bootstrap 依赖</li><li><a href="https://github.com/neocotic/qrious">qrious</a> 生成二维码的 JS 库</li><li><a href="https://highlightjs.org/">highlight.js</a> 代码高亮</li><li><a href="https://github.com/apache/echarts">ECharts</a> 百度开源的图表库，用于 <a href="https://www.misterma.com/data.html">统计页</a> 生成统计图</li></ul><p>后端没有用到任何库。</p><p>ECharts 的库比较大，所以只引入了饼图和日历图，而且只会在统计页加载。Bootstrap 的 JS 使用 Webpack 打包过的发行版也只引入了用到的模块。</p><p>主题的图标使用的是 <a href="https://icomoon.io/">IcoMoon</a> 的字体图标，IcoMoon 的图标可以自定义，所以主题中只包含几个用到的图标。</p><p>前端 JS 使用的是 ES6 语法，在 IE 系列的浏览器（包括 IE11）是无法运行的，如果没有二次开发需求的话，可以在 <a href="https://github.com/changbin1997/Facile/releases">Releases</a> 下载 <code>Facile-bundle.zip</code> 发行版，发行版使用了 Webpack + Babel 来打包和转换，可以在 IE 运行。</p><h2>代码高亮</h2><p>文章区和评论区都有代码高亮效果，目前支持 30 多种语言的代码高亮，代码高亮的配色使用的是 VS2015 的暗色主题，和 VSCode 的默认主题差不多。</p><p>支持的语言和 MWordStar 是一样的，可以访问 <a href="https://mwordstar.misterma.com/docs/doc13/">MWordStar 代码高亮</a> 查看支持的语言。</p><h2>统计页</h2><p>主题包含一个统计页模板，你可以在后台创建页面，页面的自定义模板选择 <code>网站数据</code>，标题可以随便写，创建完成后就可以在顶部导航栏访问了。</p><p>统计页包含基本的数据统计、分类文章占比图、文章更新日历图、评论动态日历图、阅读量排名前 5 的文章、评论量排名前 5 的文章。</p><p>基本数据统计如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198784315155.jpeg" alt="Facile基本统计截图" title="Facile基本统计截图"></p><p>分类占比统计图如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198785132678.jpeg" alt="Facile分类占比截图" title="Facile分类占比截图"></p><p>下面是评论动态日历图：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198788751795.jpeg" alt="Facile评论动态图" title="Facile评论动态图"></p><p>文章动态日历图和评论动态的日历图是差不多的，屏幕尺寸不同显示的月份数量也不同。</p><p>下面是文章评论排名表格：</p><p><img src="https://www.misterma.com/img-admin/uploads/16198790286475.jpeg" alt="Facile评论排名表格截图" title="Facile评论排名表格截图"></p><p>文章阅读量排名表格和评论量排名的表格也是差不多的。</p><p>统计页面演示可以访问 <a href="https://www.misterma.com/data.html">https://www.misterma.com/data.html</a> 。</p><h2>无障碍（Accessibility）</h2><p>上网对于大多数人来说是一件再简单不过的事，但是对于一些身体有缺陷的残障人士来说却是一件非常困难的事。目前国内的很多网站和 App 都只注重外观，忽略了残障人士的 <a href="https://www.misterma.com/archives/264/">可访问性</a>，甚至有的 App 在开启屏幕阅读器的情况下都无法正常使用。</p><p>Facile 主题针对屏幕阅读器做了大量优化，并在 <a href="http://www.nvda-project.org/">MVDA</a> 和 <a href="https://www.apple.com/cn/accessibility/iphone/vision/">VoiceOver</a> 这两款屏幕阅读器上做过测试，无论是 PC 还是移动设备都能完美朗读（除了日历图），主题能准确传达需要朗读的内容和信息，对于盲人来说，使用标准的屏幕阅读器基本可以无障碍操作。</p><p>主题可完美支持键盘访问，颜色对比度也符合标准。</p><p>小提示：如果您是屏幕阅读器用户，为了您的浏览体验，不建议使用 IE 浏览器。</p><h2>其他功能</h2><p>主题自带友情链接功能，友链可以分为 全站、首页、独立页 三种显示方式。友链需要在主题设置中填写 JSON 数据，格式和说明可以简单参考 <a href="https://mwordstar.misterma.com/docs/doc10">MWordStar 友情链接</a> 。</p><p>文章头图目前支持手动输入和自动获取文章中的第一张图片作为文章头图，你可以在撰写文章页的下方设置。</p><h2>插件适配</h2><p>因为我需要用到 <a href="https://plugins.typecho.me/plugins/sticky.html">Sticky</a> 文章置顶插件，所以这个主题也直接适配了 Sticky 插件，Sticky 插件安装完成后无需修改主题。</p>
 ]]></content:encoded>
-<slash:comments>0</slash:comments>
+<slash:comments>1</slash:comments>
 <comments>http://localhost/php/typecho-demo/index.php/archives/11/#comments</comments>
 <wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/11/</wfw:commentRss>
+</item>
+<item>
+<title>Linux 服务器安装 qBittorrent</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/15/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/15/</guid>
+<pubDate>Fri, 01 Oct 2021 14:36:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[qBittorrent 是一个支持多平台的 BT 下载工具。qBittorrent 的软件界面虽然是用 QT 开发的，但 qBittorrent 也包含一个 Web 面板，可以通过浏览器远程访问...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>qBittorrent 是一个支持多平台的 BT 下载工具。qBittorrent 的软件界面虽然是用 QT 开发的，但 qBittorrent 也包含一个 Web 面板，可以通过浏览器远程访问，没有图形界面的服务器也可以用。</p><p>我服务器使用的 BT 下载工具是 Aria2，现在准备再装一个 qBittorrent，这里简单写一下安装过程。</p><h2>安装</h2><p>我服务器使用的 Linux 版本是 CentOS7 ，CentOS 可以直接使用 yum 安装，官方的 yum 就可以：</p><pre><code class="lang-bash">yum install -y qbittorrent-nox</code></pre><p>如果是 Ubuntu 或 Debian 可以使用 apt 安装：</p><pre><code class="lang-bash">apt install -y qbittorrent-nox</code></pre><p>使用 yum 或 apt 安装的 qBittorrent 可能版本比较老，如果需要新版本可以手动编译安装，也可以下载编译好的二进制包安装。</p><p>如果嫌麻烦的话也可以使用其他人编写的脚本安装，下面使用脚本安装：</p><p>脚本仓库地址：<a href="https://github.com/Aniverse/qbittorrent-nox-static">https://github.com/Aniverse/qbittorrent-nox-static</a> </p><p>脚本支持的发行版：</p><blockquote><p>Debian 8/9/10、Ubuntu 16.04/18.04、CentOS 7/8、Fedora 31、Arch Linux、OpenSUSE</p></blockquote><p>下载脚本：</p><pre><code class="lang-bash">wget https://github.com/Aniverse/qbittorrent-nox-static/raw/master/install.sh</code></pre><p>运行：</p><pre><code class="lang-bash">bash install.sh -u 用户名 -p 密码 -w 端口 -v 版本</code></pre><p>把上面的中文部分换成你的设置，例如：</p><pre><code class="lang-bash">bash install.sh -u admin -p 123456 -w 8080 -v 4.2.5.lt.1.2.6</code></pre><p>支持的版本可以到仓库页面查看。</p><h2>第一次启动</h2><p>安装完成后启动 qBittorrent：</p><pre><code class="lang-bash">qbittorrent-nox</code></pre><p>第一次启动会显示法律声明：</p><pre><code class="lang-bash">*** Legal Notice ***
+qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.
+
+No further notices will be issued.
+
+Press 'y' key to accept and continue...</code></pre><p>输入 <code>y</code> 继续。</p><p>启动完成后会显示 访问地址、用户名、密码：</p><pre><code class="lang-bash">******** Information ********
+To control qBittorrent, access the Web UI at http://localhost:8080
+The Web UI administrator user name is: admin
+The Web UI administrator password is still the default one: adminadmin
+This is a security risk, please consider changing your password from program preferences</code></pre><p>一般默认的用户名是 <code>admin</code> ，密码是 <code>adminadmin</code> ，访问地址是 IP:端口 例如 <code>http://172.93.47.76:8080</code> 。</p><p>如果你的系统有防火墙的话别忘了打开端口，CentOS 操作端口可以看 <a href="https://www.misterma.com/archives/687/">CentOS 开放、关闭和查看端口</a> 。</p><p>如果你用的是 CentOS7 的话也可以直接输入：</p><pre><code class="lang-bash">firewall-cmd --zone=public --add-port=8080/tcp --permanent</code></pre><p>打开 8080 端口。</p><p>一些国内的服务器可能还会有一层防火墙，需要到服务器管理后台开放端口。</p><p>访问成功可以看到如下的登录界面：</p><p><img src="https://www.misterma.com/img-admin/uploads/16318000491656.jpeg" alt="qBittorrent登录页面" title="qBittorrent登录页面"></p><h2>设置</h2><p>下面是一些 qBittorrent 的设置说明：</p><h3>设置界面语言</h3><p>qBittorrent 的 Web 面板默认会显示英文，下面设置中文。</p><p>打开 <code>Tools</code> 菜单，选择 <code>options</code> ：</p><p><img src="https://www.misterma.com/img-admin/uploads/16318003262714.jpeg" alt="qBittorrent Web 进入选项" title="qBittorrent Web 进入选项"></p><p>选择 <code>Web UI</code> ，在 <code>Language</code> 的下拉菜单就可以看到 <code>简体中文</code> ：</p><p><img src="https://www.misterma.com/img-admin/uploads/16318005498852.jpeg" alt="qBittorrent Web 设置中文" title="qBittorrent Web 设置中文"></p><p>选择 <code>中文</code> 后继续往下滚动，点击 <code>Save</code> 保存设置。</p><p>中文需要重启 qBittorrent 才会显示。</p><p>切换到命令行，此时 qBittorrent 应该是正在运行，按 <code>ctrl + C</code> 退出，输入 <code>qbittorrent-nox</code> 启动软件，此时应该会显示中文，如下：</p><pre><code class="lang-bash">******** 信息 ********
+欲通过网页端控制 qBittorrent，你需要访问 http://localhost:8080
+网页端管理员的用户名是：admin
+网络端管理员密码设置为默认密码：adminadmin
+存在安全风险！请考虑在设置更改密码！</code></pre><p>如果需要更改用户名和密码的话可以进入 <code>选项</code> -&gt; <code>网络操作界面</code> 更改。</p><p>如果需要让 qBittorrent 启动后在后台运行可以输入：</p><pre><code class="lang-bash">qbittorrent-nox -d</code></pre><p>启动 qBittorrent。</p><h3>端口</h3><p>qBittorrent 的 BT 下载还需要开放一个端口，在 <code>选项</code> -&gt; <code>连接</code> 可以看到端口，默认应该是 <code>8999</code> ，你也可以更改，CentOS 设置端口可以看 <a href="https://www.misterma.com/archives/687/">CentOS 开放、关闭和查看端口</a> 。</p><h3>BTTracker</h3><p>BT 下载肯定是少不了 BTTracker 的，否则一些不是太热门的资源可能会没有速度。BTTracker 可以在 <code>选项</code> -&gt; <code>BitTorrent</code> 选中 <code>自动添加以下 trackers 到新的 torrents</code> ，在下方的输入框填写 BTTracker，一行一个，如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16318027826372.jpeg" alt="qBittorrent填写BTTracker" title="qBittorrent填写BTTracker"></p><p>BTTracker 可以到 <a href="https://github.com/XIU2/TrackersListCollection">https://github.com/XIU2/TrackersListCollection</a> 获取，如果你经常下载的话建议至少每周更新一次 BTTracker，如果不经常下载的话可以到下载前再更新。</p><h2>命令行</h2><p>下面是一些常用命令：</p><p>启动 qBittorrent：</p><pre><code class="lang-bash">qbittorrent-nox</code></pre><p>在后台启动 qBittorrent：</p><pre><code class="lang-bash">qbittorrent-nox -d</code></pre><p>查看版本：</p><pre><code class="lang-bash">qbittorrent-nox -v</code></pre><p>启动 qBittorrent 并指定 Web 面板的端口：</p><pre><code class="lang-bash">qbittorrent-nox --webui-port=2333</code></pre><p>上面指定 <code>2333</code> 端口。</p><p>查看帮助：</p><pre><code class="lang-bash">qbittorrent-nox -h</code></pre><p>以上就是 qBittorrent 在 Linux 的安装和基本设置。</p>
+]]></content:encoded>
+<slash:comments>4</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/15/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/15/</wfw:commentRss>
+</item>
+<item>
+<title>PHP 压缩和解压文件</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/16/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/16/</guid>
+<pubDate>Wed, 29 Sep 2021 14:47:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[我的服务器每天都会分割日志，这些按天分割的日志为了方便管理和下载就需要按月归档，打包为压缩包。这里就简单写一下 PHP 压缩和解压文件。我用来压缩和解压文件的库是 ZipArchive ，这是 ...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>我的服务器每天都会分割日志，这些按天分割的日志为了方便管理和下载就需要按月归档，打包为压缩包。这里就简单写一下 PHP 压缩和解压文件。</p><p>我用来压缩和解压文件的库是 <a href="https://www.php.net/manual/zh/class.ziparchive.php">ZipArchive</a> ，这是 PHP 内置的一个用来压缩和解压 ZIP 文件的库。</p><h2>压缩</h2><p>下面简单创建一个 ZIP 的压缩包，然后添加一个文件到压缩包：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addFile('log.txt');  // 添加一个文件到打开的 zip 文件中
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面创建了一个名为 <code>1.zip</code> 的压缩包，然后把 <code>log.txt</code> 添加到了 <code>1.zip</code> 中。</p><p>下面是用到的方法说明：</p><h3><code>open()</code> 方法</h3><p><code>open</code> 方法的功能是打开一个 zip 文件，第一个参数是文件名，第二个参数是打开方式，打开方式可以接受一个预定义常量，下面是预定义常量的说明：</p><ul><li><code>ZIPARCHIVE::OVERWRITE </code>： 总是以一个新的压缩包开始，此模式下如果已经存在则会被覆盖。</li><li><code>ZIPARCHIVE::CREATE</code>： 如果不存在则创建一个zip压缩包。</li><li><code>ZipArchive::RDONLY</code>： 只读模式打开压缩包。</li><li><code>ZIPARCHIVE::EXCL</code>： 如果压缩包已经存在，则出错。</li><li><code>ZIPARCHIVE::CHECKCONS</code>： 对压缩包执行额外的一致性检查，如果失败则显示错误。</li></ul><p>我上面使用的是 <code>ZipArchive::CREATE</code>，也就是如果 zip 文件不存在就创建一个。</p><h3><code>addFile()</code> 方法</h3><p><code>addFile</code> 方法的功能是把文件添加到 zip 包中。第一个参数是要添加的文件名，第二个参数是添加到 zip 包中的名称。</p><p>下面演示第二个参数：</p><pre><code class="lang-php">$zip-&gt;addFile('log.txt', 'log-backup.txt');</code></pre><p>我要添加到 zip 包的文件是 <code>log.txt</code> 添加到 zip 包后在 zip 包中查看就是 <code>log-backup.txt</code>，相当于在添加的时候给文件改个名，成功会返回 <code>true</code>，否则返回 <code>false</code> 。</p><h3><code>close()</code> 方法</h3><p>在操作完成后可以使用 <code>close</code> 关闭打开的 zip 包。</p><h2>直接添加内容</h2><p>在没有文件的情况下也可以直接添加字符串或其它内容到 zip 包中。</p><p>下面创建一个 zip 包，然后添加字符串到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addFromString('Hello.txt', 'Hello this is text');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面创建了一个 <code>1.zip</code> 的压缩包，然后添加了一个名为 <code>Hello.txt</code> 的文件到 zip 包中，这个 <code>Hello.txt</code> 的内容就是 <code>Hello this is text</code> 。</p><h2>添加多个文件</h2><p>添加多个文件除了多次调用添加外也可以使用 <code>addGlob</code> 方法添加，<code>addGlob</code> 方法就和 <code>glob</code> 函数差不多，可以根据给定的过滤方式来获取目录下所有符合标准的文件。</p><p>下面创建一个 zip 包，然后把当前目录下所有 <code>txt</code> 结尾的文件都添加到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addGlob('*.txt');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>如果我要添加当前目录下的所有文件可以这样写：</p><pre><code class="lang-php">$zip-&gt;addGlob('*');</code></pre><p><code>addGlob</code> 方法只能添加文件，即便用 <code>*</code> 也不会添加目录。</p><h2>添加目录</h2><p>下面创建一个 zip 包，然后添加一个目录到 zip 包中：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 类
+$zip-&gt;open('1.zip', ZipArchive::CREATE);  // 打开一个 zip 文件
+$zip-&gt;addEmptyDir('.idea');
+$zip-&gt;close();  // 关闭打开的 zip 文件</code></pre><p>上面的 <code>addEmptyDir</code> 方法只能添加目录，目录中的文件或目录是不会被添加到 zip 包中的，也就是说添加到 zip 包中的是空目录。</p><p>因为 <code>ZipArchive</code> 没有可以自动递归添加目录下的文件或目录的方法，所以如果要添加目录下的文件或目录就只能自己手动递归添加。</p><p>下面简单编写一个可以递归添加目录下的所有文件或目录的类：</p><pre><code class="lang-php">class Zip {
+    protected $zip = null;  // ZipArchive 对象
+    protected $count = 0;  // 记录文件数量
+    // 添加单个文件或目录
+    public function add($fileName, $zipFileName = '') {
+        if ($zipFileName == '') {
+            // 如果 zip 文件名为空就使用传入的文件或目录名作为 zip 文件名
+            $zipFileName = $fileName . '.zip';
+        }
+        $this-&gt;zip = new ZipArchive();  // 创建 ZipArchive 类
+        $this-&gt;zip-&gt;open($zipFileName, ZipArchive::CREATE);  // 打开一个 zip 文件
+        // 判断传入的是否是一个目录
+        if (is_dir($fileName)) {
+            $this-&gt;addDir($fileName);  // 调用添加目录方法
+        }else {
+            // 如果不是目录就直接添加文件
+            if ($this-&gt;zip-&gt;addFile($fileName)) {
+                $this-&gt;count ++;  // 成功添加后添加文件数量 +1
+            }
+        }
+        $this-&gt;zip-&gt;close();  // 关闭打开的 zip 包
+        return $this-&gt;count;  // 返回已添加文件的数量
+    }
+    // 添加目录
+    public function addDir($dir) {
+        $this-&gt;zip-&gt;addEmptyDir($dir);  // 添加目录
+        $fileList = glob($dir .  '/*');  // 获取路劲下的所有文件或目录
+        foreach ($fileList as $file) {
+            // 是否是目录
+            if (is_dir($file)) {
+                $this-&gt;addDir($file);  // 调用自身继续操作
+                continue;  // 跳过本次循环
+            }
+            // 添加文件
+            if ($this-&gt;zip-&gt;addFile($file, $file)) {
+                $this-&gt;count ++;  // 成功添加后添加文件数量 +1
+            }
+        }
+    }
+}</code></pre><p>上面的类可以调用 <code>add</code> 方法来添加文件或目录，第一个参数可以传入要添加的文件或目录，第二个参数是 zip 包名称，如果传入的 zip 包不存在就会自动创建，如果省略第二个参数会使用文件名来作为 zip 包名。</p><p>下面调用一下上面的 <code>zip</code> 类：</p><pre><code class="lang-php">$zip = new Zip();
+$zip-&gt;add('src', 'src.zip');  // 调用 add 添加</code></pre><p>使用上面的类无论目录下有多少文件或目录都能添加。</p><h2>解压文件</h2><p>下面把 <code>src.zip</code> 里的所有文件解压到 <code>dir</code> 目录：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;extractTo('dir');  // 把 zip 包内的所有文件解压到指定目录
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><p>解压文件使用的就是 <code>extractTo</code> 方法，参数就是存放解压后的文件的目录，如果传入的目录不存在会自动创建。<code>extractTo</code> 成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><h2>设置和获取注释</h2><p>使用 WinRAR 之类的软件查看一些网上下载的压缩包的时候可以看到右侧有注释内容，PHP 也能设置和查看注释内容。</p><p>下面给 <code>src.zip</code> 设置注释内容：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;setArchiveComment('这是一个 zip 压缩包');  // 设置注释
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><p><code>setArchiveComment</code> 方法可以给打开的压缩包设置注释内容，参数就是注释内容，成功返回 <code>true</code>，失败返回 <code>false</code> 。</p><p>下面输出 <code>src.zip</code> 的注释内容：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+echo $zip-&gt;getArchiveComment();  // 输出注释内容
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h2>查询相关</h2><p>下面是一些获取 zip 压缩包信息和文件的方法：</p><h3><code>count()</code> 方法</h3><p><code>count</code> 方法可以获取压缩包中的文件和目录数量，获取的是所有文件和目录的数量，包括深层级的目录和文件。</p><h3><code>getNameIndex()</code> 方法</h3><p><code>getNameIndex</code> 方法可以根据传入的索引返回压缩包内文件的文件名，需要传入一个数字索引，返回对应文件的文件名。</p><p>下面循环输出 <code>src.zip</code> 里所有文件的文件名：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src-all.zip');  // 打开 zip 包
+for ($i = 0;$i &lt; $zip-&gt;count();$i ++) {
+    echo $zip-&gt;getNameIndex($i) . &quot;\n&quot;;  // 输出文件名
+}
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>getFromIndex()</code> 方法</h3><p><code>getFromIndex</code> 方法可以根据索引读取压缩包内的文件内容，第一个参数是文件索引，第二个参数是读取的字节数，0 为读取整个文件。</p><p>下面读取并输出 <code>src.zip</code> 中的第 2 个文件的内容，只读取 3 个字节：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+echo $zip-&gt;getFromIndex(2, 3);  // 读取并输出
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>getFromName()</code> 方法</h3><p><code>getFromName</code> 方法可以根据压缩包内的文件名读取压缩包内的文件内容，第一个参数是要读取的文件名，第二个参数是读取的字节数，0 为读取整个文件。<code>getFromName</code> 和上面的 <code>getFromIndex</code> 方法都是差不多的，只是 <code>getFromName</code> 方法传入的是文件名。</p><h2>操作压缩包内的文件</h2><p>下面是一些操作压缩包内的文件的方法：</p><h3><code>renameName()</code> 方法</h3><p><code>renameName</code> 方法可以给压缩包内的文件重命名，第一个参数是要重命名的文件名，第二个参数是新文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><p>下面把 <code>src.zip</code> 里的 <code>log.txt</code> 重命名为 <code>new-name.txt</code> ：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;renameName('log.txt', 'new-name.txt');  // 重命名
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>renameIndex()</code> 方法</h3><p><code>renameIndex</code> 方法和上面的 <code>renameName</code> 方法差不多，也是给压缩包里的文件重命名的，不过 <code>renameIndex</code> 的第一个参数是要重命名的文件索引，第二个参数是新文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><h3><code>deleteName()</code> 方法</h3><p><code>deleteName</code> 方法可以删除压缩包内的文件， 参数就是要删除的文件名，成功返回 <code>true</code> ，失败返回 <code>false</code> 。</p><p>下面删除 <code>src.zip</code> 中的 <code>log.txt</code> ：</p><pre><code class="lang-php">$zip = new ZipArchive();  // 创建 ZipArchive 对象
+$zip-&gt;open('src.zip');  // 打开 zip 包
+$zip-&gt;deleteName('log.txt');  // 删除
+$zip-&gt;close();  // 关闭打开的 zip 包</code></pre><h3><code>deleteIndex()</code> 方法</h3><p><code>deleteIndex</code> 方法和上面的  <code>deleteName</code> 差不多，也是删除压缩包里的文件，不过 <code>deleteIndex</code> 需要传入文件索引。</p><p>以上就是 PHP 操作 zip 压缩文件的方法，更多方法可以查看 PHP 官网的 <a href="https://www.php.net/manual/zh/class.ziparchive.php">ZipArchive</a> 类说明。</p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/16/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/16/</wfw:commentRss>
+</item>
+<item>
+<title>Linux 安装最新 Node.js 并配置环境变量</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/17/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/17/</guid>
+<pubDate>Thu, 16 Sep 2021 15:27:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段错误信息如下：</p><pre><code class="lang-bash">npm ERR! Make sure you have the latest version of node.js and npm installed.</code></pre><p>我使用 <code>node -v</code> 查看了一下 Nodejs 的版本，发现 Yum 安装的 Nodejs 竟然是 <strong>6.x</strong> 的版本。最新的 Nodejs 版本已经到了 <strong>14.x</strong>，Yum 上的还是 <strong>6.x</strong> 的版本，也就是说 Yum 上的 Nodejs 至少是两年前的版本。</p><p>我只能到 Nodejs 官网下载最新的 Nodejs 安装，这里简单记录一下安装过程。</p><h2>下载</h2><p>直接进入 <a href="https://nodejs.org/zh-cn/download/current/">https://nodejs.org/zh-cn/download/current/</a>，选择 <code>Linux 二进制文件 (x64)</code>，如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043783614616.jpg" alt="Nodejs下载" title="Nodejs下载"></p><p>复制下载地址，可以通过 wget 或 curl 下载。</p><p>我这里把 Nodejs 下载到 <code>/opt</code> 目录，进入 <code>/opt</code> 目录：</p><pre><code class="lang-bash">cd /opt</code></pre><p>使用 wget 下载 Nodejs：</p><pre><code class="lang-bash">wget https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz</code></pre><p>下载的 Nodejs 是一个 <code>tar.xz</code> 的压缩包。</p><p>解压：</p><pre><code class="lang-bash">tar xf node-v14.4.0-linux-x64.tar.xz</code></pre><p>解压后得到一个 <code>node-v14.4.0-linux-x64</code> 目录，<code>node-v14.4.0-linux-x64</code> 中又有一个 <code>bin</code> 目录，环境变量的路劲就需要配置到 <code>bin</code> 目录。</p><h2>配置环境变量</h2><p>用 VI 之类的编辑器打开 <code>/etc/profile</code>，加入：</p><pre><code class="lang-bash">export PATH=$PATH:/opt/node-v14.4.0-linux-x64/bin</code></pre><p>保存退出后输入：</p><pre><code class="lang-bash">source /etc/profile</code></pre><p>让设置生效。</p><p>查看一下 Nodejs 版本：</p><pre><code class="lang-bash">node -v</code></pre><pre><code class="lang-bash">v14.4.0</code></pre><p>查看一下 npm 版本：</p><pre><code class="lang-bash">npm -v</code></pre><pre><code class="lang-bash">6.14.5</code></pre><p>相关文章：</p><ul><li><a href="https://www.misterma.com/archives/125/">Linux VI 编辑器简单使用教程</a></li></ul>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/17/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/17/</wfw:commentRss>
 </item>
 <item>
 <title>PHP 使用 PHPMailer 发送邮件</title>
@@ -142,20 +272,6 @@ try {
 <wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/7/</wfw:commentRss>
 </item>
 <item>
-<title>登高</title>
-<link>http://localhost/php/typecho-demo/index.php/archives/5/</link>
-<guid>http://localhost/php/typecho-demo/index.php/archives/5/</guid>
-<pubDate>Sun, 01 Aug 2021 07:17:00 +0000</pubDate>
-<dc:creator>Mr. Ma</dc:creator>
-<description><![CDATA[风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来。万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯。]]></description>
-<content:encoded xml:lang="zh-CN"><![CDATA[
-<p>风急天高猿啸哀，渚清沙白鸟飞回。</p><p>无边落木萧萧下，不尽长江滚滚来。</p><p>万里悲秋常作客，百年多病独登台。</p><p>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</p>
-]]></content:encoded>
-<slash:comments>4</slash:comments>
-<comments>http://localhost/php/typecho-demo/index.php/archives/5/#comments</comments>
-<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/5/</wfw:commentRss>
-</item>
-<item>
 <title>林黛玉进贾府</title>
 <link>http://localhost/php/typecho-demo/index.php/archives/3/</link>
 <guid>http://localhost/php/typecho-demo/index.php/archives/3/</guid>
@@ -168,20 +284,6 @@ try {
 <slash:comments>1</slash:comments>
 <comments>http://localhost/php/typecho-demo/index.php/archives/3/#comments</comments>
 <wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/3/</wfw:commentRss>
-</item>
-<item>
-<title>蜀道难</title>
-<link>http://localhost/php/typecho-demo/index.php/archives/4/</link>
-<guid>http://localhost/php/typecho-demo/index.php/archives/4/</guid>
-<pubDate>Tue, 04 May 2021 07:08:00 +0000</pubDate>
-<dc:creator>Mr. Ma</dc:creator>
-<description><![CDATA[噫吁嚱，危乎高哉！蜀道之难，难于上青天！蚕丛及鱼凫，开国何茫然！尔来四万八千岁，不与秦塞通人烟。西当太白有鸟道，可以横绝峨眉巅。地崩山摧壮士死，然后天梯石栈相钩连。上有六龙回日之高标，下有冲波逆...]]></description>
-<content:encoded xml:lang="zh-CN"><![CDATA[
-<p>噫吁嚱，危乎高哉！蜀道之难，难于上青天！<br>蚕丛及鱼凫，开国何茫然！<br>尔来四万八千岁，不与秦塞通人烟。<br>西当太白有鸟道，可以横绝峨眉巅。<br>地崩山摧壮士死，然后天梯石栈相钩连。<br>上有六龙回日之高标，下有冲波逆折之回川。<br>黄鹤之飞尚不得过，猿猱欲度愁攀援。(攀援 一作：攀缘)<br>青泥何盘盘，百步九折萦岩峦。<br>扪参历井仰胁息，以手抚膺坐长叹。<br>问君西游何时还？畏途巉岩不可攀。<br>但见悲鸟号古木，雄飞雌从绕林间。<br>又闻子规啼夜月，愁空山。<br>蜀道之难,难于上青天，使人听此凋朱颜！<br>连峰去天不盈尺，枯松倒挂倚绝壁。<br>飞湍瀑流争喧豗，砯崖转石万壑雷。<br>其险也如此，嗟尔远道之人胡为乎来哉！(也若此 一作：也如此)<br>剑阁峥嵘而崔嵬，一夫当关，万夫莫开。<br>所守或匪亲，化为狼与豺。<br>朝避猛虎，夕避长蛇；磨牙吮血，杀人如麻。<br>锦城虽云乐，不如早还家。<br>蜀道之难,难于上青天，侧身西望长咨嗟！</p>
-]]></content:encoded>
-<slash:comments>1</slash:comments>
-<comments>http://localhost/php/typecho-demo/index.php/archives/4/#comments</comments>
-<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/4/</wfw:commentRss>
 </item>
 </channel>
 </rss>
