@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>MWordStar - 2021年9月16日</title>
+<link>http://localhost/php/typecho-demo/index.php/2021/09/16/</link>
+<atom:link href="http://localhost/php/typecho-demo/index.php/feed/2021/09/16/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description>MWordStar演示站</description>
+<lastBuildDate>Thu, 16 Sep 2021 15:27:00 +0000</lastBuildDate>
+<pubDate>Thu, 16 Sep 2021 15:27:00 +0000</pubDate>
+<item>
+<title>Linux 安装最新 Node.js 并配置环境变量</title>
+<link>http://localhost/php/typecho-demo/index.php/archives/17/</link>
+<guid>http://localhost/php/typecho-demo/index.php/archives/17/</guid>
+<pubDate>Thu, 16 Sep 2021 15:27:00 +0000</pubDate>
+<dc:creator>Mr. Ma</dc:creator>
+<description><![CDATA[今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段错误信息如下：</p><pre><code class="lang-bash">npm ERR! Make sure you have the latest version of node.js and npm installed.</code></pre><p>我使用 <code>node -v</code> 查看了一下 Nodejs 的版本，发现 Yum 安装的 Nodejs 竟然是 <strong>6.x</strong> 的版本。最新的 Nodejs 版本已经到了 <strong>14.x</strong>，Yum 上的还是 <strong>6.x</strong> 的版本，也就是说 Yum 上的 Nodejs 至少是两年前的版本。</p><p>我只能到 Nodejs 官网下载最新的 Nodejs 安装，这里简单记录一下安装过程。</p><h2>下载</h2><p>直接进入 <a href="https://nodejs.org/zh-cn/download/current/">https://nodejs.org/zh-cn/download/current/</a>，选择 <code>Linux 二进制文件 (x64)</code>，如下：</p><p><img src="https://www.misterma.com/img-admin/uploads/16043783614616.jpg" alt="Nodejs下载" title="Nodejs下载"></p><p>复制下载地址，可以通过 wget 或 curl 下载。</p><p>我这里把 Nodejs 下载到 <code>/opt</code> 目录，进入 <code>/opt</code> 目录：</p><pre><code class="lang-bash">cd /opt</code></pre><p>使用 wget 下载 Nodejs：</p><pre><code class="lang-bash">wget https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz</code></pre><p>下载的 Nodejs 是一个 <code>tar.xz</code> 的压缩包。</p><p>解压：</p><pre><code class="lang-bash">tar xf node-v14.4.0-linux-x64.tar.xz</code></pre><p>解压后得到一个 <code>node-v14.4.0-linux-x64</code> 目录，<code>node-v14.4.0-linux-x64</code> 中又有一个 <code>bin</code> 目录，环境变量的路劲就需要配置到 <code>bin</code> 目录。</p><h2>配置环境变量</h2><p>用 VI 之类的编辑器打开 <code>/etc/profile</code>，加入：</p><pre><code class="lang-bash">export PATH=$PATH:/opt/node-v14.4.0-linux-x64/bin</code></pre><p>保存退出后输入：</p><pre><code class="lang-bash">source /etc/profile</code></pre><p>让设置生效。</p><p>查看一下 Nodejs 版本：</p><pre><code class="lang-bash">node -v</code></pre><pre><code class="lang-bash">v14.4.0</code></pre><p>查看一下 npm 版本：</p><pre><code class="lang-bash">npm -v</code></pre><pre><code class="lang-bash">6.14.5</code></pre><p>相关文章：</p><ul><li><a href="https://www.misterma.com/archives/125/">Linux VI 编辑器简单使用教程</a></li></ul>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>http://localhost/php/typecho-demo/index.php/archives/17/#comments</comments>
+<wfw:commentRss>http://localhost/php/typecho-demo/index.php/feed/archives/17/</wfw:commentRss>
+</item>
+</channel>
+</rss>
