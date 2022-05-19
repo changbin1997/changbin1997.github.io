@@ -1,0 +1,17 @@
+#timer-box h1 {
+  text-align: center;
+}
+/*按钮区*/
+#btn-box {
+  display: flex;
+  justify-content: center;
+}
+#btn-box button {
+  width: 100px;
+  height: 30px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+}
