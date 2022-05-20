@@ -1,0 +1,10 @@
+#preview-box {
+  border: 1px solid #000000;
+}
+canvas {
+  border: 1px solid #000000;
+}
+button {
+  width: 100px;
+  height: 30px;
+}
