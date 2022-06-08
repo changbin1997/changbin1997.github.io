@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#select-box {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 0, 0.4);
+  position: absolute;
+  display: none;
+  cursor: move;
+}
