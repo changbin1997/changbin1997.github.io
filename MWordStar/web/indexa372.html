@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<!-- Mirrored from localhost/php/typecho-demo/index.php/archives/8/?replyTo=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Aug 2022 10:02:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Linux 安装最新 Node.js 并配置环境变量 -         MWordStar            </title>
+    <link rel="icon" href="favicon.html" type="image/x-icon">
+    <link rel="stylesheet" href="images/style-20220822.css" type="text/css">
+            <meta name="description" content="今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段..." />
+<meta name="keywords" content="node.html" />
+<meta name="generator" content="Typecho 1.2.0" />
+<meta name="template" content="MWordStar" />
+<link rel="pingback" href="images/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="xmlrpc2ace.html?wlw" />
+<link rel="alternate" type="application/rss+xml" title="Linux 安装最新 Node.js 并配置环境变量 &raquo; MWordStar &raquo; RSS 2.0" href="index-41.html" />
+<link rel="alternate" type="application/rdf+xml" title="Linux 安装最新 Node.js 并配置环境变量 &raquo; MWordStar &raquo; RSS 1.0" href="index-42.html" />
+<link rel="alternate" type="application/atom+xml" title="Linux 安装最新 Node.js 并配置环境变量 &raquo; MWordStar &raquo; ATOM 1.0" href="index-43.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-8'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-8'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-8'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _c7JZRL = 'a12'//'CPW'
++'f'//'f'
++'5c'//'JFR'
++'a5c'//'G'
++//'bW'
+'0e9'+//'9'
+'2f'+''///*'wU'*/'wU'
++'859'//'h'
++//'ryD'
+'0'+/* 'W1'//'W1' */''+//'9'
+'e6'+//'jGn'
+'4c'+/* 'tq'//'tq' */''+''///*'fb'*/'fb'
++/* 'mNq'//'mNq' */''+'4'//'1'
++'21'//'ikx'
++/* 'ea7'//'ea7' */''+//'N'
+'c4'+'aeb'//'KZ'
++//'Pyo'
+'59'+'izN'//'izN'
++'M'//'M'
++//'Hhg'
+'d', _vSt = [[3,4],[31,34],[31,32]];
+    
+    for (var i = 0; i < _vSt.length; i ++) {
+        _c7JZRL = _c7JZRL.substring(0, _vSt[i][0]) + _c7JZRL.substring(_vSt[i][1]);
+    }
+
+    return _c7JZRL;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script>            </head>
+<body class="sunburst light-color2" data-rounded="fillet" data-color="light-color2">
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" title="MWordStar 首页">MWordStar</a>
+            <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="导航菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link"  href="index.html">首页</a>
+                    </li>
+                                                                                    <li class="nav-item ">
+                            <a class="nav-link" href="5.html">文章归档</a>
+                        </li>
+                                            <li class="nav-item ">
+                            <a class="nav-link" href="start-page.html">关于</a>
+                        </li>
+                                            <li class="nav-item ">
+                            <a class="nav-link" href="data.html">博客统计</a>
+                        </li>
+                                    </ul>
+                                    <div class="form-inline mr-3 mb-3 mb-sm-3 mb-md-3 mb-lg-0 mb-xl-0">
+                        <div class="rounded-circle text-center" id="change-color-btn" role="button" tabindex="0" aria-label="切换主题配色" data-toggle="tooltip" data-placement="bottom" data-light="light-color2">
+                            <i></i>
+                        </div>
+                        <span id="change-color-text" class="ml-2 d-block d-sm-block d-sm-block d-lg-none d-xl-none"></span>
+                    </div>
+                                                    <form class="form-inline search-form" action="http://localhost/php/typecho-demo/" method="post" role="search">
+                        <div class="input-group">
+                            <input data-url="http://localhost/php/typecho-demo/" class="border-right-0 form-control form-control-md search-input" type="text" placeholder="搜索" aria-label="搜索" required="required" name="s">
+                            <div class="input-group-append">
+                                <button class="btn my-sm-0" type="submit" aria-label="搜索" title="搜索" data-toggle="tooltip" data-placement="bottom">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                            </div>
+        </div>
+    </nav>
+</header>
+<div class="container post-page main-content mb-0">
+        <div class="row">
+        <div class="col-md-12 col-lg-8 col-sm-12 article-page content-area">
+            <main class="mwordstar-block">
+                <header class="entry-header">
+                    <h1 class="entry-title p-name" itemprop="name headline">
+                        <a itemprop="url" href="index-9.html" rel="bookmark">Linux 安装最新 Node.js 并配置环境变量</a>
+                    </h1>
+                </header>
+                                                    <div class="header-img border-top">
+                        <a tabindex="-1" aria-hidden="true" href="index-9.html" aria-label="Linux 安装最新 Node.js 并配置环境变量的头图" style="background-image: url(images/16115722611395.png);background-color: #CCCCCC;" class="fixed"></a>
+                    </div>
+                                <div class="article-info clearfix border-bottom border-top" role="group" aria-label="文章信息">
+                    <!--时间-->
+                    <div class="info">
+                        <i class="icon-calendar icon" aria-hidden="true"></i>
+                        <span data-toggle="tooltip" data-placement="top" tabindex="0" title="发布日期：2022年08月21日">2022年08月21日</span>
+                    </div>
+                    <!--作者-->
+                    <div class="info">
+                        <i class="icon-user icon" aria-hidden="true"></i>
+                        <a data-toggle="tooltip" data-placement="top" href="index-6.html" title="作者：Mr. Ma">Mr. Ma</a>
+                    </div>
+                    <!--阅读量-->
+                    <div class="info">
+                        <i class="icon-eye icon" aria-hidden="true"></i>
+                        <span data-toggle="tooltip" data-placement="top" tabindex="0" title="阅读量：9">9</span>
+                    </div>
+                    <!--评论-->
+                    <div class="info">
+                        <i class="icon-bubbles2 icon" aria-hidden="true"></i>
+                        <a data-toggle="tooltip" data-placement="top" title="评论" href="index-9.html#comments">2 评论</a>
+                    </div>
+                    <!--分类-->
+                    <div class="info category">
+                        <i class="icon-folder-open icon" aria-hidden="true"></i>
+                        <a href="index-10.html">技术相关</a>                    </div>
+                    <!--标签-->
+                    <div class="info tags">
+                        <i class="icon-price-tags icon" aria-hidden="true"></i>
+                        <a href="index-19.html">Node.js</a>                    </div>
+                                    </div>
+                <!--文章内容-->
+                <article>
+                                        <div data-target="_blank" class="post-content" data-code-line-num="hide">
+                                                                            <p>今天准备在服务器上构建一个前端项目，我的服务器用的 Linux 是 CentOS 7，我通过 Yum 安装了 Nodejs。在运行构建命令的时候出现了一堆错误信息，项目也无法成功构建，其中的一段错误信息如下：</p><pre><code class="lang-bash">npm ERR! Make sure you have the latest version of node.js and npm installed.</code></pre><p>我使用 <code>node -v</code> 查看了一下 Nodejs 的版本，发现 Yum 安装的 Nodejs 竟然是 <strong>6.x</strong> 的版本。最新的 Nodejs 版本已经到了 <strong>14.x</strong>，Yum 上的还是 <strong>6.x</strong> 的版本，也就是说 Yum 上的 Nodejs 至少是两年前的版本。</p><p>我只能到 Nodejs 官网下载最新的 Nodejs 安装，这里简单记录一下安装过程。</p><h2>下载</h2><p>直接进入 <a href="https://nodejs.org/zh-cn/download/current/">https://nodejs.org/zh-cn/download/current/</a>，选择 <code>Linux 二进制文件 (x64)</code>，如下：</p><p><img src="images/16043783614616.jpg" alt="Nodejs下载" title="Nodejs下载"></p><p>复制下载地址，可以通过 wget 或 curl 下载。</p><p>我这里把 Nodejs 下载到 <code>/opt</code> 目录，进入 <code>/opt</code> 目录：</p><pre><code class="lang-bash">cd /opt</code></pre><p>使用 wget 下载 Nodejs：</p><pre><code class="lang-bash">wget https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz</code></pre><p>下载的 Nodejs 是一个 <code>tar.xz</code> 的压缩包。</p><p>解压：</p><pre><code class="lang-bash">tar xf node-v14.4.0-linux-x64.tar.xz</code></pre><p>解压后得到一个 <code>node-v14.4.0-linux-x64</code> 目录，<code>node-v14.4.0-linux-x64</code> 中又有一个 <code>bin</code> 目录，环境变量的路劲就需要配置到 <code>bin</code> 目录。</p><h2>配置环境变量</h2><p>用 VI 之类的编辑器打开 <code>/etc/profile</code>，加入：</p><pre><code class="lang-bash">export PATH=$PATH:/opt/node-v14.4.0-linux-x64/bin</code></pre><p>保存退出后输入：</p><pre><code class="lang-bash">source /etc/profile</code></pre><p>让设置生效。</p><p>查看一下 Nodejs 版本：</p><pre><code class="lang-bash">node -v</code></pre><pre><code class="lang-bash">v14.4.0</code></pre><p>查看一下 npm 版本：</p><pre><code class="lang-bash">npm -v</code></pre><pre><code class="lang-bash">6.14.5</code></pre><p>相关文章：</p><ul><li><a href="https://www.misterma.com/archives/125/">Linux VI 编辑器简单使用教程</a></li></ul>                                            </div>
+                    <div class="clearfix" id="copyright-info">
+                                                    <span class="float-xl-left float-lg-left float-md-left d-block" data-toggle="tooltip" data-placement="top" tabindex="0" title="发布时间：2022年08月21日">最后编辑：2022年08月22日</span>
+                                                                            <span tabindex="0" data-toggle="tooltip" data-placement="top" title="本文为原创文章，版权归 MWordStar 所有，转载请联系博主获得授权。" class="mt-1 mt-sm-1 mt-md-0 mt-lg-0 mt-lg-0 mt-xl-0 float-xl-right float-lg-right float-md-right d-block">©著作权归作者所有</span>
+                                            </div>
+                </article>
+                <div class="mb-3 agree-and-share">
+                    <div class="text-center">
+                                                <button  data-cid="8" data-url="http://localhost/php/typecho-demo/index.php/archives/8/" id="agree-btn" type="button" class="btn mr-2">
+                            <i class="icon-thumbs-up"></i>
+                            <span>赞</span>
+                            <span class="agree-num">0</span>
+                        </button>
+                        <button id="share-btn" data-url="http://localhost/php/typecho-demo/index.php/archives/8/" type="button" class="btn" data-toggle="collapse" data-target="#qr-link" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="icon-share2"></i>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                    <div class="collapse" id="qr-link">
+                        <div class="mt-4 qr-link">
+                            <p class="text-center mb-2">用手机扫描下方二维码可在手机上浏览和分享</p>
+                            <div class="text-center">
+                                <div id="qr" class="mb-1"></div>
+                                <div class="link-box">
+                                    <a class="text-danger" href="https://service.weibo.com/share/share.php?url=http://localhost/php/typecho-demo/index.php/archives/8/&amp;title=Linux%20%e5%ae%89%e8%a3%85%e6%9c%80%e6%96%b0%20Node.js%20%e5%b9%b6%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f" target="_blank" rel="external nofollow" aria-label="分享到新浪微博" title="分享到新浪微博" data-toggle="tooltip" data-placement="top">
+                                        <i class="icon-sina-weibo mr-1"></i>
+                                    </a>
+                                    <a class="text-info" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://localhost/php/typecho-demo/index.php/archives/8/&amp;title=Linux%20%e5%ae%89%e8%a3%85%e6%9c%80%e6%96%b0%20Node.js%20%e5%b9%b6%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f&amp;site=http://localhost/php/typecho-demo/&amp;summary=%e4%bb%8a%e5%a4%a9%e5%87%86%e5%a4%87%e5%9c%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e4%b8%8a%e6%9e%84%e5%bb%ba%e4%b8%80%e4%b8%aa%e5%89%8d%e7%ab%af%e9%a1%b9%e7%9b%ae%ef%bc%8c%e6%88%91%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%94%a8%e7%9a%84%20Linux%20%e6%98%af%20CentOS%207%ef%bc%8c%e6%88%91%e9%80%9a%e8%bf%87%20Yum%20%e5%ae%89%e8%a3%85%e4%ba%86%20Nodejs%e3%80%82%e5%9c%a8%e8%bf%90%e8%a1%8c%e6%9e%84%e5%bb%ba%e5%91%bd%e4%bb%a4%e7%9a%84%e6%97%b6%e5%80%99%e5%87%ba%e7%8e%b0%e4%ba%86%e4%b8%80%e5%a0%86%e9%94%99%e8%af%af%e4%bf%a1%e6%81%af%ef%bc%8c%e9%a1%b9%e7%9b%ae%e4%b9%9f%e6%97%a0%e6%b3%95%e6%88%90%e5%8a%9f%e6%9e%84%e5%bb%ba%ef%bc%8c%e5%85%b6%e4%b8%ad%e7%9a%84%e4%b8%80%e6%ae%b5%e9%94%99%e8%af%af%e4%bf%a1%e6%81%af%e5%a6%82%e4%b8%8b%ef%bc%9anpm%20ERR!%20Make%20sure%20you%20have%20the%20latest%20vers..." target="_blank" rel="external nofollow" aria-label="分享到QQ空间" title="分享到QQ空间" data-toggle="tooltip" data-placement="top">
+                                        <i class="icon-qzone-logo mr-1"></i>
+                                    </a>
+                                    <a class="text-info" href="https://twitter.com/intent/tweet?url=http://localhost/php/typecho-demo/index.php/archives/8/&amp;text=Linux%20%e5%ae%89%e8%a3%85%e6%9c%80%e6%96%b0%20Node.js%20%e5%b9%b6%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f" target="_blank" rel="external nofollow" aria-label="分享到Twitter" title="分享到Twitter" data-toggle="tooltip" data-placement="top">
+                                        <i class="icon-twitter mr-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--上一篇和下一篇文章的导航-->
+                <nav class="post-navigation border-top">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 previous">
+                            <div>上一篇</div>
+                            <a href="index-11.html" title="Linux 搭建 Minecraft 基岩版服务器">Linux 搭建 Minecraft 基岩版服务器</a>                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 next">
+                            <div class="text-lg-right text-xl-right text-md-right">下一篇</div class="text-lg-right text-xl-right text-md-right">
+                            <div class="text-lg-right text-xl-right text-md-right next-box"><a href="index-8.html" title="Facile 一个简洁的 Typecho 博客主题">Facile 一个简洁的 Typecho 博客主题</a></div>
+                        </div>
+                    </div>
+                </nav>
+                
+<div id="comments" aria-label="评论区">
+                    <div class="comments-lists border-top">
+            <h2>已有 2 条评论</h2>
+
+            <ol class="comment-list">
+    <li id="li-comment-2" class="comment-body comment-parent comment-odd comment-by-author">
+        <div id="comment-2" class="comment-box clearfix">
+            <div class="comment-author clearfix">
+                <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2578598880&amp;spec=40" alt="Mr. Ma" class="avatar">                <div class="comment-info float-left">
+                    <b class="author"><a href="http://localhost/php/typecho-demo" rel="external nofollow">Mr. Ma</a></b>
+                                            <span class="author badge badge-secondary">作者</span>
+                                                            <a class="comment-time" href="index-9.html#comment-2">
+                        14小时前                    </a>
+                </div>
+                <span class="comment-reply float-right">
+                    <span data-id="comment-2">
+                        <a href="indexa372.html?replyTo=2#respond-post-8" rel="nofollow" onclick="return TypechoComment.reply('comment-2', 2);">回复</a>                    </span>
+                </span>
+            </div>
+            <div class="comment-content" id="c-comment-2">
+                                <p>评论测试评论测试评论测试评论测试</p>            </div>
+        </div>
+            </li>
+
+    <li id="li-comment-3" class="comment-body comment-parent comment-even comment-by-author">
+        <div id="comment-3" class="comment-box clearfix">
+            <div class="comment-author clearfix">
+                <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2578598880&amp;spec=40" alt="Mr. Ma" class="avatar">                <div class="comment-info float-left">
+                    <b class="author"><a href="http://localhost/php/typecho-demo" rel="external nofollow">Mr. Ma</a></b>
+                                            <span class="author badge badge-secondary">作者</span>
+                                                            <a class="comment-time" href="index-9.html#comment-3">
+                        14小时前                    </a>
+                </div>
+                <span class="comment-reply float-right">
+                    <span data-id="comment-3">
+                        <a href="index5022.html?replyTo=3#respond-post-8" rel="nofollow" onclick="return TypechoComment.reply('comment-3', 3);">回复</a>                    </span>
+                </span>
+            </div>
+            <div class="comment-content" id="c-comment-3">
+                                <p>哈哈哈哈哈哈哈哈</p>            </div>
+        </div>
+            </li>
+</ol>
+            <nav aria-label="评论分页导航区" class="pagination-nav">
+                            </nav>
+        </div>
+            <div id="respond-post-8" class="respond border-top">
+        <div class="cancel-comment-reply">
+            <a id="cancel-comment-reply-link" href="index-9.html#respond-post-8" rel="nofollow" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+
+        <h2 id="response">发表评论</h2>
+        <form method="post" action="http://localhost/php/typecho-demo/index.php/archives/8/comment?parent=2" id="comment-form" role="form">
+            <div class="row">
+                <!--评论内容输入-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                    <label for="textarea" class="required">评论内容</label>
+                    <textarea name="text" id="textarea" class="textarea form-control" required placeholder="请在此处输入评论内容"></textarea>
+                </div>
+                <!--Emoji表情面板-->
+                                                    <!--姓名输入-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                        <label for="author" class="required">姓名</label>
+                        <input type="text" name="author" id="author" class="text form-control" value="" required="required" placeholder="请输入您的姓名或昵称" maxlength="20">
+                    </div>
+                    <!--Email输入-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                        <label for="mail" class="required">电子邮件地址（不会公开）</label>
+                        <input type="email" name="mail" id="mail" class="text form-control" value="" required="required"  placeholder="请输入您的电子邮件地址" maxlength="64">
+                    </div>
+                    <!--URL输入-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                        <label for="url">网站（选填）</label>
+                        <input type="url" maxlength="64" name="url" id="url" class="text form-control" placeholder="请输入您的网站或博客地址" value="">
+                    </div>
+                                <!--提交按钮-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                    <button type="submit" class="submit btn">提交评论</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+            </main>
+        </div>
+        
+<div class="col-md-12 col-lg-4 col-sm-12 sidebar">
+                        <section class="mwordstar-block">
+                <h4>博客信息</h4>
+                <div class="personal-information pt-2">
+                                        <div class="user">
+                        <img src="images/16043793081520.jpg" alt="MWordStar的头像" class="rounded-circle avatar">
+                        <div class="p-2">
+                            <a class="user-name mt-2" target="_blank" href="https://www.misterma.com/">Mr. Ma</a>
+                            <p class="introduction mt-1">MWordStar 主题演示站</p>
+                        </div>
+                    </div>
+                    <div class="website clearfix border-top">
+                                                <div class="info float-left border-right">
+                            <p class="quantity">7</p>
+                            文章数
+                        </div>
+                        <div class="info float-left border-right">
+                            <p class="quantity">5</p>
+                            评论数
+                        </div>
+                        <div class="info float-left">
+                            <p class="quantity">1天</p>
+                            运行天数
+                        </div>
+                    </div>
+                </div>
+            </section>
+                                                                                                                                <section class="latest-articles mwordstar-block">
+                <h4>最新文章</h4>
+                <ul class="list-group" aria-label="最新文章">
+                                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-5.html">
+                                                                <p>MWordStar 双栏 Typecho 博客主题</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-8.html">
+                                                                <p>Facile 一个简洁的 Typecho 博客主题</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-9.html">
+                                                                <p>Linux 安装最新 Node.js 并配置环境变量</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-11.html">
+                                                                <p>Linux 搭建 Minecraft 基岩版服务器</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-12.html">
+                                                                <p>鲁提辖拳打镇关西</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-14.html">
+                                                                <p>林黛玉进贾府</p>
+                            </a>
+                        </li>
+                                                                    <li class="border-bottom">
+                            <a target="_self" href="index-15.html">
+                                                                <p>少年闰土</p>
+                            </a>
+                        </li>
+                                                            </ul>
+            </section>
+                                                                                                                <section class="latest-comment mwordstar-block">
+                <h4>最新回复</h4>
+                <ul class="list-unstyled list-group" aria-label="最新回复">
+                                                                <li class="media border-bottom">
+                            <img class="avatar" src="https://sdn.geekzu.org/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=50&amp;r=G&amp;d=" alt="评论测试者" width="50" height="50" />                            <div class="media-body ml-2">
+                                <a data-toggle="tooltip" data-placement="top" title="发表在 Facile 一个简洁的 Typecho 博客主题 的评论" target="_self" href="index-8.html#comment-6">评论测试者</a>
+                                <div class="comment-content">我用的也是这个主题</div>
+                            </div>
+                        </li>
+                                            <li class="media border-bottom">
+                            <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2578598880&amp;spec=40" alt="Mr. Ma" class="avatar">                            <div class="media-body ml-2">
+                                <a data-toggle="tooltip" data-placement="top" title="发表在 MWordStar 双栏 Typecho 博客主题 的评论" target="_self" href="index-5.html#comment-5">Mr. Ma</a>
+                                <div class="comment-content">呵呵呵呵</div>
+                            </div>
+                        </li>
+                                            <li class="media border-bottom">
+                            <img class="avatar" src="https://sdn.geekzu.org/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=50&amp;r=G&amp;d=" alt="评论测试者" width="50" height="50" />                            <div class="media-body ml-2">
+                                <a data-toggle="tooltip" data-placement="top" title="发表在 MWordStar 双栏 Typecho 博客主题 的评论" target="_self" href="index-5.html#comment-4">评论测试者</a>
+                                <div class="comment-content">可以可以</div>
+                            </div>
+                        </li>
+                                            <li class="media border-bottom">
+                            <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2578598880&amp;spec=40" alt="Mr. Ma" class="avatar">                            <div class="media-body ml-2">
+                                <a data-toggle="tooltip" data-placement="top" title="发表在 Linux 安装最新 Node.js 并配置环境变量 的评论" target="_self" href="index-9.html#comment-3">Mr. Ma</a>
+                                <div class="comment-content">哈哈哈哈哈哈哈哈</div>
+                            </div>
+                        </li>
+                                            <li class="media border-bottom">
+                            <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2578598880&amp;spec=40" alt="Mr. Ma" class="avatar">                            <div class="media-body ml-2">
+                                <a data-toggle="tooltip" data-placement="top" title="发表在 Linux 安装最新 Node.js 并配置环境变量 的评论" target="_self" href="index-9.html#comment-2">Mr. Ma</a>
+                                <div class="comment-content">评论测试评论测试评论测试评论测试</div>
+                            </div>
+                        </li>
+                                    </ul>
+            </section>
+                                                                                                                <section class="category mwordstar-block">
+                <h4>文章分类</h4>
+                <ul class="list-group list-group-flush" aria-label="文章分类">
+                                                                <li class="d-flex justify-content-between align-items-center border-bottom indentation-0">
+                            <a target="_self" data-toggle="tooltip" data-placement="top" href="index-13.html" title="这里包含一些小说的节选">
+                                小说节选                            </a>
+                            <span class="badge badge-pill">
+                                3                            </span>
+                        </li>
+                                            <li class="d-flex justify-content-between align-items-center border-bottom indentation-0">
+                            <a target="_self" data-toggle="tooltip" data-placement="top" href="index-10.html" title="这里是一些技术相关的教程和笔记">
+                                技术相关                            </a>
+                            <span class="badge badge-pill">
+                                2                            </span>
+                        </li>
+                                            <li class="d-flex justify-content-between align-items-center border-bottom indentation-0">
+                            <a target="_self" data-toggle="tooltip" data-placement="top" href="index-7.html" title="Typecho 主题和主题开发文章">
+                                Typecho                            </a>
+                            <span class="badge badge-pill">
+                                2                            </span>
+                        </li>
+                                    </ul>
+            </section>
+                                                                                                                <section class="tag-cloud mwordstar-block">
+                <h4>标签云</h4>
+                                                                        <div class="tag-list pt-2" aria-label="标签云" role="list">
+                                                    <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-16.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="1 篇文章">鲁迅</a>
+                                                                                <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-17.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="1 篇文章">红楼梦</a>
+                                                                                <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-18.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="1 篇文章">水浒传</a>
+                                                                                <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-19.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="1 篇文章">Node.js</a>
+                                                                                <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-20.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="2 篇文章">博客主题</a>
+                                                                                <a role="listitem" target="_self" data-toggle="tooltip" data-placement="top" href="index-21.html" rel="tag" class="py-1 px-2 d-inline-block tag-link" title="1 篇文章">Minecraft</a>
+                                                                                                </div>
+                            </section>
+                                                                                                                <section class="mwordstar-block">
+                <h4>文章归档</h4>
+                <ul class="list-group list-group-flush" aria-label="文章归档">
+                                                                                <li class="d-flex justify-content-between align-items-center border-bottom">
+                        <a target="_self" data-toggle="tooltip" data-placement="top" href="index-22.html" title="5篇文章">2022年08月</a>
+                        <span class="badge badge-pill">5</span>
+                    </li>
+                                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                        <a target="_self" data-toggle="tooltip" data-placement="top" href="index-23.html" title="1篇文章">2022年06月</a>
+                        <span class="badge badge-pill">1</span>
+                    </li>
+                                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                        <a target="_self" data-toggle="tooltip" data-placement="top" href="index-24.html" title="1篇文章">2022年05月</a>
+                        <span class="badge badge-pill">1</span>
+                    </li>
+                                                                            </ul>
+            </section>
+                                                                <section class="calendar mwordstar-block">
+                                <h4>2022年08月</h4>
+                <div class="tag-list pt-2">
+                                        <table aria-label="2022年08月日历" class="table table-bordered table-sm m-0"><thead><tr><th class="text-center py-2">日</th><th class="text-center py-2">一</th><th class="text-center py-2">二</th><th class="text-center py-2">三</th><th class="text-center py-2">四</th><th class="text-center py-2">五</th><th class="text-center py-2">六</th></tr></thead><tbody><tr><td></td><td class="text-center py-2">1</td><td class="text-center py-2">2</td><td class="text-center py-2">3</td><td class="text-center py-2">4</td><td class="text-center py-2">5</td><td class="text-center py-2">6</td></tr><tr><td class="text-center py-2">7</td><td class="text-center py-2">8</td><td class="text-center py-2">9</td><td class="active text-center py-2"><a href="index-25.html" class="p-0" title="1篇文章" data-toggle="tooltip" data-placement="top"><b>10</b></a></td><td class="text-center py-2">11</td><td class="text-center py-2">12</td><td class="text-center py-2">13</td></tr><tr><td class="text-center py-2">14</td><td class="text-center py-2">15</td><td class="text-center py-2">16</td><td class="active text-center py-2"><a href="index-26.html" class="p-0" title="1篇文章" data-toggle="tooltip" data-placement="top"><b>17</b></a></td><td class="text-center py-2">18</td><td class="text-center py-2">19</td><td class="text-center py-2">20</td></tr><tr><td class="active text-center py-2"><a href="index-27.html" class="p-0" title="1篇文章" data-toggle="tooltip" data-placement="top"><b>21</b></a></td><td class="active text-center py-2"><a href="index-28.html" class="p-0" title="2篇文章" data-toggle="tooltip" data-placement="top"><b>22</b></a></td><td class="text-center py-2">23</td><td class="text-center py-2">24</td><td class="text-center py-2">25</td><td class="text-center py-2">26</td><td class="text-center py-2">27</td></tr><tr><td class="text-center py-2">28</td><td class="text-center py-2">29</td><td class="text-center py-2">30</td><td class="text-center py-2">31</td><td></td><td></td><td></td></tr></tbody></table>                    <nav class="pt-2 clearfix" aria-label="上个月及下个月">
+                                                    <a class="p-0 float-left" href="index-23.html">2022年06月</a>
+                                                                    </nav>
+                </div>
+            </section>
+                                                                                                                                                        <section class="mwordstar-block">
+                <h4>其它功能</h4>
+                <ul class="list-group" aria-label="其它功能">
+                                        <li class="border-bottom"><a href="javascript:;">文章 RSS</a></li>
+                    <li class="border-bottom"><a href="javascript:;">评论 RSS</a></li>
+                </ul>
+            </section>
+                                                                                                                            </div>    </div>
+</div>
+<div id="max-img" role="dialog">
+    <div class="mask-layer"></div>
+    <img src="#" alt="" class="shadow-lg">
+    <p id="img-info" class="text-light text-center"></p>
+    <div class="btn-group" role="group" aria-label="图片工具栏" id="img-control">
+        <button type="button" class="btn big" title="放大" aria-label="放大">
+            <i class="icon-zoom-in"></i>
+        </button>
+        <button type="button" class="btn small" title="缩小" aria-label="缩小">
+            <i class="icon-zoom-out"></i>
+        </button>
+        <button type="button" class="btn spin-left" title="左旋转90度" aria-label="左旋转90度">
+            <i class="icon-undo"></i>
+        </button>
+        <button type="button" class="btn spin-right" title="右旋转90度" aria-label="右旋转90度">
+            <i class="icon-redo"></i>
+        </button>
+        <button type="button" class="btn hide-img" title="关闭大图（ESC）" aria-label="关闭大图（ESC）">
+            <i class="icon-cancel-circle"></i>
+        </button>
+    </div>
+</div><footer>
+    <div class="container">
+                <span>Powered by <a href="http://www.typecho.org/" target="_blank">Typecho</a> Theme by <a href="https://github.com/changbin1997/MWordStar" target="_blank">MWordStar</a></span>
+    </div>
+</footer>
+    <button type="button" class="btn to-top rounded-circle d-none" title="返回顶部" aria-label="返回顶部">
+        <i class="icon-arrow-up"></i>
+    </button>
+
+<script type="text/javascript" src="images/bundle-20220822.js"></script>
+<!--统计数据的图表js-->
+
+</body>
+
+<!-- Mirrored from localhost/php/typecho-demo/index.php/archives/8/?replyTo=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Aug 2022 10:02:41 GMT -->
+</html>
